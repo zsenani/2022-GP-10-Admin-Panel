@@ -4017,6 +4017,7 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
+                      "dynamicTriggerPathList": [],
                       "leftColumn": 12,
                       "dynamicBindingPathList": [
                         {
@@ -4026,7 +4027,7 @@
                           "key": "borderRadius"
                         }
                       ],
-                      "text": "Close",
+                      "text": "Cancel",
                       "isDisabled": false,
                       "key": "breix07gaq",
                       "isDeprecated": false,
@@ -4297,7 +4298,7 @@
                           "key": "borderRadius"
                         }
                       ],
-                      "text": "Close",
+                      "text": "Cencel",
                       "isDisabled": false,
                       "key": "3i1x3zkwc6",
                       "isDeprecated": false,
