@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "rowSelected",
-    "fullyQualifiedName": "JSObject2.rowSelected",
+    "name": "findHospital",
+    "fullyQualifiedName": "JSObject1.findHospital",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,17 +14,18 @@
       "userPermissions": []
     },
     "pageId": "Hospital",
-    "collectionId": "Hospital_JSObject2",
+    "collectionId": "Hospital_JSObject1",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  await Query1.run();\n  await storeValue(\"details\", Query1.data);\n}",
+      "body": "async () => {\n  await Query3.run();\n  if (Query3.data.length == 0) {\n    await add_hospital.run();\n    closeModal('add_hospital_modal');\n    get_hospital.run();\n  } else {\n    showAlert('The hospital is already exists');\n  }\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
     },
     "executeOnLoad": false,
+    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -34,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n  await Query1.run();\n  await storeValue(\"details\", Query1.data);\n}"
+      "async () => {\n  await Query3.run();\n  if (Query3.data.length == 0) {\n    await add_hospital.run();\n    closeModal('add_hospital_modal');\n    get_hospital.run();\n  } else {\n    showAlert('The hospital is already exists');\n  }\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Hospital_JSObject2.rowSelected",
+  "id": "Hospital_JSObject1.findHospital",
   "deleted": false,
-  "gitSyncId": "6356520d4b1a8d4291238688_6361728eb65da361122962c6"
+  "gitSyncId": "6356520d4b1a8d4291238688_6363c13bbaf07e59ff351554"
 }
