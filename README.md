@@ -1,11 +1,11 @@
-![](https://raw.githubusercontent.com/appsmithorg/appsmith/release/static/appsmith_logo_primary.png)
+# 2022-GP-10-Admin-Panel
 
-This app is built using Appsmith. Turn any datasource into an internal app in minutes. Appsmith lets you drag-and-drop components to build dashboards, write logic with JavaScript objects and connect to any API, database or GraphQL source.
+# MedCore Application
 
-![](https://raw.githubusercontent.com/appsmithorg/appsmith/release/static/images/integrations.png)
+# MedCore is a Centralized Hospital Application powered by artificial intelligence that not only connects all hospitals
+# in Saudi Arabia and give the physician the ability to reach all his patients' information. 
+# But it aids physicians diagnosing unusual cases with minimal risks and resources.
 
-### [Github](https://github.com/appsmithorg/appsmith) • [Docs](https://docs.appsmith.com/?utm_source=github&utm_medium=social&utm_content=appsmith_docs&utm_campaign=null&utm_term=appsmith_docs) • [Community](https://community.appsmith.com/) • [Tutorials](https://github.com/appsmithorg/appsmith/tree/update/readme#tutorials) • [Youtube](https://www.youtube.com/appsmith) • [Discord](https://discord.gg/rBTTVJp)
+# MedCore admin panle uses a JavaScript as a programming language. 
 
-##### You can visit the application using the below link
-
-###### [![](https://assets.appsmith.com/git-sync/Buttons.svg) ](https://app.appsmith.com/applications/6356520d4b1a8d4291238688/pages/6356520d4b1a8d429123868b) [![](https://assets.appsmith.com/git-sync/Buttons2.svg)](https://app.appsmith.com/applications/6356520d4b1a8d4291238688/pages/6356520d4b1a8d429123868b/edit)
+# 
