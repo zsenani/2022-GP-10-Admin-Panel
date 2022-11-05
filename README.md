@@ -8,4 +8,8 @@
 
 # MedCore admin panle uses a JavaScript as a programming language. 
 
-# 
+# https://app.appsmith.com/app/medcore/hospital-6356520d4b1a8d429123868b?branch=master
+# Email: medcore.test@gmail.com
+# Password: medcore10test
+
+# MedCore Mobile Application Repository: https://github.com/zsenani/2022-GP-10.git
