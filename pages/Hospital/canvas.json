@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 64,
+          "version": 65,
           "minHeight": 1292,
           "dynamicTriggerPathList": [],
           "parentColumnSpace": 1,
@@ -145,16 +145,7 @@
                   "key": "primaryColumns.region.computedValue"
                 },
                 {
-                  "key": "primaryColumns.LabSpecialist.computedValue"
-                },
-                {
                   "key": "primaryColumns.Physician.computedValue"
-                },
-                {
-                  "key": "primaryColumns.hospitalId.computedValue"
-                },
-                {
-                  "key": "primaryColumns.LabSpecialist.buttonLabel"
                 },
                 {
                   "key": "primaryColumns.Physician.buttonLabel"
@@ -163,7 +154,10 @@
                   "key": "primaryColumns.Physician.menuButtonLabel"
                 },
                 {
-                  "key": "primaryColumns.LabSpecialist.menuButtonLabel"
+                  "key": "primaryColumns.LabSpecialist.computedValue"
+                },
+                {
+                  "key": "primaryColumns.Visit.computedValue"
                 }
               ],
               "leftColumn": 0,
@@ -211,9 +205,9 @@
                 "city",
                 "district",
                 "Physician",
-                "LabSpecialist",
                 "_id",
-                "hospitalId"
+                "LabSpecialist",
+                "Visit"
               ],
               "dynamicPropertyPathList": [
                 {
@@ -376,37 +370,6 @@
                   "validation": {},
                   "cellBackground": "transparent"
                 },
-                "LabSpecialist": {
-                  "allowCellWrapping": false,
-                  "index": 5,
-                  "width": 150,
-                  "originalId": "LabSpecialist",
-                  "id": "LabSpecialist",
-                  "alias": "LabSpecialist",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textColor": "",
-                  "textSize": "0.875rem",
-                  "fontStyle": "",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": false,
-                  "isDisabled": false,
-                  "isCellEditable": false,
-                  "isEditable": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "LabSpecialist",
-                  "isSaveVisible": true,
-                  "isDiscardVisible": true,
-                  "computedValue": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"LabSpecialist\"]))}}",
-                  "validation": {},
-                  "cellBackground": "transparent",
-                  "customAlias": "",
-                  "buttonLabel": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( 'Action'))}}",
-                  "menuButtonLabel": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( 'Open Menu'))}}"
-                },
                 "Physician": {
                   "allowCellWrapping": false,
                   "index": 6,
@@ -439,13 +402,13 @@
                   "onClick": "{{showModal('ModalP')}}",
                   "menuButtonLabel": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( 'Open Menu'))}}"
                 },
-                "hospitalId": {
+                "LabSpecialist": {
                   "allowCellWrapping": false,
                   "index": 1,
                   "width": 150,
-                  "originalId": "hospitalId",
-                  "id": "hospitalId",
-                  "alias": "hospitalId",
+                  "originalId": "LabSpecialist",
+                  "id": "LabSpecialist",
+                  "alias": "LabSpecialist",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
@@ -460,10 +423,38 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "hospitalId",
+                  "label": "LabSpecialist",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"hospitalId\"]))}}",
+                  "computedValue": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"LabSpecialist\"]))}}",
+                  "validation": {},
+                  "cellBackground": "transparent"
+                },
+                "Visit": {
+                  "allowCellWrapping": false,
+                  "index": 7,
+                  "width": 150,
+                  "originalId": "Visit",
+                  "id": "Visit",
+                  "alias": "Visit",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Visit",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Visit\"]))}}",
                   "validation": {},
                   "cellBackground": "transparent"
                 }
@@ -1991,7 +1982,7 @@
                                   "key": "primaryColumns.id.computedValue"
                                 }
                               ],
-                              "leftColumn": 10,
+                              "leftColumn": 9,
                               "delimiter": ",",
                               "defaultSelectedRowIndex": "-1",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -2085,7 +2076,7 @@
                               "onRowSelected": "{{Query1.run()}}",
                               "key": "wc4hxv24a7",
                               "isDeprecated": false,
-                              "rightColumn": 61,
+                              "rightColumn": 58,
                               "textSize": "0.875rem",
                               "widgetId": "geu8t10vqy",
                               "tableData": "{{hospital_table.selectedRow[\"Physician\"]\n}}",
@@ -2578,7 +2569,7 @@
                           "widgetName": "Canvas9",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 490,
+                          "bottomRow": 480,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": true,
@@ -2602,7 +2593,7 @@
                               "borderColor": "#E0DEDE",
                               "isVisibleDownload": false,
                               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-                              "topRow": 38,
+                              "topRow": 37,
                               "isSortable": false,
                               "type": "TABLE_WIDGET_V2",
                               "inlineEditingSaveOption": "ROW_LEVEL",
@@ -2761,7 +2752,7 @@
                               ],
                               "dynamicPropertyPathList": [],
                               "displayName": "Table",
-                              "bottomRow": 47,
+                              "bottomRow": 46,
                               "columnWidthMap": {
                                 "task": 245,
                                 "step": 62,
@@ -3058,7 +3049,7 @@
                               "borderColor": "#E0DEDE",
                               "isVisibleDownload": true,
                               "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-                              "topRow": 2,
+                              "topRow": 1,
                               "isSortable": true,
                               "type": "TABLE_WIDGET_V2",
                               "inlineEditingSaveOption": "ROW_LEVEL",
@@ -3107,7 +3098,7 @@
                                   "key": "primaryColumns.id.computedValue"
                                 }
                               ],
-                              "leftColumn": 8,
+                              "leftColumn": 9,
                               "delimiter": ",",
                               "defaultSelectedRowIndex": "-1",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -3151,7 +3142,7 @@
                               ],
                               "dynamicPropertyPathList": [],
                               "displayName": "Table",
-                              "bottomRow": 36,
+                              "bottomRow": 35,
                               "columnWidthMap": {
                                 "task": 245,
                                 "step": 62,
@@ -3199,7 +3190,7 @@
                               "onRowSelected": "{{Query2.run()}}",
                               "key": "wc4hxv24a7",
                               "isDeprecated": false,
-                              "rightColumn": 57,
+                              "rightColumn": 58,
                               "textSize": "0.875rem",
                               "widgetId": "8px0nj7d9h",
                               "tableData": "{{hospital_table.selectedRow[\"LabSpecialist\"]}}",
