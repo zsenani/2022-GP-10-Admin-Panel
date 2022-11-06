@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Physician",
-    "slug": "physician",
+    "name": "Lab Specialist",
+    "slug": "lab-specialist",
     "layouts": [
       {
         "viewMode": false,
@@ -577,27 +577,6 @@
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
                       "label": "Nationality"
-                    },
-                    "customField1": {
-                      "children": {},
-                      "dataType": "string",
-                      "fieldType": "Text Input",
-                      "sourceData": "",
-                      "isCustomField": true,
-                      "accessor": "customField1",
-                      "identifier": "customField1",
-                      "position": 7,
-                      "originalIdentifier": "customField1",
-                      "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
-                      "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
-                      "boxShadow": "none",
-                      "iconAlign": "left",
-                      "isDisabled": false,
-                      "isRequired": true,
-                      "isSpellCheck": false,
-                      "isVisible": true,
-                      "labelTextSize": "0.875rem",
-                      "label": "Specialization"
                     }
                   },
                   "dataType": "object",
@@ -836,12 +815,6 @@
                 },
                 {
                   "key": "schema.__root_schema__.children.Physician.borderRadius"
-                },
-                {
-                  "key": "schema.__root_schema__.children.customField1.accentColor"
-                },
-                {
-                  "key": "schema.__root_schema__.children.customField1.borderRadius"
                 }
               ],
               "borderWidth": "1",
@@ -4242,7 +4215,7 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Physician_Query1",
+              "id": "Lab Specialist_Query1",
               "name": "Query1",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -4252,7 +4225,7 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Physician_Query2",
+              "id": "Lab Specialist_Query2",
               "name": "Query2",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -4265,7 +4238,7 @@
         ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "Physician",
+        "id": "Lab Specialist",
         "deleted": false,
         "policies": [],
         "userPermissions": []
@@ -4276,5 +4249,5 @@
     "isHidden": false
   },
   "deleted": false,
-  "gitSyncId": "6356520d4b1a8d4291238688_636740b803193515321c2796"
+  "gitSyncId": "6356520d4b1a8d4291238688_636745570c3174227f40b6d8"
 }

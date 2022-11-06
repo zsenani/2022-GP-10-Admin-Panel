@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Physician",
-    "slug": "physician",
+    "name": "Patient",
+    "slug": "patient",
     "layouts": [
       {
         "viewMode": false,
@@ -597,7 +597,7 @@
                       "isSpellCheck": false,
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
-                      "label": "Specialization"
+                      "label": "Marital Status"
                     }
                   },
                   "dataType": "object",
@@ -4242,7 +4242,7 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Physician_Query1",
+              "id": "Patient_Query1",
               "name": "Query1",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -4252,7 +4252,7 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Physician_Query2",
+              "id": "Patient_Query2",
               "name": "Query2",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -4265,7 +4265,7 @@
         ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "Physician",
+        "id": "Patient",
         "deleted": false,
         "policies": [],
         "userPermissions": []
@@ -4276,5 +4276,5 @@
     "isHidden": false
   },
   "deleted": false,
-  "gitSyncId": "6356520d4b1a8d4291238688_636740b803193515321c2796"
+  "gitSyncId": "6356520d4b1a8d4291238688_636744f003193515321c27b5"
 }

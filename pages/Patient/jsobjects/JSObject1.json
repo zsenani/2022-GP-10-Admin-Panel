@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "Patient",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tfindHospital: async () => {\n\t\tawait Query3.run() \n\t\tif(Query3.data.length == 0){\n\t\t\tawait add_hospital.run()\n\t\t\tcloseModal('add_hospital_modal')\n      get_hospital.run()\n\t\t}else{\n\t\t\tshowAlert('The hospital is already exists')\n\t\t}\n\t}\n}\n\n",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Patient_JSObject1",
+  "deleted": false,
+  "gitSyncId": "6356520d4b1a8d4291238688_636744f103193515321c27c7"
+}
