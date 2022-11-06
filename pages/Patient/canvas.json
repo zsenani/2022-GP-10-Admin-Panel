@@ -654,7 +654,7 @@
               "bottomRow": 68,
               "fieldLimitExceeded": false,
               "parentRowSpace": 10,
-              "title": "Edit Physician",
+              "title": "Edit Patient",
               "type": "JSON_FORM_WIDGET",
               "hideCard": false,
               "animateLoading": true,
