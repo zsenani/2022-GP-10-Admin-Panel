@@ -6,7 +6,7 @@
 # in Saudi Arabia and give the physician the ability to reach all his patients' information. 
 # But it aids physicians diagnosing unusual cases with minimal risks and resources.
 
-# MedCore admin panle uses a JavaScript as a programming language. 
+# MedCore admin panel uses a JavaScript as a programming language. 
 
 # https://app.appsmith.com/app/medcore/hospital-6356520d4b1a8d429123868b?branch=master
 
