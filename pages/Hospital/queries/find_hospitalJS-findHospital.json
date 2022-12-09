@@ -3,7 +3,7 @@
   "pluginId": "js-plugin",
   "unpublishedAction": {
     "name": "findHospital",
-    "fullyQualifiedName": "JSObject1.findHospital",
+    "fullyQualifiedName": "find_hospitalJS.findHospital",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,12 +14,12 @@
       "userPermissions": []
     },
     "pageId": "Hospital",
-    "collectionId": "Hospital_JSObject1",
+    "collectionId": "Hospital_find_hospitalJS",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  await Query3.run();\n  if (Query3.data.length == 0) {\n    await add_hospital.run();\n    closeModal('add_hospital_modal');\n    get_hospital.run();\n  } else {\n    showAlert('The hospital is already exists');\n  }\n}",
+      "body": "async () => {\n  await find_hospital.run();\n  if (find_hospital.data.length == 0) {\n    await add_hospital.run();\n    closeModal('add_hospital_modal');\n    get_hospital.run();\n  } else {\n    showAlert('The hospital is already exists');\n  }\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -35,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n  await Query3.run();\n  if (Query3.data.length == 0) {\n    await add_hospital.run();\n    closeModal('add_hospital_modal');\n    get_hospital.run();\n  } else {\n    showAlert('The hospital is already exists');\n  }\n}"
+      "async () => {\n  await find_hospital.run();\n  if (find_hospital.data.length == 0) {\n    await add_hospital.run();\n    closeModal('add_hospital_modal');\n    get_hospital.run();\n  } else {\n    showAlert('The hospital is already exists');\n  }\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Hospital_JSObject1.findHospital",
+  "id": "Hospital_find_hospitalJS.findHospital",
   "deleted": false,
   "gitSyncId": "6356520d4b1a8d4291238688_6363c13bbaf07e59ff351554"
 }

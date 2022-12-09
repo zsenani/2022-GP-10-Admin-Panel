@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 65,
+          "version": 70,
           "minHeight": 1292,
           "dynamicTriggerPathList": [],
           "parentColumnSpace": 1,
@@ -127,9 +127,6 @@
                   "key": "childStylesheet.editActions.discardBorderRadius"
                 },
                 {
-                  "key": "tableData"
-                },
-                {
                   "key": "primaryColumns.city.computedValue"
                 },
                 {
@@ -139,25 +136,13 @@
                   "key": "primaryColumns.name.computedValue"
                 },
                 {
-                  "key": "primaryColumns._id.computedValue"
-                },
-                {
                   "key": "primaryColumns.region.computedValue"
                 },
                 {
-                  "key": "primaryColumns.Physician.computedValue"
+                  "key": "tableData"
                 },
                 {
-                  "key": "primaryColumns.Physician.buttonLabel"
-                },
-                {
-                  "key": "primaryColumns.Physician.menuButtonLabel"
-                },
-                {
-                  "key": "primaryColumns.LabSpecialist.computedValue"
-                },
-                {
-                  "key": "primaryColumns.Visit.computedValue"
+                  "key": "primaryColumns.idhospital.computedValue"
                 }
               ],
               "leftColumn": 0,
@@ -200,14 +185,11 @@
               "widgetName": "hospital_table",
               "defaultPageSize": 0,
               "columnOrder": [
+                "idhospital",
                 "name",
                 "region",
                 "city",
-                "district",
-                "Physician",
-                "_id",
-                "LabSpecialist",
-                "Visit"
+                "district"
               ],
               "dynamicPropertyPathList": [
                 {
@@ -233,9 +215,6 @@
               "parentColumnSpace": 12.5625,
               "dynamicTriggerPathList": [
                 {
-                  "key": "primaryColumns.Physician.onClick"
-                },
-                {
                   "key": "onRowSelected"
                 }
               ],
@@ -259,7 +238,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "city",
+                  "label": "City",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"city\"]))}}",
@@ -285,7 +264,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "district",
+                  "label": "District",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"district\"]))}}",
@@ -311,36 +290,10 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "name",
+                  "label": "Name",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
-                  "validation": {},
-                  "cellBackground": "transparent"
-                },
-                "_id": {
-                  "allowCellWrapping": false,
-                  "index": 5,
-                  "width": 150,
-                  "originalId": "_id",
-                  "id": "_id",
-                  "alias": "_id",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "0.875rem",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellEditable": false,
-                  "isEditable": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "_id",
-                  "isSaveVisible": true,
-                  "isDiscardVisible": true,
-                  "computedValue": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"_id\"]))}}",
                   "validation": {},
                   "cellBackground": "transparent"
                 },
@@ -363,98 +316,38 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "region",
+                  "label": "Region",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"region\"]))}}",
                   "validation": {},
                   "cellBackground": "transparent"
                 },
-                "Physician": {
+                "idhospital": {
                   "allowCellWrapping": false,
-                  "index": 6,
+                  "index": 0,
                   "width": 150,
-                  "originalId": "Physician",
-                  "id": "Physician",
-                  "alias": "Physician",
+                  "originalId": "idhospital",
+                  "id": "idhospital",
+                  "alias": "idhospital",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
-                  "columnType": "text",
+                  "columnType": "number",
                   "textColor": "",
                   "textSize": "0.875rem",
                   "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
-                  "isVisible": false,
+                  "isVisible": true,
                   "isDisabled": false,
                   "isCellEditable": false,
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "Physician",
+                  "label": "Hospital ID",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Physician\"]))}}",
-                  "validation": {},
-                  "cellBackground": "transparent",
-                  "customAlias": "",
-                  "buttonLabel": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( 'Action'))}}",
-                  "onClick": "{{showModal('ModalP')}}",
-                  "menuButtonLabel": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( 'Open Menu'))}}"
-                },
-                "LabSpecialist": {
-                  "allowCellWrapping": false,
-                  "index": 1,
-                  "width": 150,
-                  "originalId": "LabSpecialist",
-                  "id": "LabSpecialist",
-                  "alias": "LabSpecialist",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textColor": "",
-                  "textSize": "0.875rem",
-                  "fontStyle": "",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": false,
-                  "isDisabled": false,
-                  "isCellEditable": false,
-                  "isEditable": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "LabSpecialist",
-                  "isSaveVisible": true,
-                  "isDiscardVisible": true,
-                  "computedValue": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"LabSpecialist\"]))}}",
-                  "validation": {},
-                  "cellBackground": "transparent"
-                },
-                "Visit": {
-                  "allowCellWrapping": false,
-                  "index": 7,
-                  "width": 150,
-                  "originalId": "Visit",
-                  "id": "Visit",
-                  "alias": "Visit",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textColor": "",
-                  "textSize": "0.875rem",
-                  "fontStyle": "",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": false,
-                  "isDisabled": false,
-                  "isCellEditable": false,
-                  "isEditable": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "Visit",
-                  "isSaveVisible": true,
-                  "isDiscardVisible": true,
-                  "computedValue": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Visit\"]))}}",
+                  "computedValue": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"idhospital\"]))}}",
                   "validation": {},
                   "cellBackground": "transparent"
                 }
@@ -511,7 +404,7 @@
                       "isCustomField": false,
                       "accessor": "city",
                       "identifier": "city",
-                      "position": 1,
+                      "position": 2,
                       "originalIdentifier": "city",
                       "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(edit_hospital_JSONForm.sourceData, edit_hospital_JSONForm.formData, edit_hospital_JSONForm.fieldState)}}",
                       "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(edit_hospital_JSONForm.sourceData, edit_hospital_JSONForm.formData, edit_hospital_JSONForm.fieldState)}}",
@@ -533,7 +426,7 @@
                       "isCustomField": false,
                       "accessor": "district",
                       "identifier": "district",
-                      "position": 2,
+                      "position": 3,
                       "originalIdentifier": "district",
                       "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(edit_hospital_JSONForm.sourceData, edit_hospital_JSONForm.formData, edit_hospital_JSONForm.fieldState)}}",
                       "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(edit_hospital_JSONForm.sourceData, edit_hospital_JSONForm.formData, edit_hospital_JSONForm.fieldState)}}",
@@ -555,7 +448,7 @@
                       "isCustomField": false,
                       "accessor": "_id",
                       "identifier": "_id",
-                      "position": 3,
+                      "position": 4,
                       "originalIdentifier": "_id",
                       "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(edit_hospital_JSONForm.sourceData, edit_hospital_JSONForm.formData, edit_hospital_JSONForm.fieldState)}}",
                       "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(edit_hospital_JSONForm.sourceData, edit_hospital_JSONForm.formData, edit_hospital_JSONForm.fieldState)}}",
@@ -572,23 +465,24 @@
                       "children": {},
                       "dataType": "string",
                       "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.region))(edit_hospital_JSONForm.sourceData, edit_hospital_JSONForm.formData, edit_hospital_JSONForm.fieldState)}}",
-                      "fieldType": "Text Input",
+                      "fieldType": "Select",
                       "sourceData": "Riyadh ",
                       "isCustomField": false,
                       "accessor": "region",
                       "identifier": "region",
-                      "position": 4,
+                      "position": 1,
                       "originalIdentifier": "region",
                       "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(edit_hospital_JSONForm.sourceData, edit_hospital_JSONForm.formData, edit_hospital_JSONForm.fieldState)}}",
                       "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(edit_hospital_JSONForm.sourceData, edit_hospital_JSONForm.formData, edit_hospital_JSONForm.fieldState)}}",
                       "boxShadow": "none",
-                      "iconAlign": "left",
                       "isDisabled": false,
-                      "isRequired": true,
-                      "isSpellCheck": false,
+                      "isFilterable": false,
+                      "isRequired": false,
                       "isVisible": true,
+                      "label": "Region",
                       "labelTextSize": "0.875rem",
-                      "label": "Region"
+                      "serverSideFiltering": false,
+                      "options": "[\n  {\n    \"label\": \"Riyadh\",\n    \"value\": \"Riyadh\"\n  },\n  {\n    \"label\": \"Makkah\",\n    \"value\": \"Makkah\"\n  },\n  {\n    \"label\": \"Eastern\",\n    \"value\": \"Eastern\"\n  },\n\t{\n    \"label\": \"Madinah\",\n    \"value\": \"Madinah\"\n  },\n\t{\n    \"label\": \"Al Baha\",\n    \"value\": \"Al Baha\"\n  },\n\t{\n    \"label\": \"Al Jawf\",\n    \"value\": \"Al Jawf\"\n  },\n\t{\n    \"label\": \"Northern Borders\",\n    \"value\": \"Northern Borders\"\n  },\n\t{\n    \"label\": \"Qassim\",\n    \"value\": \"Qassim\"\n  },\n\t{\n    \"label\": \"Ha'il\",\n    \"value\": \"Ha'il\"\n  },\n\t{\n    \"label\": \"Tabuk\",\n    \"value\": \"Tabuk\"\n  },\n\t{\n    \"label\": \"'Aseer\",\n    \"value\": \"'Aseer'\"\n  },\n\t{\n    \"label\": \"Jizan\",\n    \"value\": \"Jizan\"\n  },\n\t{\n    \"label\": \"Najran\",\n    \"value\": \"Najran\"\n  }\n]"
                     },
                     "LabSpecialist": {
                       "children": {
@@ -958,6 +852,7 @@
               "backgroundColor": "#fff",
               "isDeprecated": false,
               "rightColumn": 62,
+              "dynamicHeight": "FIXED",
               "autoGenerateForm": false,
               "widgetId": "1hwu5abhxa",
               "resetButtonStyles": {
@@ -1053,7 +948,9 @@
                 }
               },
               "disabledWhenInvalid": true,
-              "borderRadius": "0.375rem"
+              "borderRadius": "0.375rem",
+              "maxDynamicHeight": 9000,
+              "minDynamicHeight": 4
             },
             {
               "boxShadow": "none",
@@ -1182,7 +1079,7 @@
                           "widgetName": "Canvas2",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 390,
+                          "bottomRow": 330,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
@@ -1201,7 +1098,7 @@
                           "children": [
                             {
                               "boxShadow": "none",
-                              "widgetName": "hospital_district",
+                              "widgetName": "hospital_name",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
                               "searchTags": [
@@ -1210,10 +1107,10 @@
                                 "number",
                                 "textarea"
                               ],
-                              "topRow": 18,
-                              "bottomRow": 22,
+                              "topRow": 4,
+                              "bottomRow": 8,
                               "parentRowSpace": 10,
-                              "labelWidth": "10",
+                              "labelWidth": "13",
                               "autoFocus": false,
                               "type": "INPUT_WIDGET_V2",
                               "hideCard": false,
@@ -1239,6 +1136,63 @@
                               "isRequired": true,
                               "isDeprecated": false,
                               "rightColumn": 61,
+                              "dynamicHeight": "FIXED",
+                              "widgetId": "y1depq8gjd",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "label": "Name",
+                              "version": 2,
+                              "parentId": "iz1jrn5wz6",
+                              "labelAlignment": "left",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "maxDynamicHeight": 9000,
+                              "iconAlign": "left",
+                              "defaultText": "",
+                              "minDynamicHeight": 4
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "hospital_district",
+                              "displayName": "Input",
+                              "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
+                              "searchTags": [
+                                "form",
+                                "text input",
+                                "number",
+                                "textarea"
+                              ],
+                              "topRow": 16,
+                              "bottomRow": 20,
+                              "parentRowSpace": 10,
+                              "labelWidth": "13",
+                              "autoFocus": false,
+                              "type": "INPUT_WIDGET_V2",
+                              "hideCard": false,
+                              "animateLoading": true,
+                              "parentColumnSpace": 6.2998046875,
+                              "dynamicTriggerPathList": [],
+                              "resetOnSubmit": true,
+                              "leftColumn": 2,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
+                              "labelPosition": "Left",
+                              "labelStyle": "",
+                              "inputType": "TEXT",
+                              "isDisabled": false,
+                              "key": "7c07fryr7f",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": true,
+                              "isDeprecated": false,
+                              "rightColumn": 61,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "4omnbq4lvx",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
@@ -1249,8 +1203,10 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "maxDynamicHeight": 9000,
                               "iconAlign": "left",
-                              "defaultText": ""
+                              "defaultText": "",
+                              "minDynamicHeight": 4
                             },
                             {
                               "boxShadow": "none",
@@ -1263,10 +1219,10 @@
                                 "number",
                                 "textarea"
                               ],
-                              "topRow": 13,
-                              "bottomRow": 17,
+                              "topRow": 12,
+                              "bottomRow": 16,
                               "parentRowSpace": 10,
-                              "labelWidth": "10",
+                              "labelWidth": "13",
                               "autoFocus": false,
                               "type": "INPUT_WIDGET_V2",
                               "hideCard": false,
@@ -1292,6 +1248,7 @@
                               "isRequired": true,
                               "isDeprecated": false,
                               "rightColumn": 61,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "1on94ui3ig",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
@@ -1302,67 +1259,16 @@
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "maxDynamicHeight": 9000,
                               "iconAlign": "left",
-                              "defaultText": ""
-                            },
-                            {
-                              "boxShadow": "none",
-                              "widgetName": "hospital_region",
-                              "displayName": "Input",
-                              "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-                              "searchTags": [
-                                "form",
-                                "text input",
-                                "number",
-                                "textarea"
-                              ],
-                              "topRow": 8,
-                              "bottomRow": 12,
-                              "parentRowSpace": 10,
-                              "labelWidth": "10",
-                              "autoFocus": false,
-                              "type": "INPUT_WIDGET_V2",
-                              "hideCard": false,
-                              "animateLoading": true,
-                              "parentColumnSpace": 6.2998046875,
-                              "dynamicTriggerPathList": [],
-                              "resetOnSubmit": true,
-                              "leftColumn": 2,
-                              "dynamicBindingPathList": [
-                                {
-                                  "key": "accentColor"
-                                },
-                                {
-                                  "key": "borderRadius"
-                                }
-                              ],
-                              "labelPosition": "Left",
-                              "labelStyle": "",
-                              "inputType": "TEXT",
-                              "isDisabled": false,
-                              "key": "7c07fryr7f",
-                              "labelTextSize": "0.875rem",
-                              "isRequired": true,
-                              "isDeprecated": false,
-                              "rightColumn": 61,
-                              "widgetId": "7a4o24bdt6",
-                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "isVisible": true,
-                              "label": "Region",
-                              "version": 2,
-                              "parentId": "iz1jrn5wz6",
-                              "labelAlignment": "left",
-                              "renderMode": "CANVAS",
-                              "isLoading": false,
-                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                              "iconAlign": "left",
-                              "defaultText": ""
+                              "defaultText": "",
+                              "minDynamicHeight": 4
                             },
                             {
                               "resetFormOnClick": true,
                               "boxShadow": "none",
                               "widgetName": "Button1",
-                              "onClick": "{{JSObject1.findHospital()}}",
+                              "onClick": "{{find_hospitalJS.findHospital()}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "dynamicPropertyPathList": [
                                 {
@@ -1457,7 +1363,7 @@
                             },
                             {
                               "boxShadow": "none",
-                              "widgetName": "hospital_name",
+                              "widgetName": "hospital_id",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
                               "searchTags": [
@@ -1466,10 +1372,10 @@
                                 "number",
                                 "textarea"
                               ],
-                              "topRow": 3,
-                              "bottomRow": 7,
+                              "topRow": 0,
+                              "bottomRow": 4,
                               "parentRowSpace": 10,
-                              "labelWidth": "10",
+                              "labelWidth": "13",
                               "autoFocus": false,
                               "type": "INPUT_WIDGET_V2",
                               "hideCard": false,
@@ -1495,18 +1401,73 @@
                               "isRequired": true,
                               "isDeprecated": false,
                               "rightColumn": 61,
+                              "dynamicHeight": "FIXED",
                               "widgetId": "hp7s5n0yd4",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
-                              "label": "Name",
+                              "label": "Hospital ID",
                               "version": 2,
                               "parentId": "iz1jrn5wz6",
                               "labelAlignment": "left",
                               "renderMode": "CANVAS",
                               "isLoading": false,
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "maxDynamicHeight": 9000,
                               "iconAlign": "left",
-                              "defaultText": ""
+                              "defaultText": "",
+                              "minDynamicHeight": 4
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "hospital_region",
+                              "isFilterable": false,
+                              "displayName": "Select",
+                              "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
+                              "labelText": "Region",
+                              "searchTags": [
+                                "dropdown"
+                              ],
+                              "topRow": 8,
+                              "bottomRow": 12,
+                              "parentRowSpace": 10,
+                              "labelWidth": "13",
+                              "type": "SELECT_WIDGET",
+                              "serverSideFiltering": false,
+                              "hideCard": false,
+                              "defaultOptionValue": "GREEN",
+                              "animateLoading": true,
+                              "parentColumnSpace": 6.2998046875,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 2,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
+                              "labelPosition": "Left",
+                              "options": "[\n  {\n    \"label\": \"Riyadh\",\n    \"value\": \"Riyadh\"\n  },\n  {\n    \"label\": \"Makkah\",\n    \"value\": \"Makkah\"\n  },\n  {\n    \"label\": \"Eastern\",\n    \"value\": \"Eastern\"\n  },\n\t{\n    \"label\": \"Madinah\",\n    \"value\": \"Madinah\"\n  },\n\t{\n    \"label\": \"Al Baha\",\n    \"value\": \"Al Baha\"\n  },\n\t{\n    \"label\": \"Al Jawf\",\n    \"value\": \"Al Jawf\"\n  },\n\t{\n    \"label\": \"Northern Borders\",\n    \"value\": \"Northern Borders\"\n  },\n\t{\n    \"label\": \"Qassim\",\n    \"value\": \"Qassim\"\n  },\n\t{\n    \"label\": \"Ha'il\",\n    \"value\": \"Ha'il\"\n  },\n\t{\n    \"label\": \"Tabuk\",\n    \"value\": \"Tabuk\"\n  },\n\t{\n    \"label\": \"'Aseer\",\n    \"value\": \"'Aseer'\"\n  },\n\t{\n    \"label\": \"Jizan\",\n    \"value\": \"Jizan\"\n  },\n\t{\n    \"label\": \"Najran\",\n    \"value\": \"Najran\"\n  }\n]",
+                              "placeholderText": "Select option",
+                              "isDisabled": false,
+                              "key": "rkb8xjv4ss",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": false,
+                              "isDeprecated": false,
+                              "rightColumn": 63,
+                              "dynamicHeight": "FIXED",
+                              "widgetId": "quy0xey87r",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "version": 1,
+                              "parentId": "iz1jrn5wz6",
+                              "labelAlignment": "left",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "maxDynamicHeight": 9000,
+                              "minDynamicHeight": 4
                             }
                           ],
                           "key": "bpekw90lxz",
@@ -1529,12 +1490,15 @@
                       "backgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
                       "isDeprecated": false,
                       "rightColumn": 63,
+                      "dynamicHeight": "FIXED",
                       "widgetId": "6i7gnhvrlw",
                       "isVisible": true,
                       "parentId": "qkhkj979mp",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "maxDynamicHeight": 9000,
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -1622,6 +1586,7 @@
                       "isDeprecated": false,
                       "rightColumn": 37,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "ln1bzw0s8h",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -1631,7 +1596,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "fontSize": "1.25rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "1.25rem",
+                      "minDynamicHeight": 4
                     }
                   ],
                   "isDisabled": false,
@@ -1655,6 +1622,7 @@
               "rightColumn": 38,
               "backgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
               "detachFromLayout": true,
+              "dynamicHeight": "FIXED",
               "widgetId": "a1f491soxd",
               "canOutsideClickClose": true,
               "canEscapeKeyClose": true,
@@ -1663,7 +1631,9 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "width": 456
+              "maxDynamicHeight": 9000,
+              "width": 456,
+              "minDynamicHeight": 4
             },
             {
               "resetFormOnClick": false,
@@ -1835,7 +1805,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "IconButton2",
-                      "onClick": "{{resetWidget('Table1').then(()=> {Query1.run();\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t\tcloseModal('ModalP')})\nresetWidget('tt1').then(()=> {Query2.run();\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t\tcloseModal('ModalP')})\n}}",
+                      "onClick": "{{resetWidget('Table1').then(()=> {update_hospital.run();\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t\tcloseModal('ModalP')})\nresetWidget('tt1').then(()=> {Query2.run();\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t\tcloseModal('ModalP')})\n}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -2083,7 +2053,7 @@
                                   "cellBackground": "transparent"
                                 }
                               },
-                              "onRowSelected": "{{Query1.run()}}",
+                              "onRowSelected": "{{update_hospital.run()}}",
                               "key": "wc4hxv24a7",
                               "isDeprecated": false,
                               "rightColumn": 58,
@@ -2212,6 +2182,9 @@
                                 },
                                 {
                                   "key": "tableData"
+                                },
+                                {
+                                  "key": "primaryColumns.hospitals.computedValue"
                                 }
                               ],
                               "leftColumn": 1,
@@ -2263,7 +2236,8 @@
                                 "email",
                                 "password",
                                 "nationalId",
-                                "_id"
+                                "_id",
+                                "hospitals"
                               ],
                               "dynamicPropertyPathList": [],
                               "displayName": "Table",
@@ -2539,6 +2513,34 @@
                                   "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"email\"]))}}",
                                   "validation": {},
                                   "cellBackground": "{{appsmith.theme.colors.backgroundColor}}"
+                                },
+                                "hospitals": {
+                                  "allowCellWrapping": false,
+                                  "index": 0,
+                                  "width": 150,
+                                  "originalId": "hospitals",
+                                  "id": "hospitals",
+                                  "alias": "hospitals",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "hospitals",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"hospitals\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": "#F0F9F8"
                                 }
                               },
                               "key": "xltdvoo6n7",
@@ -2546,7 +2548,7 @@
                               "rightColumn": 64,
                               "textSize": "0.875rem",
                               "widgetId": "gbsj53jvh3",
-                              "tableData": "{{Query1.data}}",
+                              "tableData": "{{update_hospital.data}}",
                               "label": "Data",
                               "searchKey": "",
                               "parentId": "pan06kavys",
@@ -2704,9 +2706,6 @@
                                 },
                                 {
                                   "key": "cellBackground"
-                                },
-                                {
-                                  "key": "primaryColumns.hospital.computedValue"
                                 }
                               ],
                               "leftColumn": 1,
@@ -2757,8 +2756,7 @@
                                 "email",
                                 "password",
                                 "nationalId",
-                                "_id",
-                                "hospital"
+                                "_id"
                               ],
                               "dynamicPropertyPathList": [],
                               "displayName": "Table",
@@ -3008,34 +3006,6 @@
                                   "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"email\"]))}}",
                                   "validation": {},
                                   "cellBackground": "{{appsmith.theme.colors.backgroundColor}}"
-                                },
-                                "hospital": {
-                                  "allowCellWrapping": false,
-                                  "index": 8,
-                                  "width": 150,
-                                  "originalId": "hospital",
-                                  "id": "hospital",
-                                  "alias": "hospital",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textColor": "",
-                                  "textSize": "0.875rem",
-                                  "fontStyle": "",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellEditable": false,
-                                  "isEditable": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "hospital",
-                                  "isSaveVisible": true,
-                                  "isDiscardVisible": true,
-                                  "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"hospital\"]))}}",
-                                  "validation": {},
-                                  "cellBackground": "#F0F9F8"
                                 }
                               },
                               "key": "xltdvoo6n7",
@@ -3236,6 +3206,7 @@
                       "backgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
                       "isDeprecated": false,
                       "rightColumn": 64,
+                      "dynamicHeight": "FIXED",
                       "widgetId": "juh6auh9yx",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "defaultTab": "",
@@ -3261,7 +3232,9 @@
                       "parentId": "58tjviu0p4",
                       "renderMode": "CANVAS",
                       "isLoading": false,
-                      "borderRadius": "0px"
+                      "borderRadius": "0px",
+                      "maxDynamicHeight": 9000,
+                      "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
@@ -3322,6 +3295,7 @@
               "rightColumn": 37,
               "backgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
               "detachFromLayout": true,
+              "dynamicHeight": "FIXED",
               "widgetId": "xgvzv6efou",
               "canOutsideClickClose": true,
               "canEscapeKeyClose": true,
@@ -3330,7 +3304,9 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "width": 876
+              "maxDynamicHeight": 9000,
+              "width": 876,
+              "minDynamicHeight": 4
             },
             {
               "boxShadow": "none",
@@ -3452,6 +3428,7 @@
                       "isDeprecated": false,
                       "rightColumn": 41,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "7eiaa7ykhy",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -3461,7 +3438,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "fontSize": "1.5rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "1.5rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "resetFormOnClick": false,
@@ -3573,6 +3552,7 @@
               "isDeprecated": false,
               "rightColumn": 33,
               "detachFromLayout": true,
+              "dynamicHeight": "FIXED",
               "widgetId": "vn7fspgs0b",
               "canOutsideClickClose": true,
               "canEscapeKeyClose": true,
@@ -3581,7 +3561,9 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "width": 456
+              "maxDynamicHeight": 9000,
+              "width": 456,
+              "minDynamicHeight": 4
             },
             {
               "boxShadow": "none",
@@ -3740,6 +3722,7 @@
                       "isDeprecated": false,
                       "rightColumn": 41,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "56dbunrx5b",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -3749,7 +3732,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "fontSize": "1.5rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "1.5rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "resetFormOnClick": false,
@@ -3861,6 +3846,7 @@
               "isDeprecated": false,
               "rightColumn": 0,
               "detachFromLayout": true,
+              "dynamicHeight": "FIXED",
               "widgetId": "h78unqicxe",
               "canOutsideClickClose": true,
               "canEscapeKeyClose": true,
@@ -3869,7 +3855,9 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "width": 456
+              "maxDynamicHeight": 9000,
+              "width": 456,
+              "minDynamicHeight": 4
             },
             {
               "boxShadow": "none",
@@ -3988,9 +3976,6 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "borderRadius"
-                        },
-                        {
-                          "key": "textColor"
                         }
                       ],
                       "shouldTruncate": false,
@@ -3999,16 +3984,19 @@
                       "isDeprecated": false,
                       "rightColumn": 56,
                       "textAlign": "CENTER",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "wmmneepk6v",
                       "isVisible": true,
                       "fontStyle": "BOLD",
-                      "textColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "textColor": "#3f3f46",
                       "version": 1,
                       "parentId": "a2wx8mm7df",
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "fontSize": "0.950rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "0.950rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "resetFormOnClick": false,
@@ -4060,7 +4048,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button12",
-                      "onClick": "\n{{update_hospital.run(() =>\n\t\t\t\t\t\t\t\t\t\t\t{\n\tcloseModal('Modal4')\n\tget_hospital.run() \n\t\n})}}",
+                      "onClick": "{{update_hospital.run(() =>\n\t\t\t\t\t\t\t\t\t\t\t{\n\tcloseModal('Modal4')\n\tget_hospital.run() \n\t\n})}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -4133,6 +4121,7 @@
               "rightColumn": 35,
               "backgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
               "detachFromLayout": true,
+              "dynamicHeight": "FIXED",
               "widgetId": "ueikpln5ae",
               "canOutsideClickClose": true,
               "canEscapeKeyClose": true,
@@ -4141,7 +4130,9 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "width": 418
+              "maxDynamicHeight": 9000,
+              "width": 418,
+              "minDynamicHeight": 4
             },
             {
               "boxShadow": "none",
@@ -4270,6 +4261,7 @@
                       "isDeprecated": false,
                       "rightColumn": 57,
                       "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
                       "widgetId": "byoqo341xb",
                       "isVisible": true,
                       "fontStyle": "BOLD",
@@ -4279,7 +4271,9 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "fontSize": "1rem"
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "1rem",
+                      "minDynamicHeight": 4
                     },
                     {
                       "resetFormOnClick": false,
@@ -4401,6 +4395,7 @@
               "rightColumn": 0,
               "backgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
               "detachFromLayout": true,
+              "dynamicHeight": "FIXED",
               "widgetId": "k6dra198lh",
               "canOutsideClickClose": true,
               "canEscapeKeyClose": true,
@@ -4409,7 +4404,9 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "width": 462
+              "maxDynamicHeight": 9000,
+              "width": 462,
+              "minDynamicHeight": 4
             }
           ]
         },
@@ -4426,22 +4423,16 @@
           ],
           [
             {
-              "id": "Hospital_Query1",
-              "name": "Query1",
+              "id": "Hospital_update_hospital",
+              "name": "update_hospital",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "Table1.selectedRow.id"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Hospital_Query2",
-              "name": "Query2",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "tt1.selectedRow.id"
+                "edit_hospital_JSONForm.formData.region",
+                "edit_hospital_JSONForm.formData.city",
+                "edit_hospital_JSONForm.formData.district",
+                "edit_hospital_JSONForm.formData.name",
+                "hospital_table.selectedRow.idhospital"
               ],
               "timeoutInMillisecond": 10000
             }

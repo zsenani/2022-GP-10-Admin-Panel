@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mysql-plugin",
   "unpublishedAction": {
-    "name": "get_hospital",
+    "name": "find_hospital",
     "datasource": {
       "name": "MedCoreMySQL",
       "pluginId": "mysql-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM Hospital;",
+      "body": "SELECT * FROM Hospital WHERE idhospital = '{{hospital_id.text}}';",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,18 +26,24 @@
         }
       ]
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "hospital_id.text"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Hospital_get_hospital",
+  "id": "Hospital_find_hospital",
   "deleted": false,
-  "gitSyncId": "6356520d4b1a8d4291238688_6391f9181a6c7b62d5cb9431"
+  "gitSyncId": "6356520d4b1a8d4291238688_63921dd46b75d6679991925e"
 }
