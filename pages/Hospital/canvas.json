@@ -147,7 +147,7 @@
               ],
               "leftColumn": 0,
               "delimiter": ",",
-              "defaultSelectedRowIndex": "0",
+              "defaultSelectedRowIndex": "-1",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisibleFilters": true,
               "isVisible": true,
@@ -4128,7 +4128,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "Table1.selectedRow.id"
+                "Table1.selectedRow.idPhysician"
               ],
               "timeoutInMillisecond": 10000
             }
