@@ -799,9 +799,6 @@
                   "key": "schema.__root_schema__.children._id.borderRadius"
                 },
                 {
-                  "key": "schema.__root_schema__.children.region.defaultValue"
-                },
-                {
                   "key": "schema.__root_schema__.children.region.accentColor"
                 },
                 {
@@ -842,6 +839,9 @@
                 },
                 {
                   "key": "schema.__root_schema__.children.Physician.cellBorderRadius"
+                },
+                {
+                  "key": "schema.__root_schema__.children.region.defaultValue"
                 }
               ],
               "borderWidth": "1",
@@ -1434,7 +1434,7 @@
                               "type": "SELECT_WIDGET",
                               "serverSideFiltering": false,
                               "hideCard": false,
-                              "defaultOptionValue": "GREEN",
+                              "defaultOptionValue": "",
                               "animateLoading": true,
                               "parentColumnSpace": 6.2998046875,
                               "dynamicTriggerPathList": [],
@@ -1805,7 +1805,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "IconButton2",
-                      "onClick": "{{resetWidget('Table1').then(()=> {update_hospital.run();\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t\tcloseModal('ModalP')})\nresetWidget('tt1').then(()=> {Query2.run();\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t\tcloseModal('ModalP')})\n}}",
+                      "onClick": "{{resetWidget('Table1').then(()=> {get_physicianDetails.run();\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t\tcloseModal('ModalP')})\nresetWidget('tt1').then(()=> {get_labSpecialistDetails.run();\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t\tcloseModal('ModalP')})\n}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -1869,7 +1869,11 @@
                       "shouldScrollContents": false,
                       "animateLoading": true,
                       "parentColumnSpace": 12.96875,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onTabSelected"
+                        }
+                      ],
                       "leftColumn": 0,
                       "dynamicBindingPathList": [
                         {
@@ -2053,13 +2057,13 @@
                                   "cellBackground": "transparent"
                                 }
                               },
-                              "onRowSelected": "{{update_hospital.run()}}",
+                              "onRowSelected": "{{get_physicianDetails.run()}}",
                               "key": "wc4hxv24a7",
                               "isDeprecated": false,
                               "rightColumn": 58,
                               "textSize": "0.875rem",
                               "widgetId": "geu8t10vqy",
-                              "tableData": "{{hospital_table.selectedRow[\"Physician\"]\n}}",
+                              "tableData": "{{get_physician.data}}",
                               "label": "Data",
                               "searchKey": "",
                               "parentId": "pan06kavys",
@@ -2118,73 +2122,13 @@
                                   "key": "childStylesheet.editActions.discardBorderRadius"
                                 },
                                 {
-                                  "key": "primaryColumns.password.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.gender.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.nationality.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.nationalId.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.DOB.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.name.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.specialization.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns._id.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.mobileNo.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.email.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.password.cellBackground"
-                                },
-                                {
-                                  "key": "primaryColumns.gender.cellBackground"
-                                },
-                                {
-                                  "key": "primaryColumns.nationality.cellBackground"
-                                },
-                                {
-                                  "key": "primaryColumns.nationalId.cellBackground"
-                                },
-                                {
-                                  "key": "primaryColumns.DOB.cellBackground"
-                                },
-                                {
-                                  "key": "primaryColumns.name.cellBackground"
-                                },
-                                {
-                                  "key": "primaryColumns.specialization.cellBackground"
-                                },
-                                {
-                                  "key": "primaryColumns._id.cellBackground"
-                                },
-                                {
-                                  "key": "primaryColumns.mobileNo.cellBackground"
-                                },
-                                {
-                                  "key": "primaryColumns.email.cellBackground"
-                                },
-                                {
                                   "key": "cellBackground"
                                 },
                                 {
-                                  "key": "tableData"
+                                  "key": "primaryColumns.affectedRows.computedValue"
                                 },
                                 {
-                                  "key": "primaryColumns.hospitals.computedValue"
+                                  "key": "tableData"
                                 }
                               ],
                               "leftColumn": 1,
@@ -2227,17 +2171,7 @@
                               "widgetName": "Table2",
                               "defaultPageSize": 0,
                               "columnOrder": [
-                                "name",
-                                "gender",
-                                "nationality",
-                                "DOB",
-                                "specialization",
-                                "mobileNo",
-                                "email",
-                                "password",
-                                "nationalId",
-                                "_id",
-                                "hospitals"
+                                "affectedRows"
                               ],
                               "dynamicPropertyPathList": [],
                               "displayName": "Table",
@@ -2254,276 +2188,16 @@
                               "dynamicTriggerPathList": [],
                               "borderWidth": "1",
                               "primaryColumns": {
-                                "password": {
+                                "affectedRows": {
                                   "allowCellWrapping": false,
                                   "index": 0,
                                   "width": 150,
-                                  "originalId": "password",
-                                  "id": "password",
-                                  "alias": "password",
+                                  "originalId": "affectedRows",
+                                  "id": "affectedRows",
+                                  "alias": "affectedRows",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "0.875rem",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": false,
-                                  "isDisabled": false,
-                                  "isCellEditable": false,
-                                  "isEditable": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "password",
-                                  "isSaveVisible": true,
-                                  "isDiscardVisible": true,
-                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"password\"]))}}",
-                                  "validation": {},
-                                  "cellBackground": "{{appsmith.theme.colors.backgroundColor}}"
-                                },
-                                "gender": {
-                                  "allowCellWrapping": false,
-                                  "index": 1,
-                                  "width": 150,
-                                  "originalId": "gender",
-                                  "id": "gender",
-                                  "alias": "gender",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "0.875rem",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellEditable": false,
-                                  "isEditable": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "gender",
-                                  "isSaveVisible": true,
-                                  "isDiscardVisible": true,
-                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"gender\"]))}}",
-                                  "validation": {},
-                                  "cellBackground": "{{appsmith.theme.colors.backgroundColor}}"
-                                },
-                                "nationality": {
-                                  "allowCellWrapping": false,
-                                  "index": 2,
-                                  "width": 150,
-                                  "originalId": "nationality",
-                                  "id": "nationality",
-                                  "alias": "nationality",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "0.875rem",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellEditable": false,
-                                  "isEditable": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "nationality",
-                                  "isSaveVisible": true,
-                                  "isDiscardVisible": true,
-                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationality\"]))}}",
-                                  "validation": {},
-                                  "cellBackground": "{{appsmith.theme.colors.backgroundColor}}"
-                                },
-                                "nationalId": {
-                                  "allowCellWrapping": false,
-                                  "index": 3,
-                                  "width": 150,
-                                  "originalId": "nationalId",
-                                  "id": "nationalId",
-                                  "alias": "nationalId",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "0.875rem",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": false,
-                                  "isDisabled": false,
-                                  "isCellEditable": false,
-                                  "isEditable": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "nationalId",
-                                  "isSaveVisible": true,
-                                  "isDiscardVisible": true,
-                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationalId\"]))}}",
-                                  "validation": {},
-                                  "cellBackground": "{{appsmith.theme.colors.backgroundColor}}"
-                                },
-                                "DOB": {
-                                  "allowCellWrapping": false,
-                                  "index": 4,
-                                  "width": 150,
-                                  "originalId": "DOB",
-                                  "id": "DOB",
-                                  "alias": "DOB",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "date",
-                                  "textSize": "0.875rem",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellEditable": false,
-                                  "isEditable": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "DOB",
-                                  "isSaveVisible": true,
-                                  "isDiscardVisible": true,
-                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"DOB\"]))}}",
-                                  "validation": {},
-                                  "cellBackground": "{{appsmith.theme.colors.backgroundColor}}"
-                                },
-                                "name": {
-                                  "allowCellWrapping": false,
-                                  "index": 5,
-                                  "width": 150,
-                                  "originalId": "name",
-                                  "id": "name",
-                                  "alias": "name",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "0.875rem",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellEditable": false,
-                                  "isEditable": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "name",
-                                  "isSaveVisible": true,
-                                  "isDiscardVisible": true,
-                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
-                                  "validation": {},
-                                  "cellBackground": "{{appsmith.theme.colors.backgroundColor}}"
-                                },
-                                "specialization": {
-                                  "allowCellWrapping": false,
-                                  "index": 6,
-                                  "width": 150,
-                                  "originalId": "specialization",
-                                  "id": "specialization",
-                                  "alias": "specialization",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "0.875rem",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellEditable": false,
-                                  "isEditable": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "specialization",
-                                  "isSaveVisible": true,
-                                  "isDiscardVisible": true,
-                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"specialization\"]))}}",
-                                  "validation": {},
-                                  "cellBackground": "{{appsmith.theme.colors.backgroundColor}}"
-                                },
-                                "_id": {
-                                  "allowCellWrapping": false,
-                                  "index": 7,
-                                  "width": 150,
-                                  "originalId": "_id",
-                                  "id": "_id",
-                                  "alias": "_id",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "0.875rem",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": false,
-                                  "isDisabled": false,
-                                  "isCellEditable": false,
-                                  "isEditable": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "_id",
-                                  "isSaveVisible": true,
-                                  "isDiscardVisible": true,
-                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"_id\"]))}}",
-                                  "validation": {},
-                                  "cellBackground": "{{appsmith.theme.colors.backgroundColor}}"
-                                },
-                                "mobileNo": {
-                                  "allowCellWrapping": false,
-                                  "index": 8,
-                                  "width": 150,
-                                  "originalId": "mobileNo",
-                                  "id": "mobileNo",
-                                  "alias": "mobileNo",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "0.875rem",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellEditable": false,
-                                  "isEditable": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "mobileNo",
-                                  "isSaveVisible": true,
-                                  "isDiscardVisible": true,
-                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"mobileNo\"]))}}",
-                                  "validation": {},
-                                  "cellBackground": "{{appsmith.theme.colors.backgroundColor}}"
-                                },
-                                "email": {
-                                  "allowCellWrapping": false,
-                                  "index": 10,
-                                  "width": 150,
-                                  "originalId": "email",
-                                  "id": "email",
-                                  "alias": "email",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "0.875rem",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellEditable": false,
-                                  "isEditable": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "email",
-                                  "isSaveVisible": true,
-                                  "isDiscardVisible": true,
-                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"email\"]))}}",
-                                  "validation": {},
-                                  "cellBackground": "{{appsmith.theme.colors.backgroundColor}}"
-                                },
-                                "hospitals": {
-                                  "allowCellWrapping": false,
-                                  "index": 0,
-                                  "width": 150,
-                                  "originalId": "hospitals",
-                                  "id": "hospitals",
-                                  "alias": "hospitals",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
+                                  "columnType": "number",
                                   "textColor": "",
                                   "textSize": "0.875rem",
                                   "fontStyle": "",
@@ -2535,10 +2209,10 @@
                                   "isEditable": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "hospitals",
+                                  "label": "affectedRows",
                                   "isSaveVisible": true,
                                   "isDiscardVisible": true,
-                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"hospitals\"]))}}",
+                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"affectedRows\"]))}}",
                                   "validation": {},
                                   "cellBackground": "#F0F9F8"
                                 }
@@ -2548,7 +2222,7 @@
                               "rightColumn": 64,
                               "textSize": "0.875rem",
                               "widgetId": "gbsj53jvh3",
-                              "tableData": "{{update_hospital.data}}",
+                              "tableData": "{{get_physicianDetails.data}}",
                               "label": "Data",
                               "searchKey": "",
                               "parentId": "pan06kavys",
@@ -2651,25 +2325,22 @@
                                   "key": "tableData"
                                 },
                                 {
-                                  "key": "primaryColumns.password.computedValue"
+                                  "key": "cellBackground"
                                 },
                                 {
-                                  "key": "primaryColumns.gender.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.nationality.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.nationalId.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.DOB.computedValue"
+                                  "key": "primaryColumns.nationalID.computedValue"
                                 },
                                 {
                                   "key": "primaryColumns.name.computedValue"
                                 },
                                 {
-                                  "key": "primaryColumns._id.computedValue"
+                                  "key": "primaryColumns.password.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.DOB.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.gender.computedValue"
                                 },
                                 {
                                   "key": "primaryColumns.mobileNo.computedValue"
@@ -2678,34 +2349,10 @@
                                   "key": "primaryColumns.email.computedValue"
                                 },
                                 {
-                                  "key": "primaryColumns.password.cellBackground"
+                                  "key": "primaryColumns.nationality.computedValue"
                                 },
                                 {
-                                  "key": "primaryColumns.gender.cellBackground"
-                                },
-                                {
-                                  "key": "primaryColumns.nationality.cellBackground"
-                                },
-                                {
-                                  "key": "primaryColumns.nationalId.cellBackground"
-                                },
-                                {
-                                  "key": "primaryColumns.DOB.cellBackground"
-                                },
-                                {
-                                  "key": "primaryColumns.name.cellBackground"
-                                },
-                                {
-                                  "key": "primaryColumns._id.cellBackground"
-                                },
-                                {
-                                  "key": "primaryColumns.mobileNo.cellBackground"
-                                },
-                                {
-                                  "key": "primaryColumns.email.cellBackground"
-                                },
-                                {
-                                  "key": "cellBackground"
+                                  "key": "primaryColumns.idHospital.computedValue"
                                 }
                               ],
                               "leftColumn": 1,
@@ -2748,15 +2395,15 @@
                               "widgetName": "Table2Copy",
                               "defaultPageSize": 0,
                               "columnOrder": [
+                                "nationalID",
                                 "name",
-                                "gender",
-                                "nationality",
+                                "password",
                                 "DOB",
+                                "gender",
                                 "mobileNo",
                                 "email",
-                                "password",
-                                "nationalId",
-                                "_id"
+                                "nationality",
+                                "idHospital"
                               ],
                               "dynamicPropertyPathList": [],
                               "displayName": "Table",
@@ -2773,17 +2420,19 @@
                               "dynamicTriggerPathList": [],
                               "borderWidth": "1",
                               "primaryColumns": {
-                                "password": {
+                                "nationalID": {
                                   "allowCellWrapping": false,
                                   "index": 0,
                                   "width": 150,
-                                  "originalId": "password",
-                                  "id": "password",
-                                  "alias": "password",
+                                  "originalId": "nationalID",
+                                  "id": "nationalID",
+                                  "alias": "nationalID",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
-                                  "columnType": "text",
+                                  "columnType": "number",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
+                                  "fontStyle": "",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": false,
@@ -2792,120 +2441,16 @@
                                   "isEditable": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "password",
+                                  "label": "nationalID",
                                   "isSaveVisible": true,
                                   "isDiscardVisible": true,
-                                  "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"password\"]))}}",
+                                  "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationalID\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "{{appsmith.theme.colors.backgroundColor}}"
-                                },
-                                "gender": {
-                                  "allowCellWrapping": false,
-                                  "index": 1,
-                                  "width": 150,
-                                  "originalId": "gender",
-                                  "id": "gender",
-                                  "alias": "gender",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "0.875rem",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellEditable": false,
-                                  "isEditable": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "gender",
-                                  "isSaveVisible": true,
-                                  "isDiscardVisible": true,
-                                  "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"gender\"]))}}",
-                                  "validation": {},
-                                  "cellBackground": "{{appsmith.theme.colors.backgroundColor}}"
-                                },
-                                "nationality": {
-                                  "allowCellWrapping": false,
-                                  "index": 2,
-                                  "width": 150,
-                                  "originalId": "nationality",
-                                  "id": "nationality",
-                                  "alias": "nationality",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "0.875rem",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellEditable": false,
-                                  "isEditable": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "nationality",
-                                  "isSaveVisible": true,
-                                  "isDiscardVisible": true,
-                                  "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationality\"]))}}",
-                                  "validation": {},
-                                  "cellBackground": "{{appsmith.theme.colors.backgroundColor}}"
-                                },
-                                "nationalId": {
-                                  "allowCellWrapping": false,
-                                  "index": 3,
-                                  "width": 150,
-                                  "originalId": "nationalId",
-                                  "id": "nationalId",
-                                  "alias": "nationalId",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "text",
-                                  "textSize": "0.875rem",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": false,
-                                  "isDisabled": false,
-                                  "isCellEditable": false,
-                                  "isEditable": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "nationalId",
-                                  "isSaveVisible": true,
-                                  "isDiscardVisible": true,
-                                  "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationalId\"]))}}",
-                                  "validation": {},
-                                  "cellBackground": "{{appsmith.theme.colors.backgroundColor}}"
-                                },
-                                "DOB": {
-                                  "allowCellWrapping": false,
-                                  "index": 4,
-                                  "width": 150,
-                                  "originalId": "DOB",
-                                  "id": "DOB",
-                                  "alias": "DOB",
-                                  "horizontalAlignment": "LEFT",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "date",
-                                  "textSize": "0.875rem",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellEditable": false,
-                                  "isEditable": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "DOB",
-                                  "isSaveVisible": true,
-                                  "isDiscardVisible": true,
-                                  "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"DOB\"]))}}",
-                                  "validation": {},
-                                  "cellBackground": "{{appsmith.theme.colors.backgroundColor}}"
+                                  "cellBackground": "#F0F9F8"
                                 },
                                 "name": {
                                   "allowCellWrapping": false,
-                                  "index": 5,
+                                  "index": 1,
                                   "width": 150,
                                   "originalId": "name",
                                   "id": "name",
@@ -2913,7 +2458,9 @@
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
+                                  "fontStyle": "",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -2927,19 +2474,21 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "{{appsmith.theme.colors.backgroundColor}}"
+                                  "cellBackground": "#F0F9F8"
                                 },
-                                "_id": {
+                                "password": {
                                   "allowCellWrapping": false,
-                                  "index": 7,
+                                  "index": 2,
                                   "width": 150,
-                                  "originalId": "_id",
-                                  "id": "_id",
-                                  "alias": "_id",
+                                  "originalId": "password",
+                                  "id": "password",
+                                  "alias": "password",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
+                                  "fontStyle": "",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": false,
@@ -2948,16 +2497,72 @@
                                   "isEditable": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "_id",
+                                  "label": "password",
                                   "isSaveVisible": true,
                                   "isDiscardVisible": true,
-                                  "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"_id\"]))}}",
+                                  "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"password\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "{{appsmith.theme.colors.backgroundColor}}"
+                                  "cellBackground": "#F0F9F8"
+                                },
+                                "DOB": {
+                                  "allowCellWrapping": false,
+                                  "index": 3,
+                                  "width": 150,
+                                  "originalId": "DOB",
+                                  "id": "DOB",
+                                  "alias": "DOB",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "date",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "DOB",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"DOB\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": "#F0F9F8"
+                                },
+                                "gender": {
+                                  "allowCellWrapping": false,
+                                  "index": 4,
+                                  "width": 150,
+                                  "originalId": "gender",
+                                  "id": "gender",
+                                  "alias": "gender",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "gender",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"gender\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": "#F0F9F8"
                                 },
                                 "mobileNo": {
                                   "allowCellWrapping": false,
-                                  "index": 8,
+                                  "index": 5,
                                   "width": 150,
                                   "originalId": "mobileNo",
                                   "id": "mobileNo",
@@ -2965,7 +2570,9 @@
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
+                                  "fontStyle": "",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -2979,11 +2586,11 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"mobileNo\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "{{appsmith.theme.colors.backgroundColor}}"
+                                  "cellBackground": "#F0F9F8"
                                 },
                                 "email": {
                                   "allowCellWrapping": false,
-                                  "index": 10,
+                                  "index": 6,
                                   "width": 150,
                                   "originalId": "email",
                                   "id": "email",
@@ -2991,7 +2598,9 @@
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
+                                  "fontStyle": "",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
@@ -3005,7 +2614,63 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"email\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "{{appsmith.theme.colors.backgroundColor}}"
+                                  "cellBackground": "#F0F9F8"
+                                },
+                                "nationality": {
+                                  "allowCellWrapping": false,
+                                  "index": 7,
+                                  "width": 150,
+                                  "originalId": "nationality",
+                                  "id": "nationality",
+                                  "alias": "nationality",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "nationality",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationality\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": "#F0F9F8"
+                                },
+                                "idHospital": {
+                                  "allowCellWrapping": false,
+                                  "index": 8,
+                                  "width": 150,
+                                  "originalId": "idHospital",
+                                  "id": "idHospital",
+                                  "alias": "idHospital",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "number",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": false,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "idHospital",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"idHospital\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": "#F0F9F8"
                                 }
                               },
                               "key": "xltdvoo6n7",
@@ -3013,7 +2678,7 @@
                               "rightColumn": 64,
                               "textSize": "0.875rem",
                               "widgetId": "zr9914uky6",
-                              "tableData": "{{Query2.data}}",
+                              "tableData": "{{get_labSpecialistDetails.data}}",
                               "label": "Data",
                               "searchKey": "",
                               "parentId": "tgm26z3wqo",
@@ -3075,7 +2740,7 @@
                                   "key": "tableData"
                                 },
                                 {
-                                  "key": "primaryColumns.id.computedValue"
+                                  "key": "primaryColumns.nationalID.computedValue"
                                 }
                               ],
                               "leftColumn": 9,
@@ -3118,9 +2783,13 @@
                               "widgetName": "tt1",
                               "defaultPageSize": 0,
                               "columnOrder": [
-                                "id"
+                                "nationalID"
                               ],
-                              "dynamicPropertyPathList": [],
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "tableData"
+                                }
+                              ],
                               "displayName": "Table",
                               "bottomRow": 35,
                               "columnWidthMap": {
@@ -3138,16 +2807,16 @@
                               ],
                               "borderWidth": "1",
                               "primaryColumns": {
-                                "id": {
+                                "nationalID": {
                                   "allowCellWrapping": false,
                                   "index": 0,
                                   "width": 150,
-                                  "originalId": "id",
-                                  "id": "id",
-                                  "alias": "id",
+                                  "originalId": "nationalID",
+                                  "id": "nationalID",
+                                  "alias": "nationalID",
                                   "horizontalAlignment": "CENTER",
                                   "verticalAlignment": "CENTER",
-                                  "columnType": "text",
+                                  "columnType": "number",
                                   "textColor": "",
                                   "textSize": "0.875rem",
                                   "fontStyle": "",
@@ -3159,21 +2828,21 @@
                                   "isEditable": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "id",
+                                  "label": "nationalID",
                                   "isSaveVisible": true,
                                   "isDiscardVisible": true,
-                                  "computedValue": "{{tt1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+                                  "computedValue": "{{tt1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationalID\"]))}}",
                                   "validation": {},
                                   "cellBackground": "transparent"
                                 }
                               },
-                              "onRowSelected": "{{Query2.run()}}",
+                              "onRowSelected": "{{get_labSpecialistDetails.run()}}",
                               "key": "wc4hxv24a7",
                               "isDeprecated": false,
                               "rightColumn": 58,
                               "textSize": "0.875rem",
                               "widgetId": "8px0nj7d9h",
-                              "tableData": "{{hospital_table.selectedRow[\"LabSpecialist\"]}}",
+                              "tableData": "{{get_labSpecialist.data}}",
                               "label": "Data",
                               "searchKey": "",
                               "parentId": "tgm26z3wqo",
@@ -3210,6 +2879,7 @@
                       "widgetId": "juh6auh9yx",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "defaultTab": "",
+                      "onTabSelected": "{{get_physician.run()}}",
                       "shouldShowTabs": true,
                       "tabsObj": {
                         "tab1": {
@@ -4423,16 +4093,42 @@
           ],
           [
             {
-              "id": "Hospital_update_hospital",
-              "name": "update_hospital",
+              "id": "Hospital_get_labSpecialist",
+              "name": "get_labSpecialist",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "edit_hospital_JSONForm.formData.region",
-                "edit_hospital_JSONForm.formData.city",
-                "edit_hospital_JSONForm.formData.district",
-                "edit_hospital_JSONForm.formData.name",
                 "hospital_table.selectedRow.idhospital"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Hospital_get_labSpecialistDetails",
+              "name": "get_labSpecialistDetails",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "tt1.selectedRow.nationalID"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Hospital_get_physician",
+              "name": "get_physician",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "hospital_table.selectedRow.idhospital"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Hospital_get_physicianDetails",
+              "name": "get_physicianDetails",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Table1.selectedRow.id"
               ],
               "timeoutInMillisecond": 10000
             }

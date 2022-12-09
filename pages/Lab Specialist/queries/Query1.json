@@ -60,7 +60,7 @@
         },
         "find": {
           "query": {
-            "data": "{\"nationalId\": \"{{Table1.selectedRow.id}}\"}"
+            "data": "{\"nationalId\": \"{{table.selectedRow.id}}\"}"
           },
           "limit": {
             "data": "10"
@@ -96,7 +96,7 @@
         }
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "formData.find.query.data"
@@ -106,7 +106,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Table1.selectedRow.id"
+      "table.selectedRow.id"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
