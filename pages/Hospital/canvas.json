@@ -2879,7 +2879,7 @@
                       "widgetId": "juh6auh9yx",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "defaultTab": "",
-                      "onTabSelected": "{{get_physician.run()}}",
+                      "onTabSelected": "{{get_physician.run(() => get_labSpecialist.run(), () => {})}}",
                       "shouldShowTabs": true,
                       "tabsObj": {
                         "tab1": {
