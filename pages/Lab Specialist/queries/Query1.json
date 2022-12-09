@@ -60,7 +60,7 @@
         },
         "find": {
           "query": {
-            "data": "{\"nationalId\": \"{{table.selectedRow.id}}\"}"
+            "data": "{\"nationalId\": \"{{labSpecialist_table.selectedRow.id}}\"}"
           },
           "limit": {
             "data": "10"
@@ -106,7 +106,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "table.selectedRow.id"
+      "labSpecialist_table.selectedRow.id"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

@@ -76,28 +76,31 @@
                   "key": "childStylesheet.editActions.discardBorderRadius"
                 },
                 {
-                  "key": "primaryColumns.city.computedValue"
+                  "key": "tableData"
                 },
                 {
-                  "key": "primaryColumns.district.computedValue"
+                  "key": "primaryColumns.nationalID.computedValue"
                 },
                 {
-                  "key": "primaryColumns._id.computedValue"
+                  "key": "primaryColumns.password.computedValue"
                 },
                 {
-                  "key": "primaryColumns.region.computedValue"
+                  "key": "primaryColumns.DOB.computedValue"
                 },
                 {
-                  "key": "primaryColumns.Physician.computedValue"
+                  "key": "primaryColumns.gender.computedValue"
                 },
                 {
-                  "key": "primaryColumns.Physician.buttonLabel"
+                  "key": "primaryColumns.mobileNo.computedValue"
                 },
                 {
-                  "key": "primaryColumns.Physician.menuButtonLabel"
+                  "key": "primaryColumns.email.computedValue"
                 },
                 {
-                  "key": "primaryColumns.LabSpecialist.computedValue"
+                  "key": "primaryColumns.nationality.computedValue"
+                },
+                {
+                  "key": "primaryColumns.idHospital.computedValue"
                 }
               ],
               "leftColumn": 0,
@@ -137,17 +140,18 @@
               "defaultSelectedRowIndices": [
                 0
               ],
-              "widgetName": "table",
+              "widgetName": "labSpecialist_table",
               "defaultPageSize": 0,
               "columnOrder": [
                 "name",
-                "region",
-                "city",
-                "district",
-                "Physician",
-                "_id",
-                "LabSpecialist",
-                "Visit"
+                "nationalID",
+                "password",
+                "DOB",
+                "gender",
+                "mobileNo",
+                "email",
+                "nationality",
+                "idHospital"
               ],
               "dynamicPropertyPathList": [
                 {
@@ -173,65 +177,10 @@
               "parentColumnSpace": 12.5625,
               "dynamicTriggerPathList": [
                 {
-                  "key": "primaryColumns.Physician.onClick"
-                },
-                {
                   "key": "onRowSelected"
                 }
               ],
               "primaryColumns": {
-                "city": {
-                  "allowCellWrapping": false,
-                  "index": 0,
-                  "width": 150,
-                  "originalId": "city",
-                  "id": "city",
-                  "alias": "city",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "0.875rem",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellEditable": false,
-                  "isEditable": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "",
-                  "isSaveVisible": true,
-                  "isDiscardVisible": true,
-                  "computedValue": "{{table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"city\"]))}}",
-                  "validation": {},
-                  "cellBackground": "transparent"
-                },
-                "district": {
-                  "allowCellWrapping": false,
-                  "index": 2,
-                  "width": 150,
-                  "originalId": "district",
-                  "id": "district",
-                  "alias": "district",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "0.875rem",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellEditable": false,
-                  "isEditable": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "",
-                  "isSaveVisible": true,
-                  "isDiscardVisible": true,
-                  "computedValue": "{{table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"district\"]))}}",
-                  "validation": {},
-                  "cellBackground": "transparent"
-                },
                 "name": {
                   "allowCellWrapping": false,
                   "index": 3,
@@ -251,72 +200,132 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "",
+                  "label": "Name",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "",
                   "validation": {},
                   "cellBackground": "transparent"
                 },
-                "_id": {
+                "nationalID": {
+                  "allowCellWrapping": false,
+                  "index": 0,
+                  "width": 150,
+                  "originalId": "nationalID",
+                  "id": "nationalID",
+                  "alias": "nationalID",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "National ID",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{labSpecialist_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationalID\"]))}}",
+                  "validation": {},
+                  "cellBackground": "transparent"
+                },
+                "password": {
+                  "allowCellWrapping": false,
+                  "index": 2,
+                  "width": 150,
+                  "originalId": "password",
+                  "id": "password",
+                  "alias": "password",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "password",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{labSpecialist_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"password\"]))}}",
+                  "validation": {},
+                  "cellBackground": "transparent"
+                },
+                "DOB": {
+                  "allowCellWrapping": false,
+                  "index": 3,
+                  "width": 150,
+                  "originalId": "DOB",
+                  "id": "DOB",
+                  "alias": "DOB",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "date",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "DOB",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{labSpecialist_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"DOB\"]))}}",
+                  "validation": {},
+                  "cellBackground": "transparent"
+                },
+                "gender": {
+                  "allowCellWrapping": false,
+                  "index": 4,
+                  "width": 150,
+                  "originalId": "gender",
+                  "id": "gender",
+                  "alias": "gender",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Gender",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{labSpecialist_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"gender\"]))}}",
+                  "validation": {},
+                  "cellBackground": "transparent"
+                },
+                "mobileNo": {
                   "allowCellWrapping": false,
                   "index": 5,
                   "width": 150,
-                  "originalId": "_id",
-                  "id": "_id",
-                  "alias": "_id",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "0.875rem",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellEditable": false,
-                  "isEditable": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "",
-                  "isSaveVisible": true,
-                  "isDiscardVisible": true,
-                  "computedValue": "{{table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"_id\"]))}}",
-                  "validation": {},
-                  "cellBackground": "transparent"
-                },
-                "region": {
-                  "allowCellWrapping": false,
-                  "index": 6,
-                  "width": 150,
-                  "originalId": "region",
-                  "id": "region",
-                  "alias": "region",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "0.875rem",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellEditable": false,
-                  "isEditable": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "",
-                  "isSaveVisible": true,
-                  "isDiscardVisible": true,
-                  "computedValue": "{{table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"region\"]))}}",
-                  "validation": {},
-                  "cellBackground": "transparent"
-                },
-                "Physician": {
-                  "allowCellWrapping": false,
-                  "index": 6,
-                  "width": 150,
-                  "originalId": "Physician",
-                  "id": "Physician",
-                  "alias": "Physician",
+                  "originalId": "mobileNo",
+                  "id": "mobileNo",
+                  "alias": "mobileNo",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
@@ -325,30 +334,26 @@
                   "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
-                  "isVisible": false,
+                  "isVisible": true,
                   "isDisabled": false,
                   "isCellEditable": false,
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "",
+                  "label": "Mobile No.",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Physician\"]))}}",
+                  "computedValue": "{{labSpecialist_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"mobileNo\"]))}}",
                   "validation": {},
-                  "cellBackground": "transparent",
-                  "customAlias": "",
-                  "buttonLabel": "{{table.processedTableData.map((currentRow, currentIndex) => ( 'Action'))}}",
-                  "onClick": "{{showModal('ModalP')}}",
-                  "menuButtonLabel": "{{table.processedTableData.map((currentRow, currentIndex) => ( 'Open Menu'))}}"
+                  "cellBackground": "transparent"
                 },
-                "LabSpecialist": {
+                "email": {
                   "allowCellWrapping": false,
-                  "index": 1,
+                  "index": 6,
                   "width": 150,
-                  "originalId": "LabSpecialist",
-                  "id": "LabSpecialist",
-                  "alias": "LabSpecialist",
+                  "originalId": "email",
+                  "id": "email",
+                  "alias": "email",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
@@ -357,29 +362,57 @@
                   "fontStyle": "",
                   "enableFilter": true,
                   "enableSort": true,
-                  "isVisible": false,
+                  "isVisible": true,
                   "isDisabled": false,
                   "isCellEditable": false,
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "",
+                  "label": "Email",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "{{table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"LabSpecialist\"]))}}",
+                  "computedValue": "{{labSpecialist_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"email\"]))}}",
                   "validation": {},
                   "cellBackground": "transparent"
                 },
-                "Visit": {
+                "nationality": {
                   "allowCellWrapping": false,
                   "index": 7,
                   "width": 150,
-                  "originalId": "Visit",
-                  "id": "Visit",
-                  "alias": "Visit",
+                  "originalId": "nationality",
+                  "id": "nationality",
+                  "alias": "nationality",
                   "horizontalAlignment": "LEFT",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "fontStyle": "",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellEditable": false,
+                  "isEditable": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Nationality",
+                  "isSaveVisible": true,
+                  "isDiscardVisible": true,
+                  "computedValue": "{{labSpecialist_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationality\"]))}}",
+                  "validation": {},
+                  "cellBackground": "transparent"
+                },
+                "idHospital": {
+                  "allowCellWrapping": false,
+                  "index": 8,
+                  "width": 150,
+                  "originalId": "idHospital",
+                  "id": "idHospital",
+                  "alias": "idHospital",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "number",
                   "textColor": "",
                   "textSize": "0.875rem",
                   "fontStyle": "",
@@ -391,10 +424,10 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "",
+                  "label": "idHospital",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
-                  "computedValue": "",
+                  "computedValue": "{{labSpecialist_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"idHospital\"]))}}",
                   "validation": {},
                   "cellBackground": "transparent"
                 }
@@ -405,7 +438,7 @@
               "rightColumn": 44,
               "textSize": "0.875rem",
               "widgetId": "lk7hkwpqur",
-              "tableData": "[]",
+              "tableData": "{{get_labSpecialist.data}}",
               "label": "Data",
               "searchKey": "",
               "parentId": "0",
@@ -425,7 +458,7 @@
                       "dataType": "string",
                       "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.name))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "fieldType": "Text Input",
-                      "sourceData": "Dr. Sulaiman AlHabib Hospita",
+                      "sourceData": "keen kd",
                       "isCustomField": false,
                       "accessor": "name",
                       "identifier": "name",
@@ -442,61 +475,17 @@
                       "labelTextSize": "0.875rem",
                       "label": "Name"
                     },
-                    "city": {
+                    "nationalID": {
                       "children": {},
-                      "dataType": "string",
-                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.city))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
-                      "fieldType": "Text Input",
-                      "sourceData": "Riyadh",
+                      "dataType": "number",
+                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.nationalID))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
+                      "fieldType": "Number Input",
+                      "sourceData": 1234123411,
                       "isCustomField": false,
-                      "accessor": "city",
-                      "identifier": "city",
+                      "accessor": "nationalID",
+                      "identifier": "nationalID",
                       "position": 1,
-                      "originalIdentifier": "city",
-                      "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
-                      "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
-                      "boxShadow": "none",
-                      "iconAlign": "left",
-                      "isDisabled": false,
-                      "isRequired": true,
-                      "isSpellCheck": false,
-                      "isVisible": true,
-                      "labelTextSize": "0.875rem",
-                      "label": "DOB"
-                    },
-                    "district": {
-                      "children": {},
-                      "dataType": "string",
-                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.district))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
-                      "fieldType": "Text Input",
-                      "sourceData": "Ar Rayyan",
-                      "isCustomField": false,
-                      "accessor": "district",
-                      "identifier": "district",
-                      "position": 2,
-                      "originalIdentifier": "district",
-                      "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
-                      "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
-                      "boxShadow": "none",
-                      "iconAlign": "left",
-                      "isDisabled": false,
-                      "isRequired": true,
-                      "isSpellCheck": false,
-                      "isVisible": true,
-                      "labelTextSize": "0.875rem",
-                      "label": "Gender"
-                    },
-                    "_id": {
-                      "children": {},
-                      "dataType": "string",
-                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData._id))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
-                      "fieldType": "Text Input",
-                      "sourceData": "634bd50a1e664ebdc403016a",
-                      "isCustomField": false,
-                      "accessor": "_id",
-                      "identifier": "_id",
-                      "position": 3,
-                      "originalIdentifier": "_id",
+                      "originalIdentifier": "nationalID",
                       "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "boxShadow": "none",
@@ -506,94 +495,181 @@
                       "isSpellCheck": false,
                       "isVisible": false,
                       "labelTextSize": "0.875rem",
-                      "label": "Id"
+                      "label": "National ID"
                     },
-                    "region": {
+                    "password": {
                       "children": {},
                       "dataType": "string",
-                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.region))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
+                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.password))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "fieldType": "Text Input",
-                      "sourceData": "Riyadh ",
+                      "sourceData": "$2b$10$nsNN6DVtc.pQZLykUu5.kezziIglEimcJc71VG4jp3akNCy.QZHR6",
                       "isCustomField": false,
-                      "accessor": "region",
-                      "identifier": "region",
-                      "position": 4,
-                      "originalIdentifier": "region",
+                      "accessor": "password",
+                      "identifier": "password",
+                      "position": 2,
+                      "originalIdentifier": "password",
                       "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "boxShadow": "none",
                       "iconAlign": "left",
                       "isDisabled": false,
-                      "isRequired": true,
+                      "isRequired": false,
+                      "isSpellCheck": false,
+                      "isVisible": false,
+                      "labelTextSize": "0.875rem",
+                      "label": "Password"
+                    },
+                    "DOB": {
+                      "children": {},
+                      "dataType": "string",
+                      "defaultValue": "{{((sourceData, formData, fieldState) => (moment(sourceData.DOB, \"YYYY-MM-DD\").format(\"YYYY-MM-DDTHH:mm:ss.sssZ\")))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
+                      "fieldType": "Datepicker",
+                      "sourceData": "2002-12-02",
+                      "isCustomField": false,
+                      "accessor": "DOB",
+                      "identifier": "DOB",
+                      "position": 3,
+                      "originalIdentifier": "DOB",
+                      "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
+                      "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
+                      "boxShadow": "none",
+                      "closeOnSelection": false,
+                      "convertToISO": false,
+                      "dateFormat": "YYYY-MM-DD",
+                      "isDisabled": false,
+                      "isRequired": false,
+                      "isVisible": true,
+                      "label": "DOB",
+                      "maxDate": "2121-12-31T18:29:00.000Z",
+                      "minDate": "1920-12-31T18:30:00.000Z",
+                      "shortcuts": false,
+                      "timePrecision": "minute",
+                      "labelTextSize": "0.875rem"
+                    },
+                    "gender": {
+                      "children": {},
+                      "dataType": "string",
+                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.gender))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
+                      "fieldType": "Text Input",
+                      "sourceData": "Female",
+                      "isCustomField": false,
+                      "accessor": "gender",
+                      "identifier": "gender",
+                      "position": 4,
+                      "originalIdentifier": "gender",
+                      "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
+                      "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
+                      "boxShadow": "none",
+                      "iconAlign": "left",
+                      "isDisabled": false,
+                      "isRequired": false,
                       "isSpellCheck": false,
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
-                      "label": "mobileNo"
+                      "label": "Gender"
                     },
-                    "LabSpecialist": {
+                    "mobileNo": {
                       "children": {},
-                      "dataType": "array",
-                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.LabSpecialist))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
-                      "fieldType": "Email Input",
-                      "sourceData": [
-                        "0012345678"
-                      ],
+                      "dataType": "string",
+                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.mobileNo))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
+                      "fieldType": "Text Input",
+                      "sourceData": "098098098",
                       "isCustomField": false,
-                      "accessor": "LabSpecialist",
-                      "identifier": "LabSpecialist",
+                      "accessor": "mobileNo",
+                      "identifier": "mobileNo",
                       "position": 5,
-                      "originalIdentifier": "LabSpecialist",
+                      "originalIdentifier": "mobileNo",
                       "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "boxShadow": "none",
                       "iconAlign": "left",
                       "isDisabled": false,
-                      "isRequired": true,
+                      "isRequired": false,
+                      "isSpellCheck": false,
+                      "isVisible": true,
+                      "labelTextSize": "0.875rem",
+                      "label": "Mobile No"
+                    },
+                    "email": {
+                      "children": {},
+                      "dataType": "string",
+                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.email))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
+                      "fieldType": "Email Input",
+                      "sourceData": "l@g.com",
+                      "isCustomField": false,
+                      "accessor": "email",
+                      "identifier": "email",
+                      "position": 6,
+                      "originalIdentifier": "email",
+                      "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
+                      "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
+                      "boxShadow": "none",
+                      "iconAlign": "left",
+                      "isDisabled": false,
+                      "isRequired": false,
                       "isSpellCheck": false,
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
                       "label": "Email"
                     },
-                    "Physician": {
+                    "nationality": {
                       "children": {},
-                      "dataType": "array",
-                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.Physician))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
+                      "dataType": "string",
+                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.nationality))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "fieldType": "Text Input",
-                      "sourceData": [
-                        "01233456789"
-                      ],
+                      "sourceData": "المملكة العربية السعودية",
                       "isCustomField": false,
-                      "accessor": "Physician",
-                      "identifier": "Physician",
-                      "position": 6,
-                      "originalIdentifier": "Physician",
+                      "accessor": "nationality",
+                      "identifier": "nationality",
+                      "position": 7,
+                      "originalIdentifier": "nationality",
                       "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "boxShadow": "none",
                       "iconAlign": "left",
                       "isDisabled": false,
-                      "isRequired": true,
+                      "isRequired": false,
                       "isSpellCheck": false,
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
                       "label": "Nationality"
+                    },
+                    "idHospital": {
+                      "children": {},
+                      "dataType": "number",
+                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.idHospital))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
+                      "fieldType": "Number Input",
+                      "sourceData": 456,
+                      "isCustomField": false,
+                      "accessor": "idHospital",
+                      "identifier": "idHospital",
+                      "position": 8,
+                      "originalIdentifier": "idHospital",
+                      "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
+                      "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
+                      "boxShadow": "none",
+                      "iconAlign": "left",
+                      "isDisabled": false,
+                      "isRequired": false,
+                      "isSpellCheck": false,
+                      "isVisible": false,
+                      "labelTextSize": "0.875rem",
+                      "label": "Id Hospital"
                     }
                   },
                   "dataType": "object",
                   "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                   "fieldType": "Object",
                   "sourceData": {
-                    "city": "Riyadh",
-                    "district": "Ar Rayyan",
-                    "name": "Dr. Sulaiman AlHabib Hospita",
-                    "_id": "634bd50a1e664ebdc403016a",
-                    "region": "Riyadh ",
-                    "LabSpecialist": [
-                      "0012345678"
-                    ],
-                    "Physician": [
-                      "01233456789"
-                    ]
+                    "nationalID": 1234123411,
+                    "name": "keen kd",
+                    "password": "$2b$10$nsNN6DVtc.pQZLykUu5.kezziIglEimcJc71VG4jp3akNCy.QZHR6",
+                    "DOB": "2002-12-02",
+                    "gender": "Female",
+                    "mobileNo": "098098098",
+                    "email": "l@g.com",
+                    "nationality": "المملكة العربية السعودية",
+                    "idHospital": 456
                   },
                   "isCustomField": false,
                   "accessor": "__root_schema__",
@@ -624,6 +700,9 @@
               "dynamicPropertyPathList": [
                 {
                   "key": "schema.__root_schema__.children.date_of_birth.defaultValue"
+                },
+                {
+                  "key": "schema.__root_schema__.children.DOB.defaultValue"
                 }
               ],
               "displayName": "JSON Form",
@@ -763,62 +842,83 @@
                   "key": "schema.__root_schema__.cellBorderRadius"
                 },
                 {
-                  "key": "schema.__root_schema__.children.city.defaultValue"
+                  "key": "sourceData"
                 },
                 {
-                  "key": "schema.__root_schema__.children.city.accentColor"
+                  "key": "schema.__root_schema__.children.nationalID.defaultValue"
                 },
                 {
-                  "key": "schema.__root_schema__.children.city.borderRadius"
+                  "key": "schema.__root_schema__.children.nationalID.accentColor"
                 },
                 {
-                  "key": "schema.__root_schema__.children.district.defaultValue"
+                  "key": "schema.__root_schema__.children.nationalID.borderRadius"
                 },
                 {
-                  "key": "schema.__root_schema__.children.district.accentColor"
+                  "key": "schema.__root_schema__.children.password.defaultValue"
                 },
                 {
-                  "key": "schema.__root_schema__.children.district.borderRadius"
+                  "key": "schema.__root_schema__.children.password.accentColor"
                 },
                 {
-                  "key": "schema.__root_schema__.children._id.defaultValue"
+                  "key": "schema.__root_schema__.children.password.borderRadius"
                 },
                 {
-                  "key": "schema.__root_schema__.children._id.accentColor"
+                  "key": "schema.__root_schema__.children.DOB.defaultValue"
                 },
                 {
-                  "key": "schema.__root_schema__.children._id.borderRadius"
+                  "key": "schema.__root_schema__.children.DOB.accentColor"
                 },
                 {
-                  "key": "schema.__root_schema__.children.region.defaultValue"
+                  "key": "schema.__root_schema__.children.DOB.borderRadius"
                 },
                 {
-                  "key": "schema.__root_schema__.children.region.accentColor"
+                  "key": "schema.__root_schema__.children.gender.defaultValue"
                 },
                 {
-                  "key": "schema.__root_schema__.children.region.borderRadius"
+                  "key": "schema.__root_schema__.children.gender.accentColor"
                 },
                 {
-                  "key": "schema.__root_schema__.children.LabSpecialist.defaultValue"
+                  "key": "schema.__root_schema__.children.gender.borderRadius"
                 },
                 {
-                  "key": "schema.__root_schema__.children.LabSpecialist.accentColor"
+                  "key": "schema.__root_schema__.children.mobileNo.defaultValue"
                 },
                 {
-                  "key": "schema.__root_schema__.children.LabSpecialist.borderRadius"
+                  "key": "schema.__root_schema__.children.mobileNo.accentColor"
                 },
                 {
-                  "key": "schema.__root_schema__.children.Physician.defaultValue"
+                  "key": "schema.__root_schema__.children.mobileNo.borderRadius"
                 },
                 {
-                  "key": "schema.__root_schema__.children.Physician.accentColor"
+                  "key": "schema.__root_schema__.children.email.defaultValue"
                 },
                 {
-                  "key": "schema.__root_schema__.children.Physician.borderRadius"
+                  "key": "schema.__root_schema__.children.email.accentColor"
+                },
+                {
+                  "key": "schema.__root_schema__.children.email.borderRadius"
+                },
+                {
+                  "key": "schema.__root_schema__.children.nationality.defaultValue"
+                },
+                {
+                  "key": "schema.__root_schema__.children.nationality.accentColor"
+                },
+                {
+                  "key": "schema.__root_schema__.children.nationality.borderRadius"
+                },
+                {
+                  "key": "schema.__root_schema__.children.idHospital.defaultValue"
+                },
+                {
+                  "key": "schema.__root_schema__.children.idHospital.accentColor"
+                },
+                {
+                  "key": "schema.__root_schema__.children.idHospital.borderRadius"
                 }
               ],
               "borderWidth": "1",
-              "sourceData": "{}",
+              "sourceData": "{{labSpecialist_table.selectedRow}}",
               "showReset": true,
               "resetButtonLabel": "Reset",
               "key": "z2ibxqm3hh",
@@ -2706,7 +2806,18 @@
             }
           ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Lab Specialist_get_labSpecialist",
+              "name": "get_labSpecialist",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "Lab Specialist",

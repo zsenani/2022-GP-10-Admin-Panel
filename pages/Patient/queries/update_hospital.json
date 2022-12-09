@@ -88,7 +88,7 @@
             "data": "ALL"
           },
           "query": {
-            "data": "{ \"_id\": ObjectId(\"{{table.selectedRow._id}}\") }"
+            "data": "{ \"_id\": ObjectId(\"{{patient_table.selectedRow._id}}\") }"
           },
           "update": {
             "data": "{ \"$set\": {{JSONForm.formData}} }"
@@ -110,7 +110,7 @@
     "messages": [],
     "jsonPathKeys": [
       "JSONForm.formData",
-      "table.selectedRow._id"
+      "patient_table.selectedRow._id"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

@@ -32,6 +32,7 @@
               "widgetName": "Button8Copy",
               "onClick": "{{showModal('ModalP')}}",
               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "dynamicPropertyPathList": [],
               "displayName": "Button",
               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
               "searchTags": [
@@ -399,7 +400,7 @@
                       "children": {},
                       "dataType": "string",
                       "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.city))(edit_hospital_JSONForm.sourceData, edit_hospital_JSONForm.formData, edit_hospital_JSONForm.fieldState)}}",
-                      "fieldType": "Text Input",
+                      "fieldType": "Select",
                       "sourceData": "Riyadh",
                       "isCustomField": false,
                       "accessor": "city",
@@ -409,13 +410,14 @@
                       "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(edit_hospital_JSONForm.sourceData, edit_hospital_JSONForm.formData, edit_hospital_JSONForm.fieldState)}}",
                       "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(edit_hospital_JSONForm.sourceData, edit_hospital_JSONForm.formData, edit_hospital_JSONForm.fieldState)}}",
                       "boxShadow": "none",
-                      "iconAlign": "left",
                       "isDisabled": false,
-                      "isRequired": true,
-                      "isSpellCheck": false,
+                      "isFilterable": true,
+                      "isRequired": false,
                       "isVisible": true,
+                      "label": "City",
                       "labelTextSize": "0.875rem",
-                      "label": "City"
+                      "serverSideFiltering": false,
+                      "options": "[\n  {\n    \"label\": \"Abha\",\n    \"value\": \"Abha\"\n  },\n  {\n    \"label\": \"Ad-Dilam\",\n    \"value\": \"Ad-Dilam\"\n  },\n  {\n    \"label\": \"Al Artaweeiyah\",\n    \"value\": \"Al Artaweeiyah\"\n  },\n\t{\n    \"label\": \"Al Bukayriyah\",\n    \"value\": \"Al Bukayriyah\"\n  },\n\t{\n    \"label\": \"Badr\",\n    \"value\": \"Badr\"\n  },\n\t{\n    \"label\": \"Baljurashi\",\n    \"value\": \"Baljurashi\"\n  },\n\t{\n    \"label\": \"Bisha\",\n    \"value\": \"Bisha\"\n  },\n\t{\n    \"label\": \"Bareq\",\n    \"value\": \"Bareq\"\n  },\n\t{\n    \"label\": \"Buraydah\",\n    \"value\": \"Buraydah\"\n  },\n\t{\n    \"label\": \"Al Bahah\",\n    \"value\": \"Al Bahah\"\n  },\n\t{\n    \"label\": \"'Buqaa\",\n    \"value\": \"'Buqaa'\"\n  },\n\t{\n    \"label\": \"Dammam\",\n    \"value\": \"Dammam\"\n  },\n\t{\n    \"label\": \"Dhahran\",\n    \"value\": \"Dhahran\"\n  },\n\t{\n    \"label\": \"Dhurma\",\n    \"value\": \"Dhurma\"\n  },\n\t{\n    \"label\": \"Dahaban\",\n    \"value\": \"Dahaban\"\n  },\n\t{\n    \"label\": \"Diriyah\",\n    \"value\": \"Diriyah\"\n  },\n\t{\n    \"label\": \"Duba\",\n    \"value\": \"Duba\"\n  },\n\t{\n    \"label\": \"Dumat Al-Jandal\",\n    \"value\": \"Dumat Al-Jandal\"\n  },\n\t{\n    \"label\": \"Dawadmi\",\n    \"value\": \"Dawadmi\"\n  },\n\t{\n    \"label\": \"Farasan\",\n    \"value\": \"Farasan\"\n  },\n\t{\n    \"label\": \"Gatgat\",\n    \"value\": \"Gatgat\"\n  },\n\t{\n    \"label\": \"Gerrha\",\n    \"value\": \"Gerrha\"\n  },\n\t{\n    \"label\": \"Ghawiyah\",\n    \"value\": \"Ghawiyah\"\n  },\n\t{\n    \"label\": \"Al-Gwei'iyyah\",\n    \"value\": \"Al-Gwei'iyyah\"\n  },\n\t{\n    \"label\": \"Hautat Sudair\",\n    \"value\": \"Hautat Sudair\"\n  },\n\t{\n    \"label\": \"Habaala\",\n    \"value\": \"Habaala\"\n  },\n\t{\n    \"label\": \"Hajrah\",\n    \"value\": \"Hajrah\"\n  },\n\t{\n    \"label\": \"Haql\",\n    \"value\": \"Haql\"\n  },\n\t{\n    \"label\": \"Al-Hareeq\",\n    \"value\": \"Al-Hareeq\"\n  },\n\t{\n    \"label\": \"Harmah\",\n    \"value\": \"Harmah\"\n  },\n\t{\n    \"label\": \"Ha'il\",\n    \"value\": \"Ha'il\"\n  },\n\t{\n    \"label\": \"Hotat Bani Tamim\",\n    \"value\": \"Hotat Bani Tamim\"\n  },\n\t{\n    \"label\": \"Hofuf\",\n    \"value\": \"Hofuf\"\n  },\n\t{\n    \"label\": \"Huraymila\",\n    \"value\": \"Huraymila\"\n  },\n\t{\n    \"label\": \"Hafr Al-Batin\",\n    \"value\": \"Hafr Al-Batin\"\n  },\n\t{\n    \"label\": \"Jabal Umm al Ru'us\",\n    \"value\": \"Jabal Umm al Ru'us\"\n  },\n\t{\n    \"label\": \"Jalajil\",\n    \"value\": \"Jalajil\"\n  },\n\t{\n    \"label\": \"Jeddah\",\n    \"value\": \"Jeddah\"\n  },\n\t{\n    \"label\": \"Jizan\",\n    \"value\": \"Jizan\"\n  },\n\t{\n    \"label\": \"Jizan Economic City\",\n    \"value\": \"Jizan Economic City\"\n  },\n\t{\n    \"label\": \"Jubail\",\n    \"value\": \"Jubail\"\n  },\n\t{\n    \"label\": \"Al Jafr\",\n    \"value\": \"Al Jafr\"\n  },\n\t{\n    \"label\": \"Khafji\",\n    \"value\": \"Khafji\"\n  },\n\t{\n    \"label\": \"Khaybar\",\n    \"value\": \"Khaybar\"\n  },\n\t{\n    \"label\": \"King Abdullah Economic City\",\n    \"value\": \"King Abdullah Economic City\"\n  },\n\t{\n    \"label\": \"Khamis Mushait\",\n    \"value\": \"Khamis Mushait\"\n  },\n\t{\n    \"label\": \"Al-Saih\",\n    \"value\": \"Al-Saih\"\n  },\n\t{\n    \"label\": \"Knowledge Economic City, Medina\",\n    \"value\": \"Knowledge Economic City, Medina\"\n  },\n\t{\n    \"label\": \"Khobar\",\n    \"value\": \"Khobar\"\n  },\n\t{\n    \"label\": \"Al-Khutt\",\n    \"value\": \"Al-Khutt\"\n  },\n\t{\n    \"label\": \"Layla\",\n    \"value\": \"Layla\"\n  },\n\t{\n    \"label\": \"Lihyan\",\n    \"value\": \"Lihyan\"\n  },\n\t{\n    \"label\": \"Al Lith\",\n    \"value\": \"Al Lith\"\n  },\n\t{\n    \"label\": \"Al Majma'ah\",\n    \"value\": \"Al Majma'ah\"\n  },\n\t{\n    \"label\": \"Mastoorah\",\n    \"value\": \"Mastoorah\"\n  },\n\t{\n    \"label\": \"Al Mikhwah\",\n    \"value\": \"Al Mikhwah\"\n  },\n\t{\n    \"label\": \"Al-Mubarraz\",\n    \"value\": \"Al-Mubarraz\"\n  },\n\t{\n    \"label\": \"Al Mawain\",\n    \"value\": \"Al Mawain\"\n  },\n\t{\n    \"label\": \"Medina\",\n    \"value\": \"Medina\"\n  },\n\t{\n    \"label\": \"Mecca\",\n    \"value\": \"Mecca\"\n  },\n\t{\n    \"label\": \"Muzahmiyya\",\n    \"value\": \"Muzahmiyya\"\n  },\n\t{\n    \"label\": \"Najran\",\n    \"value\": \"Najran\"\n  },\n\t{\n    \"label\": \"Al-Namas\",\n    \"value\": \"Al-Namas\"\n  },\n\t{\n    \"label\": \"Umluj\",\n    \"value\": \"Umluj\"\n  },\n\t{\n    \"label\": \"Al-Omran\",\n    \"value\": \"Al-Omran\"\n  },\n\t{\n    \"label\": \"Al-Oyoon\",\n    \"value\": \"Al-Oyoon\"\n  },\n\t{\n    \"label\": \"Qadeimah\",\n    \"value\": \"Qadeimah\"\n  },\n\t{\n    \"label\": \"Qatif\",\n    \"value\": \"Qatif\"\n  },\n\t{\n    \"label\": \"Qaisumah\",\n    \"value\": \"Qaisumah\"\n  },\n\t{\n    \"label\": \"Al Qunfudhah\",\n    \"value\": \"Al Qunfudhah\"\n  },\n\t{\n    \"label\": \"Qurayyat\",\n    \"value\": \"Qurayyat\"\n  },\n\t{\n    \"label\": \"Rabigh\",\n    \"value\": \"Rabigh\"\n  },\n\t{\n    \"label\": \"Rafha\",\n    \"value\": \"Rafha\"\n  },\n\t{\n    \"label\": \"Ar Rass\",\n    \"value\": \"Ar Rass\"\n  },\n\t{\n    \"label\": \"Ras Tanura\",\n    \"value\": \"Ras Tanura\"\n  },\n\t{\n    \"label\": \"Ranyah\",\n    \"value\": \"Ranyah\"\n  },\n\t{\n    \"label\": \"Riyadh\",\n    \"value\": \"Riyadh\"\n  },\n\t{\n    \"label\": \"Riyadh Al-Khabra\",\n    \"value\": \"Riyadh Al-Khabra\"\n  },\n\t{\n    \"label\": \"Rumailah\",\n    \"value\": \"Rumailah\"\n  },\n\t{\n    \"label\": \"Sabt Al Alaya\",\n    \"value\": \"Sabt Al Alaya\"\n  },\n\t{\n    \"label\": \"Sarat Abidah\",\n    \"value\": \"Sarat Abidah\"\n  },\n\t{\n    \"label\": \"Saihat\",\n    \"value\": \"Saihat\"\n  },\n\t{\n    \"label\": \"Safwa city\",\n    \"value\": \"Safwa city\"\n  },\n\t{\n    \"label\": \"Sakakah\",\n    \"value\": \"Sakakah\"\n  },\n\t{\n    \"label\": \"Sharurah\",\n    \"value\": \"Sharurah\"\n  },\n\t{\n    \"label\": \"Shaqraa\",\n    \"value\": \"Shaqraa\"\n  },\n\t{\n    \"label\": \"Shaybah\",\n    \"value\": \"Shaybah\"\n  },\n\t{\n    \"label\": \"As Sulayyil\",\n    \"value\": \"As Sulayyil\"\n  },\n\t{\n    \"label\": \"Taif\",\n    \"value\": \"Taif\"\n  },\n\t{\n    \"label\": \"Tabuk\",\n    \"value\": \"Tabuk\"\n  },\n\t{\n    \"label\": \"Tanomah\",\n    \"value\": \"Tanomah\"\n  },\n\t{\n    \"label\": \"Tarout\",\n    \"value\": \"Tarout\"\n  },\n\t{\n    \"label\": \"Tayma\",\n    \"value\": \"Tayma\"\n  },\n\t{\n    \"label\": \"Thadiq\",\n    \"value\": \"Thadiq\"\n  },\n\t{\n    \"label\": \"Thuwal\",\n    \"value\": \"Thuwal\"\n  },\n\t{\n    \"label\": \"Thuqbah\",\n    \"value\": \"Thuqbah\"\n  },\n\t{\n    \"label\": \"Turaif\",\n    \"value\": \"Turaif\"\n  },\n\t{\n    \"label\": \"Tabarjal\",\n    \"value\": \"Tabarjal\"\n  },\n\t{\n    \"label\": \"Udhailiyah\",\n    \"value\": \"Udhailiyah\"\n  },\n\t{\n    \"label\": \"Al-'Ula\",\n    \"value\": \"Al-'Ula\"\n  },\n\t{\n    \"label\": \"Um Al-Sahek\",\n    \"value\": \"Um Al-Sahek\"\n  },\n\t{\n    \"label\": \"Unaizah\",\n    \"value\": \"Unaizah\"\n  },\n\t{\n    \"label\": \"Uqair\",\n    \"value\": \"Uqair\"\n  },\n\t{\n    \"label\": \"Uyayna\",\n    \"value\": \"Uyayna\"\n  },\n\t{\n    \"label\": \"Uyun AlJiwa\",\n    \"value\": \"Uyun AlJiwa\"\n  },\n\t{\n    \"label\": \"Wadi Al-Dawasir\",\n    \"value\": \"Wadi Al-Dawasir\"\n  },\n\t{\n    \"label\": \"Al Wajh\",\n    \"value\": \"Al Wajh\"\n  },\n\t{\n    \"label\": \"Yanbu\",\n    \"value\": \"Yanbu\"\n  },\n\t{\n    \"label\": \"Az Zaimah\",\n    \"value\": \"Az Zaimah\"\n  },\n\t{\n    \"label\": \"Zulfi\",\n    \"value\": \"Zulfi\"\n  }\n]"
                     },
                     "district": {
                       "children": {},
@@ -476,7 +478,7 @@
                       "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(edit_hospital_JSONForm.sourceData, edit_hospital_JSONForm.formData, edit_hospital_JSONForm.fieldState)}}",
                       "boxShadow": "none",
                       "isDisabled": false,
-                      "isFilterable": false,
+                      "isFilterable": true,
                       "isRequired": false,
                       "isVisible": true,
                       "label": "Region",
@@ -1098,6 +1100,58 @@
                           "children": [
                             {
                               "boxShadow": "none",
+                              "widgetName": "hospital_city",
+                              "isFilterable": true,
+                              "displayName": "Select",
+                              "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
+                              "labelText": "City",
+                              "searchTags": [
+                                "dropdown"
+                              ],
+                              "topRow": 13,
+                              "bottomRow": 17,
+                              "parentRowSpace": 10,
+                              "labelWidth": "13",
+                              "type": "SELECT_WIDGET",
+                              "serverSideFiltering": false,
+                              "hideCard": false,
+                              "defaultOptionValue": "",
+                              "animateLoading": true,
+                              "parentColumnSpace": 6.2998046875,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 2,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                },
+                                {
+                                  "key": "borderRadius"
+                                }
+                              ],
+                              "labelPosition": "Left",
+                              "options": "[\n  {\n    \"label\": \"Abha\",\n    \"value\": \"Abha\"\n  },\n  {\n    \"label\": \"Ad-Dilam\",\n    \"value\": \"Ad-Dilam\"\n  },\n  {\n    \"label\": \"Al Artaweeiyah\",\n    \"value\": \"Al Artaweeiyah\"\n  },\n\t{\n    \"label\": \"Al Bukayriyah\",\n    \"value\": \"Al Bukayriyah\"\n  },\n\t{\n    \"label\": \"Badr\",\n    \"value\": \"Badr\"\n  },\n\t{\n    \"label\": \"Baljurashi\",\n    \"value\": \"Baljurashi\"\n  },\n\t{\n    \"label\": \"Bisha\",\n    \"value\": \"Bisha\"\n  },\n\t{\n    \"label\": \"Bareq\",\n    \"value\": \"Bareq\"\n  },\n\t{\n    \"label\": \"Buraydah\",\n    \"value\": \"Buraydah\"\n  },\n\t{\n    \"label\": \"Al Bahah\",\n    \"value\": \"Al Bahah\"\n  },\n\t{\n    \"label\": \"'Buqaa\",\n    \"value\": \"'Buqaa'\"\n  },\n\t{\n    \"label\": \"Dammam\",\n    \"value\": \"Dammam\"\n  },\n\t{\n    \"label\": \"Dhahran\",\n    \"value\": \"Dhahran\"\n  },\n\t{\n    \"label\": \"Dhurma\",\n    \"value\": \"Dhurma\"\n  },\n\t{\n    \"label\": \"Dahaban\",\n    \"value\": \"Dahaban\"\n  },\n\t{\n    \"label\": \"Diriyah\",\n    \"value\": \"Diriyah\"\n  },\n\t{\n    \"label\": \"Duba\",\n    \"value\": \"Duba\"\n  },\n\t{\n    \"label\": \"Dumat Al-Jandal\",\n    \"value\": \"Dumat Al-Jandal\"\n  },\n\t{\n    \"label\": \"Dawadmi\",\n    \"value\": \"Dawadmi\"\n  },\n\t{\n    \"label\": \"Farasan\",\n    \"value\": \"Farasan\"\n  },\n\t{\n    \"label\": \"Gatgat\",\n    \"value\": \"Gatgat\"\n  },\n\t{\n    \"label\": \"Gerrha\",\n    \"value\": \"Gerrha\"\n  },\n\t{\n    \"label\": \"Ghawiyah\",\n    \"value\": \"Ghawiyah\"\n  },\n\t{\n    \"label\": \"Al-Gwei'iyyah\",\n    \"value\": \"Al-Gwei'iyyah\"\n  },\n\t{\n    \"label\": \"Hautat Sudair\",\n    \"value\": \"Hautat Sudair\"\n  },\n\t{\n    \"label\": \"Habaala\",\n    \"value\": \"Habaala\"\n  },\n\t{\n    \"label\": \"Hajrah\",\n    \"value\": \"Hajrah\"\n  },\n\t{\n    \"label\": \"Haql\",\n    \"value\": \"Haql\"\n  },\n\t{\n    \"label\": \"Al-Hareeq\",\n    \"value\": \"Al-Hareeq\"\n  },\n\t{\n    \"label\": \"Harmah\",\n    \"value\": \"Harmah\"\n  },\n\t{\n    \"label\": \"Ha'il\",\n    \"value\": \"Ha'il\"\n  },\n\t{\n    \"label\": \"Hotat Bani Tamim\",\n    \"value\": \"Hotat Bani Tamim\"\n  },\n\t{\n    \"label\": \"Hofuf\",\n    \"value\": \"Hofuf\"\n  },\n\t{\n    \"label\": \"Huraymila\",\n    \"value\": \"Huraymila\"\n  },\n\t{\n    \"label\": \"Hafr Al-Batin\",\n    \"value\": \"Hafr Al-Batin\"\n  },\n\t{\n    \"label\": \"Jabal Umm al Ru'us\",\n    \"value\": \"Jabal Umm al Ru'us\"\n  },\n\t{\n    \"label\": \"Jalajil\",\n    \"value\": \"Jalajil\"\n  },\n\t{\n    \"label\": \"Jeddah\",\n    \"value\": \"Jeddah\"\n  },\n\t{\n    \"label\": \"Jizan\",\n    \"value\": \"Jizan\"\n  },\n\t{\n    \"label\": \"Jizan Economic City\",\n    \"value\": \"Jizan Economic City\"\n  },\n\t{\n    \"label\": \"Jubail\",\n    \"value\": \"Jubail\"\n  },\n\t{\n    \"label\": \"Al Jafr\",\n    \"value\": \"Al Jafr\"\n  },\n\t{\n    \"label\": \"Khafji\",\n    \"value\": \"Khafji\"\n  },\n\t{\n    \"label\": \"Khaybar\",\n    \"value\": \"Khaybar\"\n  },\n\t{\n    \"label\": \"King Abdullah Economic City\",\n    \"value\": \"King Abdullah Economic City\"\n  },\n\t{\n    \"label\": \"Khamis Mushait\",\n    \"value\": \"Khamis Mushait\"\n  },\n\t{\n    \"label\": \"Al-Saih\",\n    \"value\": \"Al-Saih\"\n  },\n\t{\n    \"label\": \"Knowledge Economic City, Medina\",\n    \"value\": \"Knowledge Economic City, Medina\"\n  },\n\t{\n    \"label\": \"Khobar\",\n    \"value\": \"Khobar\"\n  },\n\t{\n    \"label\": \"Al-Khutt\",\n    \"value\": \"Al-Khutt\"\n  },\n\t{\n    \"label\": \"Layla\",\n    \"value\": \"Layla\"\n  },\n\t{\n    \"label\": \"Lihyan\",\n    \"value\": \"Lihyan\"\n  },\n\t{\n    \"label\": \"Al Lith\",\n    \"value\": \"Al Lith\"\n  },\n\t{\n    \"label\": \"Al Majma'ah\",\n    \"value\": \"Al Majma'ah\"\n  },\n\t{\n    \"label\": \"Mastoorah\",\n    \"value\": \"Mastoorah\"\n  },\n\t{\n    \"label\": \"Al Mikhwah\",\n    \"value\": \"Al Mikhwah\"\n  },\n\t{\n    \"label\": \"Al-Mubarraz\",\n    \"value\": \"Al-Mubarraz\"\n  },\n\t{\n    \"label\": \"Al Mawain\",\n    \"value\": \"Al Mawain\"\n  },\n\t{\n    \"label\": \"Medina\",\n    \"value\": \"Medina\"\n  },\n\t{\n    \"label\": \"Mecca\",\n    \"value\": \"Mecca\"\n  },\n\t{\n    \"label\": \"Muzahmiyya\",\n    \"value\": \"Muzahmiyya\"\n  },\n\t{\n    \"label\": \"Najran\",\n    \"value\": \"Najran\"\n  },\n\t{\n    \"label\": \"Al-Namas\",\n    \"value\": \"Al-Namas\"\n  },\n\t{\n    \"label\": \"Umluj\",\n    \"value\": \"Umluj\"\n  },\n\t{\n    \"label\": \"Al-Omran\",\n    \"value\": \"Al-Omran\"\n  },\n\t{\n    \"label\": \"Al-Oyoon\",\n    \"value\": \"Al-Oyoon\"\n  },\n\t{\n    \"label\": \"Qadeimah\",\n    \"value\": \"Qadeimah\"\n  },\n\t{\n    \"label\": \"Qatif\",\n    \"value\": \"Qatif\"\n  },\n\t{\n    \"label\": \"Qaisumah\",\n    \"value\": \"Qaisumah\"\n  },\n\t{\n    \"label\": \"Al Qunfudhah\",\n    \"value\": \"Al Qunfudhah\"\n  },\n\t{\n    \"label\": \"Qurayyat\",\n    \"value\": \"Qurayyat\"\n  },\n\t{\n    \"label\": \"Rabigh\",\n    \"value\": \"Rabigh\"\n  },\n\t{\n    \"label\": \"Rafha\",\n    \"value\": \"Rafha\"\n  },\n\t{\n    \"label\": \"Ar Rass\",\n    \"value\": \"Ar Rass\"\n  },\n\t{\n    \"label\": \"Ras Tanura\",\n    \"value\": \"Ras Tanura\"\n  },\n\t{\n    \"label\": \"Ranyah\",\n    \"value\": \"Ranyah\"\n  },\n\t{\n    \"label\": \"Riyadh\",\n    \"value\": \"Riyadh\"\n  },\n\t{\n    \"label\": \"Riyadh Al-Khabra\",\n    \"value\": \"Riyadh Al-Khabra\"\n  },\n\t{\n    \"label\": \"Rumailah\",\n    \"value\": \"Rumailah\"\n  },\n\t{\n    \"label\": \"Sabt Al Alaya\",\n    \"value\": \"Sabt Al Alaya\"\n  },\n\t{\n    \"label\": \"Sarat Abidah\",\n    \"value\": \"Sarat Abidah\"\n  },\n\t{\n    \"label\": \"Saihat\",\n    \"value\": \"Saihat\"\n  },\n\t{\n    \"label\": \"Safwa city\",\n    \"value\": \"Safwa city\"\n  },\n\t{\n    \"label\": \"Sakakah\",\n    \"value\": \"Sakakah\"\n  },\n\t{\n    \"label\": \"Sharurah\",\n    \"value\": \"Sharurah\"\n  },\n\t{\n    \"label\": \"Shaqraa\",\n    \"value\": \"Shaqraa\"\n  },\n\t{\n    \"label\": \"Shaybah\",\n    \"value\": \"Shaybah\"\n  },\n\t{\n    \"label\": \"As Sulayyil\",\n    \"value\": \"As Sulayyil\"\n  },\n\t{\n    \"label\": \"Taif\",\n    \"value\": \"Taif\"\n  },\n\t{\n    \"label\": \"Tabuk\",\n    \"value\": \"Tabuk\"\n  },\n\t{\n    \"label\": \"Tanomah\",\n    \"value\": \"Tanomah\"\n  },\n\t{\n    \"label\": \"Tarout\",\n    \"value\": \"Tarout\"\n  },\n\t{\n    \"label\": \"Tayma\",\n    \"value\": \"Tayma\"\n  },\n\t{\n    \"label\": \"Thadiq\",\n    \"value\": \"Thadiq\"\n  },\n\t{\n    \"label\": \"Thuwal\",\n    \"value\": \"Thuwal\"\n  },\n\t{\n    \"label\": \"Thuqbah\",\n    \"value\": \"Thuqbah\"\n  },\n\t{\n    \"label\": \"Turaif\",\n    \"value\": \"Turaif\"\n  },\n\t{\n    \"label\": \"Tabarjal\",\n    \"value\": \"Tabarjal\"\n  },\n\t{\n    \"label\": \"Udhailiyah\",\n    \"value\": \"Udhailiyah\"\n  },\n\t{\n    \"label\": \"Al-'Ula\",\n    \"value\": \"Al-'Ula\"\n  },\n\t{\n    \"label\": \"Um Al-Sahek\",\n    \"value\": \"Um Al-Sahek\"\n  },\n\t{\n    \"label\": \"Unaizah\",\n    \"value\": \"Unaizah\"\n  },\n\t{\n    \"label\": \"Uqair\",\n    \"value\": \"Uqair\"\n  },\n\t{\n    \"label\": \"Uyayna\",\n    \"value\": \"Uyayna\"\n  },\n\t{\n    \"label\": \"Uyun AlJiwa\",\n    \"value\": \"Uyun AlJiwa\"\n  },\n\t{\n    \"label\": \"Wadi Al-Dawasir\",\n    \"value\": \"Wadi Al-Dawasir\"\n  },\n\t{\n    \"label\": \"Al Wajh\",\n    \"value\": \"Al Wajh\"\n  },\n\t{\n    \"label\": \"Yanbu\",\n    \"value\": \"Yanbu\"\n  },\n\t{\n    \"label\": \"Az Zaimah\",\n    \"value\": \"Az Zaimah\"\n  },\n\t{\n    \"label\": \"Zulfi\",\n    \"value\": \"Zulfi\"\n  }\n]",
+                              "placeholderText": "Select option",
+                              "isDisabled": false,
+                              "key": "rkb8xjv4ss",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": false,
+                              "isDeprecated": false,
+                              "rightColumn": 63,
+                              "dynamicHeight": "FIXED",
+                              "widgetId": "2irua4yjsr",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "version": 1,
+                              "parentId": "iz1jrn5wz6",
+                              "labelAlignment": "left",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "maxDynamicHeight": 9000,
+                              "minDynamicHeight": 4
+                            },
+                            {
+                              "boxShadow": "none",
                               "widgetName": "hospital_name",
                               "displayName": "Input",
                               "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
@@ -1125,6 +1179,9 @@
                                 },
                                 {
                                   "key": "borderRadius"
+                                },
+                                {
+                                  "key": "validation"
                                 }
                               ],
                               "labelPosition": "Left",
@@ -1132,6 +1189,7 @@
                               "inputType": "TEXT",
                               "isDisabled": false,
                               "key": "7c07fryr7f",
+                              "validation": "{{hospital_name.text.length > 5}}",
                               "labelTextSize": "0.875rem",
                               "isRequired": true,
                               "isDeprecated": false,
@@ -1163,8 +1221,8 @@
                                 "number",
                                 "textarea"
                               ],
-                              "topRow": 16,
-                              "bottomRow": 20,
+                              "topRow": 18,
+                              "bottomRow": 22,
                               "parentRowSpace": 10,
                               "labelWidth": "13",
                               "autoFocus": false,
@@ -1181,6 +1239,9 @@
                                 },
                                 {
                                   "key": "borderRadius"
+                                },
+                                {
+                                  "key": "validation"
                                 }
                               ],
                               "labelPosition": "Left",
@@ -1188,6 +1249,7 @@
                               "inputType": "TEXT",
                               "isDisabled": false,
                               "key": "7c07fryr7f",
+                              "validation": "{{hospital_district.text.length > 5}}",
                               "labelTextSize": "0.875rem",
                               "isRequired": true,
                               "isDeprecated": false,
@@ -1197,62 +1259,6 @@
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisible": true,
                               "label": "District",
-                              "version": 2,
-                              "parentId": "iz1jrn5wz6",
-                              "labelAlignment": "left",
-                              "renderMode": "CANVAS",
-                              "isLoading": false,
-                              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                              "maxDynamicHeight": 9000,
-                              "iconAlign": "left",
-                              "defaultText": "",
-                              "minDynamicHeight": 4
-                            },
-                            {
-                              "boxShadow": "none",
-                              "widgetName": "hospital_city",
-                              "displayName": "Input",
-                              "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
-                              "searchTags": [
-                                "form",
-                                "text input",
-                                "number",
-                                "textarea"
-                              ],
-                              "topRow": 12,
-                              "bottomRow": 16,
-                              "parentRowSpace": 10,
-                              "labelWidth": "13",
-                              "autoFocus": false,
-                              "type": "INPUT_WIDGET_V2",
-                              "hideCard": false,
-                              "animateLoading": true,
-                              "parentColumnSpace": 6.2998046875,
-                              "dynamicTriggerPathList": [],
-                              "resetOnSubmit": true,
-                              "leftColumn": 2,
-                              "dynamicBindingPathList": [
-                                {
-                                  "key": "accentColor"
-                                },
-                                {
-                                  "key": "borderRadius"
-                                }
-                              ],
-                              "labelPosition": "Left",
-                              "labelStyle": "",
-                              "inputType": "TEXT",
-                              "isDisabled": false,
-                              "key": "7c07fryr7f",
-                              "labelTextSize": "0.875rem",
-                              "isRequired": true,
-                              "isDeprecated": false,
-                              "rightColumn": 61,
-                              "dynamicHeight": "FIXED",
-                              "widgetId": "1on94ui3ig",
-                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "isVisible": true,
-                              "label": "City",
                               "version": 2,
                               "parentId": "iz1jrn5wz6",
                               "labelAlignment": "left",
@@ -1420,7 +1426,7 @@
                             {
                               "boxShadow": "none",
                               "widgetName": "hospital_region",
-                              "isFilterable": false,
+                              "isFilterable": true,
                               "displayName": "Select",
                               "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
                               "labelText": "Region",
@@ -1805,7 +1811,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "IconButton2",
-                      "onClick": "{{resetWidget('Table1').then(()=> {get_physicianDetails.run();\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t\tcloseModal('ModalP')})\nresetWidget('tt1').then(()=> {get_labSpecialistDetails.run();\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t\tcloseModal('ModalP')})\n}}",
+                      "onClick": "{{resetWidget('Table1').then(()=> {get_physician.run();\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t\tcloseModal('ModalP')})\nresetWidget('tt1').then(()=> {get_labSpecialist.run();\t\t\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\t\tcloseModal('ModalP')})\n}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -1963,7 +1969,7 @@
                                   "key": "tableData"
                                 },
                                 {
-                                  "key": "primaryColumns.id.computedValue"
+                                  "key": "primaryColumns.idPhysician.computedValue"
                                 }
                               ],
                               "leftColumn": 9,
@@ -2008,7 +2014,7 @@
                               "widgetName": "Table1",
                               "defaultPageSize": 0,
                               "columnOrder": [
-                                "id"
+                                "idPhysician"
                               ],
                               "dynamicPropertyPathList": [],
                               "displayName": "Table",
@@ -2028,16 +2034,16 @@
                               ],
                               "borderWidth": "1",
                               "primaryColumns": {
-                                "id": {
+                                "idPhysician": {
                                   "allowCellWrapping": false,
                                   "index": 0,
                                   "width": 150,
-                                  "originalId": "id",
-                                  "id": "id",
-                                  "alias": "id",
+                                  "originalId": "idPhysician",
+                                  "id": "idPhysician",
+                                  "alias": "idPhysician",
                                   "horizontalAlignment": "CENTER",
                                   "verticalAlignment": "CENTER",
-                                  "columnType": "text",
+                                  "columnType": "number",
                                   "textColor": "#52525b",
                                   "textSize": "0.875rem",
                                   "fontStyle": "",
@@ -2049,10 +2055,10 @@
                                   "isEditable": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "id",
+                                  "label": "idPhysician",
                                   "isSaveVisible": true,
                                   "isDiscardVisible": true,
-                                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"id\"]))}}",
+                                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"idPhysician\"]))}}",
                                   "validation": {},
                                   "cellBackground": "transparent"
                                 }
@@ -2125,10 +2131,34 @@
                                   "key": "cellBackground"
                                 },
                                 {
-                                  "key": "primaryColumns.affectedRows.computedValue"
+                                  "key": "tableData"
                                 },
                                 {
-                                  "key": "tableData"
+                                  "key": "primaryColumns.nationalID.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.name.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.password.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.DOB.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.gender.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.mobileNo.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.email.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.nationality.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.specialisation.computedValue"
                                 }
                               ],
                               "leftColumn": 1,
@@ -2171,7 +2201,15 @@
                               "widgetName": "Table2",
                               "defaultPageSize": 0,
                               "columnOrder": [
-                                "affectedRows"
+                                "nationalID",
+                                "name",
+                                "password",
+                                "DOB",
+                                "gender",
+                                "mobileNo",
+                                "email",
+                                "nationality",
+                                "specialisation"
                               ],
                               "dynamicPropertyPathList": [],
                               "displayName": "Table",
@@ -2188,13 +2226,13 @@
                               "dynamicTriggerPathList": [],
                               "borderWidth": "1",
                               "primaryColumns": {
-                                "affectedRows": {
+                                "nationalID": {
                                   "allowCellWrapping": false,
                                   "index": 0,
                                   "width": 150,
-                                  "originalId": "affectedRows",
-                                  "id": "affectedRows",
-                                  "alias": "affectedRows",
+                                  "originalId": "nationalID",
+                                  "id": "nationalID",
+                                  "alias": "nationalID",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "number",
@@ -2209,10 +2247,234 @@
                                   "isEditable": false,
                                   "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "affectedRows",
+                                  "label": "nationalID",
                                   "isSaveVisible": true,
                                   "isDiscardVisible": true,
-                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"affectedRows\"]))}}",
+                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationalID\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": "#F0F9F8"
+                                },
+                                "name": {
+                                  "allowCellWrapping": false,
+                                  "index": 1,
+                                  "width": 150,
+                                  "originalId": "name",
+                                  "id": "name",
+                                  "alias": "name",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "name",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": "#F0F9F8"
+                                },
+                                "password": {
+                                  "allowCellWrapping": false,
+                                  "index": 2,
+                                  "width": 150,
+                                  "originalId": "password",
+                                  "id": "password",
+                                  "alias": "password",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "password",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"password\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": "#F0F9F8"
+                                },
+                                "DOB": {
+                                  "allowCellWrapping": false,
+                                  "index": 3,
+                                  "width": 150,
+                                  "originalId": "DOB",
+                                  "id": "DOB",
+                                  "alias": "DOB",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "date",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "DOB",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"DOB\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": "#F0F9F8"
+                                },
+                                "gender": {
+                                  "allowCellWrapping": false,
+                                  "index": 4,
+                                  "width": 150,
+                                  "originalId": "gender",
+                                  "id": "gender",
+                                  "alias": "gender",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "gender",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"gender\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": "#F0F9F8"
+                                },
+                                "mobileNo": {
+                                  "allowCellWrapping": false,
+                                  "index": 5,
+                                  "width": 150,
+                                  "originalId": "mobileNo",
+                                  "id": "mobileNo",
+                                  "alias": "mobileNo",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "mobileNo",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"mobileNo\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": "#F0F9F8"
+                                },
+                                "email": {
+                                  "allowCellWrapping": false,
+                                  "index": 6,
+                                  "width": 150,
+                                  "originalId": "email",
+                                  "id": "email",
+                                  "alias": "email",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "email",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"email\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": "#F0F9F8"
+                                },
+                                "nationality": {
+                                  "allowCellWrapping": false,
+                                  "index": 7,
+                                  "width": 150,
+                                  "originalId": "nationality",
+                                  "id": "nationality",
+                                  "alias": "nationality",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "nationality",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationality\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": "#F0F9F8"
+                                },
+                                "specialisation": {
+                                  "allowCellWrapping": false,
+                                  "index": 8,
+                                  "width": 150,
+                                  "originalId": "specialisation",
+                                  "id": "specialisation",
+                                  "alias": "specialisation",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "specialisation",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"specialisation\"]))}}",
                                   "validation": {},
                                   "cellBackground": "#F0F9F8"
                                 }
