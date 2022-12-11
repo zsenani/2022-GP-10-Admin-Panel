@@ -228,7 +228,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "NationalI D",
+                  "label": "National/ Resident ID D",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{physician_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationalID\"]))}}",
@@ -1666,11 +1666,7 @@
               "widgetName": "Button3",
               "onClick": "",
               "buttonColor": "#ef4444",
-              "dynamicPropertyPathList": [
-                {
-                  "key": "onClick"
-                }
-              ],
+              "dynamicPropertyPathList": [],
               "displayName": "Button",
               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
               "searchTags": [

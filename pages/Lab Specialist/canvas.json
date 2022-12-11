@@ -228,7 +228,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "National ID",
+                  "label": "National/ Resident ID",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{labSpecialist_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationalID\"]))}}",
