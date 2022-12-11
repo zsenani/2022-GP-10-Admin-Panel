@@ -228,7 +228,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "nationalID",
+                  "label": "NationalI D",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{physician_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationalID\"]))}}",
@@ -284,12 +284,13 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "DOB",
+                  "label": "Date of Birth",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{physician_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"DOB\"]))}}",
                   "validation": {},
-                  "cellBackground": "transparent"
+                  "cellBackground": "transparent",
+                  "outputFormat": "YYYY-MM-DD"
                 },
                 "gender": {
                   "allowCellWrapping": false,
@@ -312,7 +313,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "gender",
+                  "label": "Gender",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{physician_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"gender\"]))}}",
@@ -340,7 +341,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "mobileNo",
+                  "label": "Mobile No.",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{physician_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"mobileNo\"]))}}",
@@ -368,7 +369,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "email",
+                  "label": "Email",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{physician_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"email\"]))}}",
@@ -396,7 +397,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "nationality",
+                  "label": "Nationality",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{physician_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationality\"]))}}",
@@ -424,7 +425,7 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "specialisation",
+                  "label": "Specialization",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{physician_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"specialisation\"]))}}",
@@ -473,7 +474,10 @@
                       "isSpellCheck": false,
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
-                      "label": "Name"
+                      "label": "Name",
+                      "regex": "/^[a-zA-Z]+[\\s]+/",
+                      "validation": "{{((sourceData, formData, fieldState) => (JSONForm.formData.name.length > 4))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
+                      "tooltip": "The field must include the first and the last name "
                     },
                     "nationalID": {
                       "children": {},
@@ -533,13 +537,13 @@
                       "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "boxShadow": "none",
-                      "closeOnSelection": false,
+                      "closeOnSelection": true,
                       "convertToISO": false,
                       "dateFormat": "YYYY-MM-DD",
                       "isDisabled": false,
-                      "isRequired": false,
+                      "isRequired": true,
                       "isVisible": true,
-                      "label": "DOB",
+                      "label": "Date of Birth",
                       "maxDate": "2121-12-31T18:29:00.000Z",
                       "minDate": "1920-12-31T18:30:00.000Z",
                       "shortcuts": false,
@@ -550,7 +554,7 @@
                       "children": {},
                       "dataType": "string",
                       "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.gender))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
-                      "fieldType": "Text Input",
+                      "fieldType": "Select",
                       "sourceData": "Female",
                       "isCustomField": false,
                       "accessor": "gender",
@@ -560,19 +564,20 @@
                       "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "boxShadow": "none",
-                      "iconAlign": "left",
                       "isDisabled": false,
-                      "isRequired": false,
-                      "isSpellCheck": false,
+                      "isFilterable": false,
+                      "isRequired": true,
                       "isVisible": true,
+                      "label": "Gender",
                       "labelTextSize": "0.875rem",
-                      "label": "Gender"
+                      "serverSideFiltering": false,
+                      "options": "[\n  {\n    \"label\": \"Female\",\n    \"value\": \"Female\"\n  },\n  {\n    \"label\": \"Male\",\n    \"value\": \"Male\"\n  }\n]"
                     },
                     "mobileNo": {
                       "children": {},
                       "dataType": "string",
                       "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.mobileNo))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
-                      "fieldType": "Text Input",
+                      "fieldType": "Phone Number Input",
                       "sourceData": "555666777",
                       "isCustomField": false,
                       "accessor": "mobileNo",
@@ -582,13 +587,15 @@
                       "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "boxShadow": "none",
-                      "iconAlign": "left",
+                      "allowDialCodeChange": true,
+                      "dialCode": "+966",
                       "isDisabled": false,
-                      "isRequired": false,
+                      "isRequired": true,
                       "isSpellCheck": false,
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
-                      "label": "Mobile No"
+                      "label": "Mobile No",
+                      "validation": "{{((sourceData, formData, fieldState) => (JSONForm.formData.mobileNo.length >= 9))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}"
                     },
                     "email": {
                       "children": {},
@@ -606,7 +613,7 @@
                       "boxShadow": "none",
                       "iconAlign": "left",
                       "isDisabled": false,
-                      "isRequired": false,
+                      "isRequired": true,
                       "isSpellCheck": false,
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
@@ -628,7 +635,7 @@
                       "boxShadow": "none",
                       "iconAlign": "left",
                       "isDisabled": false,
-                      "isRequired": false,
+                      "isRequired": true,
                       "isSpellCheck": false,
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
@@ -638,7 +645,7 @@
                       "children": {},
                       "dataType": "string",
                       "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.specialisation))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
-                      "fieldType": "Text Input",
+                      "fieldType": "Select",
                       "sourceData": "Allergy and immunology",
                       "isCustomField": false,
                       "accessor": "specialisation",
@@ -648,13 +655,14 @@
                       "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "boxShadow": "none",
-                      "iconAlign": "left",
                       "isDisabled": false,
-                      "isRequired": false,
-                      "isSpellCheck": false,
+                      "isFilterable": true,
+                      "isRequired": true,
                       "isVisible": true,
+                      "label": "Specialization",
                       "labelTextSize": "0.875rem",
-                      "label": "Specialisation"
+                      "serverSideFiltering": false,
+                      "options": "[\n  {\n    \"label\": \"Allergy and immunology\",\n    \"value\": \"Allergy and immunology\"\n  },\n  {\n    \"label\": \"Anesthesiology\",\n    \"value\": \"Anesthesiology\"\n  },\n  {\n    \"label\": \"Dermatology\",\n    \"value\": \"Dermatology\"\n  },\n  {\n    \"label\": \"Diagnostic radiology\",\n    \"value\": \"Diagnostic radiology\"\n  },\n  {\n    \"label\": \"Emergency medicine\",\n    \"value\": \"Emergency medicine\"\n  },\n  {\n    \"label\": \"Family medicine\",\n    \"value\": \"Family medicine\"\n  },\n  {\n    \"label\": \"Internal medicine\",\n    \"value\": \"Internal medicine\"\n  },\n  {\n    \"label\": \"Medical genetics\",\n    \"value\": \"Medical genetics\"\n  },\n  {\n    \"label\": \"Neurology\",\n    \"value\": \"Neurology\"\n  },\n  {\n    \"label\": \"Nuclear medicine\",\n    \"value\": \"Nuclear medicine\"\n  },\n  {\n    \"label\": \"Obstetrics and gynecology\",\n    \"value\": \"Obstetrics and gynecology\"\n  },\n  {\n    \"label\": \"Ophthalmology\",\n    \"value\": \"Ophthalmology\"\n  },\n  {\n    \"label\": \"Pathology\",\n    \"value\": \"Pathology\"\n  },\n  {\n    \"label\": \"Pediatrics\",\n    \"value\": \"Pediatrics\"\n  },\n  {\n    \"label\": \"Physical medicine and rehabilitation\",\n    \"value\": \"Physical medicine and rehabilitation\"\n  },\n  {\n    \"label\": \"Preventive medicine\",\n    \"value\": \"Preventive medicine\"\n  },\n  {\n    \"label\": \"Psychiatry\",\n    \"value\": \"Psychiatry\"\n  },\n  {\n    \"label\": \"Radiation oncology\",\n    \"value\": \"Radiation oncology\"\n  },\n  {\n    \"label\": \"Surgery\",\n    \"value\": \"Surgery\"\n  },\n  {\n    \"label\": \"Urology\",\n    \"value\": \"Urology\"\n  },\n  {\n    \"label\": \"Other\",\n    \"value\": \"Other\"\n  }\n]"
                     }
                   },
                   "dataType": "object",
@@ -915,6 +923,12 @@
                 },
                 {
                   "key": "schema.__root_schema__.children.specialisation.borderRadius"
+                },
+                {
+                  "key": "schema.__root_schema__.children.name.validation"
+                },
+                {
+                  "key": "schema.__root_schema__.children.mobileNo.validation"
                 }
               ],
               "borderWidth": "1",
@@ -2369,13 +2383,10 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "borderRadius"
-                        },
-                        {
-                          "key": "textColor"
                         }
                       ],
                       "shouldTruncate": false,
-                      "text": "Are you sure you want to edit the hospital information?",
+                      "text": "Are you sure you want to edit the information?",
                       "key": "kbss625324",
                       "isDeprecated": false,
                       "rightColumn": 56,
@@ -2384,7 +2395,7 @@
                       "widgetId": "wmmneepk6v",
                       "isVisible": true,
                       "fontStyle": "BOLD",
-                      "textColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "textColor": "#3f3f46",
                       "version": 1,
                       "parentId": "a2wx8mm7df",
                       "renderMode": "CANVAS",
@@ -2444,7 +2455,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button12",
-                      "onClick": "\n{{update_hospital.run(() =>\n\t\t\t\t\t\t\t\t\t\t\t{\n\tcloseModal('Modal4')\n\tget_hospital.run() \n\t\n})}}",
+                      "onClick": "\n{{update_physician.run(() =>\n\t\t\t\t\t\t\t\t\t\t\t{\n\tcloseModal('Modal4')\n\tget_physician.run() \n\t\n})}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {

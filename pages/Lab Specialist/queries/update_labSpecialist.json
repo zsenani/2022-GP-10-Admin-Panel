@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mysql-plugin",
   "unpublishedAction": {
-    "name": "add_hospital",
+    "name": "update_labSpecialist",
     "datasource": {
       "name": "MedCoreMySQL",
       "pluginId": "mysql-plugin",
@@ -13,16 +13,16 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Hospital",
+    "pageId": "Lab Specialist",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO Hospital (idhospital, name, region, city, district)\n  VALUES ({{hospital_id.text}}, {{hospital_name.text}}, {{hospital_region.selectedOptionLabel}}, {{hospital_city.selectedOptionLabel}},{{ hospital_district.text}});",
+      "body": "UPDATE LabSpecialist SET\n    name = '{{JSONForm.formData.name}}',\n    DOB = '{{JSONForm.formData.DOB}}',\n    gender = '{{JSONForm.formData.gender}}',\n    mobileNo = '{{JSONForm.formData.mobileNo}}',\n    email = '{{JSONForm.formData.email}}',\n    nationality = '{{JSONForm.formData.nationality}}'\n  WHERE nationalID = '{{labSpecialist_table.selectedRow.nationalID}}'; ",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ]
     },
@@ -36,18 +36,20 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "hospital_city.selectedOptionLabel",
-      "hospital_district.text",
-      "hospital_id.text",
-      "hospital_name.text",
-      "hospital_region.selectedOptionLabel"
+      "JSONForm.formData.DOB",
+      "JSONForm.formData.email",
+      "JSONForm.formData.gender",
+      "JSONForm.formData.mobileNo",
+      "JSONForm.formData.name",
+      "JSONForm.formData.nationality",
+      "labSpecialist_table.selectedRow.nationalID"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Hospital_add_hospital",
+  "id": "Lab Specialist_update_labSpecialist",
   "deleted": false,
-  "gitSyncId": "6356520d4b1a8d4291238688_639215fc6b75d667999191a3"
+  "gitSyncId": "6356520d4b1a8d4291238688_6395a7474b95806da2da7295"
 }

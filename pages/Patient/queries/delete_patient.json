@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mysql-plugin",
   "unpublishedAction": {
-    "name": "add_hospital",
+    "name": "delete_patient",
     "datasource": {
       "name": "MedCoreMySQL",
       "pluginId": "mysql-plugin",
@@ -13,16 +13,16 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Hospital",
+    "pageId": "Patient",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO Hospital (idhospital, name, region, city, district)\n  VALUES ({{hospital_id.text}}, {{hospital_name.text}}, {{hospital_region.selectedOptionLabel}}, {{hospital_city.selectedOptionLabel}},{{ hospital_district.text}});",
+      "body": "DELETE FROM Patient\n    WHERE NationalID = '{{patient_table.selectedRow.NationalID}}'; ",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ]
     },
@@ -36,18 +36,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "hospital_city.selectedOptionLabel",
-      "hospital_district.text",
-      "hospital_id.text",
-      "hospital_name.text",
-      "hospital_region.selectedOptionLabel"
+      "patient_table.selectedRow.NationalID"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Hospital_add_hospital",
+  "id": "Patient_delete_patient",
   "deleted": false,
-  "gitSyncId": "6356520d4b1a8d4291238688_639215fc6b75d667999191a3"
+  "gitSyncId": "6356520d4b1a8d4291238688_6395b921e77ccb59f68818e7"
 }

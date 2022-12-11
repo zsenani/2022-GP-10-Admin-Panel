@@ -284,12 +284,13 @@
                   "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "DOB",
+                  "label": "Date of Birth",
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{labSpecialist_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"DOB\"]))}}",
                   "validation": {},
-                  "cellBackground": "transparent"
+                  "cellBackground": "transparent",
+                  "outputFormat": "YYYY-MM-DD"
                 },
                 "gender": {
                   "allowCellWrapping": false,
@@ -473,7 +474,11 @@
                       "isSpellCheck": false,
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
-                      "label": "Name"
+                      "label": "Name",
+                      "regex": "/^[a-zA-Z]+[\\s]+/",
+                      "validation": "{{((sourceData, formData, fieldState) => (JSONForm.formData.name.length > 4))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
+                      "errorMessage": "",
+                      "tooltip": "The field must include the first and the last name "
                     },
                     "nationalID": {
                       "children": {},
@@ -533,24 +538,24 @@
                       "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "boxShadow": "none",
-                      "closeOnSelection": false,
+                      "closeOnSelection": true,
                       "convertToISO": false,
                       "dateFormat": "YYYY-MM-DD",
                       "isDisabled": false,
-                      "isRequired": false,
+                      "isRequired": true,
                       "isVisible": true,
-                      "label": "DOB",
+                      "label": "Date of Birth",
                       "maxDate": "2121-12-31T18:29:00.000Z",
                       "minDate": "1920-12-31T18:30:00.000Z",
                       "shortcuts": false,
-                      "timePrecision": "minute",
+                      "timePrecision": "None",
                       "labelTextSize": "0.875rem"
                     },
                     "gender": {
                       "children": {},
                       "dataType": "string",
                       "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.gender))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
-                      "fieldType": "Text Input",
+                      "fieldType": "Select",
                       "sourceData": "Female",
                       "isCustomField": false,
                       "accessor": "gender",
@@ -560,19 +565,20 @@
                       "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "boxShadow": "none",
-                      "iconAlign": "left",
                       "isDisabled": false,
-                      "isRequired": false,
-                      "isSpellCheck": false,
+                      "isFilterable": false,
+                      "isRequired": true,
                       "isVisible": true,
+                      "label": "Gender",
                       "labelTextSize": "0.875rem",
-                      "label": "Gender"
+                      "serverSideFiltering": false,
+                      "options": "[\n  {\n    \"label\": \"Female\",\n    \"value\": \"Female\"\n  },\n  {\n    \"label\": \"Male\",\n    \"value\": \"Male\"\n  }\n]"
                     },
                     "mobileNo": {
                       "children": {},
                       "dataType": "string",
                       "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.mobileNo))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
-                      "fieldType": "Text Input",
+                      "fieldType": "Phone Number Input",
                       "sourceData": "098098098",
                       "isCustomField": false,
                       "accessor": "mobileNo",
@@ -582,13 +588,15 @@
                       "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
                       "boxShadow": "none",
-                      "iconAlign": "left",
+                      "allowDialCodeChange": true,
+                      "dialCode": "+966",
                       "isDisabled": false,
-                      "isRequired": false,
+                      "isRequired": true,
                       "isSpellCheck": false,
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
-                      "label": "Mobile No"
+                      "label": "Mobile No.",
+                      "validation": "{{((sourceData, formData, fieldState) => (JSONForm.formData.mobileNo.length >= 9))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}"
                     },
                     "email": {
                       "children": {},
@@ -606,7 +614,7 @@
                       "boxShadow": "none",
                       "iconAlign": "left",
                       "isDisabled": false,
-                      "isRequired": false,
+                      "isRequired": true,
                       "isSpellCheck": false,
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
@@ -628,7 +636,7 @@
                       "boxShadow": "none",
                       "iconAlign": "left",
                       "isDisabled": false,
-                      "isRequired": false,
+                      "isRequired": true,
                       "isSpellCheck": false,
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
@@ -915,6 +923,12 @@
                 },
                 {
                   "key": "schema.__root_schema__.children.idHospital.borderRadius"
+                },
+                {
+                  "key": "schema.__root_schema__.children.name.validation"
+                },
+                {
+                  "key": "schema.__root_schema__.children.mobileNo.validation"
                 }
               ],
               "borderWidth": "1",
@@ -2369,13 +2383,10 @@
                       "dynamicBindingPathList": [
                         {
                           "key": "borderRadius"
-                        },
-                        {
-                          "key": "textColor"
                         }
                       ],
                       "shouldTruncate": false,
-                      "text": "Are you sure you want to edit the hospital information?",
+                      "text": "Are you sure you want to edit the information?",
                       "key": "kbss625324",
                       "isDeprecated": false,
                       "rightColumn": 56,
@@ -2384,7 +2395,7 @@
                       "widgetId": "wmmneepk6v",
                       "isVisible": true,
                       "fontStyle": "BOLD",
-                      "textColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "textColor": "#3f3f46",
                       "version": 1,
                       "parentId": "a2wx8mm7df",
                       "renderMode": "CANVAS",
@@ -2444,7 +2455,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button12",
-                      "onClick": "\n{{update_hospital.run(() =>\n\t\t\t\t\t\t\t\t\t\t\t{\n\tcloseModal('Modal4')\n\tget_hospital.run() \n\t\n})}}",
+                      "onClick": "\n{{update_labSpecialist.run(() =>\n\t\t\t\t\t\t\t\t\t\t\t{\n\tcloseModal('Modal4')\n\tget_labSpecialist.run() \n\t\n})}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
