@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1290,
+          "bottomRow": 1292,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -26,56 +26,6 @@
           "dynamicBindingPathList": [],
           "leftColumn": 0,
           "children": [
-            {
-              "resetFormOnClick": false,
-              "boxShadow": "none",
-              "widgetName": "Button3Copy",
-              "onClick": "{{storeValue('selectOptions',undefined)}}",
-              "buttonColor": "#dc2626",
-              "displayName": "Button",
-              "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
-              "searchTags": [
-                "click",
-                "submit"
-              ],
-              "topRow": 69,
-              "bottomRow": 73,
-              "parentRowSpace": 10,
-              "type": "BUTTON_WIDGET",
-              "hideCard": false,
-              "animateLoading": true,
-              "parentColumnSpace": 20.0625,
-              "dynamicTriggerPathList": [
-                {
-                  "key": "onClick"
-                }
-              ],
-              "leftColumn": 49,
-              "dynamicBindingPathList": [
-                {
-                  "key": "borderRadius"
-                }
-              ],
-              "text": "Clear customized options",
-              "isDisabled": false,
-              "key": "hrhhgtz8w8",
-              "isDeprecated": false,
-              "rightColumn": 60,
-              "isDefaultClickDisabled": true,
-              "iconName": "reset",
-              "widgetId": "mbdfwjgwgz",
-              "isVisible": true,
-              "recaptchaType": "V3",
-              "version": 1,
-              "parentId": "0",
-              "renderMode": "CANVAS",
-              "isLoading": false,
-              "disabledWhenInvalid": false,
-              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "buttonVariant": "PRIMARY",
-              "iconAlign": "left",
-              "placement": "CENTER"
-            },
             {
               "boxShadow": "none",
               "widgetName": "other_model",
@@ -230,7 +180,7 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
-                      "leftColumn": 32,
+                      "leftColumn": 19,
                       "dynamicBindingPathList": [
                         {
                           "key": "buttonColor"
@@ -243,7 +193,7 @@
                       "isDisabled": false,
                       "key": "qm8x69w8df",
                       "isDeprecated": false,
-                      "rightColumn": 48,
+                      "rightColumn": 35,
                       "isDefaultClickDisabled": true,
                       "widgetId": "kx2os29r8m",
                       "buttonStyle": "PRIMARY",
@@ -280,7 +230,7 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 48,
+                      "leftColumn": 35,
                       "dynamicBindingPathList": [
                         {
                           "key": "buttonColor"
@@ -293,7 +243,7 @@
                       "isDisabled": false,
                       "key": "qm8x69w8df",
                       "isDeprecated": false,
-                      "rightColumn": 64,
+                      "rightColumn": 51,
                       "isDefaultClickDisabled": true,
                       "widgetId": "iiob03mw8s",
                       "buttonStyle": "PRIMARY_BUTTON",
@@ -1610,7 +1560,7 @@
                 "buttonVariant": "SECONDARY",
                 "iconAlign": "left"
               },
-              "isVisible": "{{Object.values(physician_table.selectedRow).every((item) => { return item !== \"\"; })}} ",
+              "isVisible": "{{!Object.values(physician_table.selectedRow).every((item) => { return item === \"\"; })}} ",
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",

@@ -882,7 +882,7 @@
                 "buttonVariant": "SECONDARY",
                 "iconAlign": "left"
               },
-              "isVisible": "{{Object.values(hospital_table.selectedRow).every((item) => { return item !== \"\"; })}} ",
+              "isVisible": "{{!Object.values(hospital_table.selectedRow).every((item) => { return item === \"\"; })}} ",
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",
@@ -2113,14 +2113,17 @@
                                 },
                                 {
                                   "key": "primaryColumns.specialisation.computedValue"
+                                },
+                                {
+                                  "key": "isVisible"
                                 }
                               ],
                               "leftColumn": 1,
                               "delimiter": ",",
-                              "defaultSelectedRowIndex": 0,
+                              "defaultSelectedRowIndex": "-1",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisibleFilters": false,
-                              "isVisible": true,
+                              "isVisible": "{{Object.values(Table1.selectedRow).every((item) => { return item !== \"\"; })}}",
                               "enableClientSideSearch": true,
                               "version": 1,
                               "totalRecordsCount": 0,
@@ -2165,7 +2168,11 @@
                                 "nationality",
                                 "specialisation"
                               ],
-                              "dynamicPropertyPathList": [],
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "isVisible"
+                                }
+                              ],
                               "displayName": "Table",
                               "bottomRow": 46,
                               "columnWidthMap": {

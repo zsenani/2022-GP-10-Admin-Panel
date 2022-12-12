@@ -1228,7 +1228,7 @@
                 "buttonVariant": "SECONDARY",
                 "iconAlign": "left"
               },
-              "isVisible": "{{Object.values(labSpecialist_table.selectedRow).every((item) => { return item !== \"\"; })}} ",
+              "isVisible": "{{!Object.values(labSpecialist_table.selectedRow).every((item) => { return item === \"\"; })}} ",
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",

@@ -464,11 +464,7 @@
                 "medicalIllnesses",
                 "BloodPressure"
               ],
-              "dynamicPropertyPathList": [
-                {
-                  "key": "onRowSelected"
-                }
-              ],
+              "dynamicPropertyPathList": [],
               "displayName": "Table",
               "bottomRow": 73,
               "columnWidthMap": {
@@ -1848,7 +1844,7 @@
                 "buttonVariant": "SECONDARY",
                 "iconAlign": "left"
               },
-              "isVisible": "{{Object.values(patient_table.selectedRow).every((item) => { return item !== \"\"; })}} ",
+              "isVisible": "{{!Object.values(patient_table.selectedRow).every((item) => { return item === \"\"; })}}  ",
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",
