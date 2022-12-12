@@ -148,7 +148,7 @@
               ],
               "leftColumn": 0,
               "delimiter": ",",
-              "defaultSelectedRowIndex": "-1",
+              "defaultSelectedRowIndex": "0",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisibleFilters": true,
               "isVisible": true,
