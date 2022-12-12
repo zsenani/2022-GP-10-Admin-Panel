@@ -18,11 +18,11 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO Hospital (idhospital, name, region, city, district)\n  VALUES ({{hospital_id.text}}, {{hospital_name.text}}, {{hospital_region.selectedOptionLabel}}, {{hospital_city.selectedOptionLabel}},{{ hospital_district.text}});",
+      "body": "INSERT INTO Hospital (idhospital, name, region, city, district)\n  VALUES ('{{JSONForm1.formData.hospitalID}}', '{{JSONForm1.formData.name}}', '{{JSONForm1.formData.region}}', '{{JSONForm1.formData.city}}','{{ JSONForm1.formData.district}}');",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ]
     },
@@ -36,11 +36,11 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "hospital_city.selectedOptionLabel",
-      "hospital_district.text",
-      "hospital_id.text",
-      "hospital_name.text",
-      "hospital_region.selectedOptionLabel"
+      "JSONForm1.formData.city",
+      "JSONForm1.formData.district",
+      "JSONForm1.formData.hospitalID",
+      "JSONForm1.formData.name",
+      "JSONForm1.formData.region"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

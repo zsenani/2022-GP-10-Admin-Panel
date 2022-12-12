@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  showModal('ModalP');\n  await get_physician.run();\n  await get_labSpecialist.run();\n}",
+      "body": "async () => {\n  showModal('ModalP');\n  await get_physician.run();\n  await get_physicianDetails.run();\n  await get_labSpecialist.run();\n  await get_labSpecialistDetails.run();\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -35,7 +35,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n  showModal('ModalP');\n  await get_physician.run();\n  await get_labSpecialist.run();\n}"
+      "async () => {\n  showModal('ModalP');\n  await get_physician.run();\n  await get_physicianDetails.run();\n  await get_labSpecialist.run();\n  await get_labSpecialistDetails.run();\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
