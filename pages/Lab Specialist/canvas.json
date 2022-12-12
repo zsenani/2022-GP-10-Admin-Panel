@@ -376,7 +376,7 @@
               ],
               "leftColumn": 0,
               "delimiter": ",",
-              "defaultSelectedRowIndex": "0",
+              "defaultSelectedRowIndex": "-1",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisibleFilters": true,
               "isVisible": true,
@@ -984,6 +984,9 @@
                 },
                 {
                   "key": "schema.__root_schema__.children.DOB.defaultValue"
+                },
+                {
+                  "key": "isVisible"
                 }
               ],
               "displayName": "JSON Form",
@@ -1202,6 +1205,9 @@
                 },
                 {
                   "key": "schema.__root_schema__.children.mobileNo.validation"
+                },
+                {
+                  "key": "isVisible"
                 }
               ],
               "borderWidth": "1",
@@ -1222,7 +1228,7 @@
                 "buttonVariant": "SECONDARY",
                 "iconAlign": "left"
               },
-              "isVisible": true,
+              "isVisible": "{{Object.values(labSpecialist_table.selectedRow).every((item) => { return item !== \"\"; })}} ",
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",
@@ -1942,6 +1948,9 @@
               "dynamicPropertyPathList": [
                 {
                   "key": "onClick"
+                },
+                {
+                  "key": "isDisabled"
                 }
               ],
               "displayName": "Button",
@@ -1966,10 +1975,13 @@
               "dynamicBindingPathList": [
                 {
                   "key": "borderRadius"
+                },
+                {
+                  "key": "isDisabled"
                 }
               ],
               "text": "Delete",
-              "isDisabled": false,
+              "isDisabled": "{{Object.values(labSpecialist_table.selectedRow).every((item) => { return item === \"\"; })}} ",
               "key": "jtmue10pec",
               "isDeprecated": false,
               "rightColumn": 44,

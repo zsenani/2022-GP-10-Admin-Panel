@@ -32,7 +32,11 @@
               "widgetName": "Button8Copy",
               "onClick": "{{view_physiciansLabSpecialist.viewPhysiciansLabSpecialist()}}",
               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-              "dynamicPropertyPathList": [],
+              "dynamicPropertyPathList": [
+                {
+                  "key": "isDisabled"
+                }
+              ],
               "displayName": "Button",
               "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
               "searchTags": [
@@ -58,10 +62,13 @@
                 },
                 {
                   "key": "borderRadius"
+                },
+                {
+                  "key": "isDisabled"
                 }
               ],
               "text": "View Physicians/ Lab Specialists",
-              "isDisabled": false,
+              "isDisabled": "{{Object.values(hospital_table.selectedRow).every((item) => { return item === \"\"; })}} ",
               "key": "ibscu13tyu",
               "isDeprecated": false,
               "rightColumn": 35,
@@ -148,7 +155,7 @@
               ],
               "leftColumn": 0,
               "delimiter": ",",
-              "defaultSelectedRowIndex": "0",
+              "defaultSelectedRowIndex": "-1",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisibleFilters": true,
               "isVisible": true,
@@ -634,6 +641,9 @@
               "dynamicPropertyPathList": [
                 {
                   "key": "schema.__root_schema__.children.date_of_birth.defaultValue"
+                },
+                {
+                  "key": "isVisible"
                 }
               ],
               "displayName": "JSON Form",
@@ -849,6 +859,9 @@
                 },
                 {
                   "key": "schema.__root_schema__.children.name.validation"
+                },
+                {
+                  "key": "isVisible"
                 }
               ],
               "borderWidth": "1",
@@ -869,7 +882,7 @@
                 "buttonVariant": "SECONDARY",
                 "iconAlign": "left"
               },
-              "isVisible": true,
+              "isVisible": "{{Object.values(hospital_table.selectedRow).every((item) => { return item !== \"\"; })}} ",
               "version": 1,
               "parentId": "0",
               "renderMode": "CANVAS",
@@ -1639,6 +1652,9 @@
               "dynamicPropertyPathList": [
                 {
                   "key": "onClick"
+                },
+                {
+                  "key": "isDisabled"
                 }
               ],
               "displayName": "Button",
@@ -1663,10 +1679,13 @@
               "dynamicBindingPathList": [
                 {
                   "key": "borderRadius"
+                },
+                {
+                  "key": "isDisabled"
                 }
               ],
               "text": "Delete",
-              "isDisabled": false,
+              "isDisabled": "{{Object.values(hospital_table.selectedRow).every((item) => { return item === \"\"; })}} ",
               "key": "jtmue10pec",
               "isDeprecated": false,
               "rightColumn": 44,
