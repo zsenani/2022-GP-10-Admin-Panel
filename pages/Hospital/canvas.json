@@ -394,7 +394,9 @@
                       "isSpellCheck": false,
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
-                      "label": "Name"
+                      "label": "Name",
+                      "regex": "/^[a-zA-Z]+/",
+                      "validation": "{{((sourceData, formData, fieldState) => (edit_hospital_JSONForm.formData.name.length > 5))(edit_hospital_JSONForm.sourceData, edit_hospital_JSONForm.formData, edit_hospital_JSONForm.fieldState)}}"
                     },
                     "city": {
                       "children": {},
@@ -844,6 +846,9 @@
                 },
                 {
                   "key": "schema.__root_schema__.children.region.defaultValue"
+                },
+                {
+                  "key": "schema.__root_schema__.children.name.validation"
                 }
               ],
               "borderWidth": "1",
@@ -1142,7 +1147,8 @@
                               "isVisible": true,
                               "labelTextSize": "0.875rem",
                               "label": "Name",
-                              "validation": "{{((sourceData, formData, fieldState) => (JSONForm1.formData.name.length > 5))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}"
+                              "validation": "{{((sourceData, formData, fieldState) => (JSONForm1.formData.name.length > 5))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
+                              "regex": "/^[a-zA-Z]+/"
                             },
                             "employee_id": {
                               "children": {},
