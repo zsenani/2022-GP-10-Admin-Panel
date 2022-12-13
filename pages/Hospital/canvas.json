@@ -2121,7 +2121,7 @@
                               "defaultSelectedRowIndex": "-1",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisibleFilters": false,
-                              "isVisible": "{{Object.values(Table1.selectedRow).every((item) => { return item !== \"\"; })}}",
+                              "isVisible": "{{!Object.values(Table1.selectedRow).every((item) => { return item === \"\"; })}}",
                               "enableClientSideSearch": true,
                               "version": 1,
                               "totalRecordsCount": 0,
@@ -2177,7 +2177,8 @@
                                 "task": 245,
                                 "step": 62,
                                 "status": 75,
-                                "name": 134
+                                "name": 134,
+                                "mobileNo": 150
                               },
                               "parentRowSpace": 10,
                               "hideCard": false,
@@ -2576,14 +2577,17 @@
                                 },
                                 {
                                   "key": "primaryColumns.idHospital.computedValue"
+                                },
+                                {
+                                  "key": "isVisible"
                                 }
                               ],
                               "leftColumn": 1,
                               "delimiter": ",",
-                              "defaultSelectedRowIndex": 0,
+                              "defaultSelectedRowIndex": "-1",
                               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                               "isVisibleFilters": false,
-                              "isVisible": true,
+                              "isVisible": "{{!Object.values(tt1.selectedRow).every((item) => { return item === \"\"; })}}",
                               "enableClientSideSearch": true,
                               "version": 1,
                               "totalRecordsCount": 0,
@@ -2628,7 +2632,11 @@
                                 "nationality",
                                 "idHospital"
                               ],
-                              "dynamicPropertyPathList": [],
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "isVisible"
+                                }
+                              ],
                               "displayName": "Table",
                               "bottomRow": 46,
                               "columnWidthMap": {
