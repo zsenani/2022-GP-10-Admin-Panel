@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM Physician WHERE nationalID = '{{Table1.selectedRow.idPhysician}}';",
+      "body": "SELECT * FROM Physician WHERE nationalID = '{{Table1.selectedRow?.idPhysician}}';",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,7 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Table1.selectedRow.idPhysician"
+      "Table1.selectedRow?.idPhysician"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

@@ -868,7 +868,7 @@
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
                       "label": "Mobile No.",
-                      "validation": "{{((sourceData, formData, fieldState) => (JSONForm.formData.mobileNo.length == 9))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}"
+                      "validation": "{{((sourceData, formData, fieldState) => (JSONForm.formData.mobileNo?.length == 9))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}"
                     },
                     "email": {
                       "children": {},
@@ -1208,7 +1208,7 @@
                 }
               ],
               "borderWidth": "1",
-              "sourceData": "{{labSpecialist_table.selectedRow}}",
+              "sourceData": "{{labSpecialist_table?.selectedRow}}",
               "showReset": true,
               "resetButtonLabel": "Reset",
               "key": "z2ibxqm3hh",

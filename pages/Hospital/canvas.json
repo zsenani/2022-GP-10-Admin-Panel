@@ -4323,22 +4323,12 @@
           ],
           [
             {
-              "id": "Hospital_get_labSpecialist",
-              "name": "get_labSpecialist",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "hospital_table.selectedRow.idhospital"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Hospital_get_labSpecialistDetails",
               "name": "get_labSpecialistDetails",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "tt1.selectedRow.nationalID"
+                "tt1.selectedRow?.nationalID"
               ],
               "timeoutInMillisecond": 10000
             },
@@ -4358,7 +4348,19 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "Table1.selectedRow.idPhysician"
+                "Table1.selectedRow?.idPhysician"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Hospital_get_labSpecialist",
+              "name": "get_labSpecialist",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "hospital_table.selectedRow?.idhospital"
               ],
               "timeoutInMillisecond": 10000
             }

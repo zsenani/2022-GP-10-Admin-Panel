@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "UPDATE LabSpecialist SET\n    name = '{{JSONForm.formData.name}}',\n    DOB = '{{JSONForm.formData.DOB}}',\n    gender = '{{JSONForm.formData.gender}}',\n    mobileNo = '{{JSONForm.formData.mobileNo}}',\n    email = '{{JSONForm.formData.email}}',\n    nationality = '{{JSONForm.formData.nationality}}'\n  WHERE nationalID = '{{labSpecialist_table.selectedRow.nationalID}}'; ",
+      "body": "UPDATE LabSpecialist SET\n    name = '{{JSONForm.formData.name}}',\n    DOB = '{{JSONForm.formData.DOB}}',\n    gender = '{{JSONForm.formData.gender}}',\n    mobileNo = '{{JSONForm.formData.mobileNo}}',\n    email = '{{JSONForm.formData.email}}',\n    nationality = '{{JSONForm.formData.nationality}}'\n  WHERE nationalID = '{{labSpecialist_table.selectedRow?.nationalID}}'; ",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -42,7 +42,7 @@
       "JSONForm.formData.mobileNo",
       "JSONForm.formData.name",
       "JSONForm.formData.nationality",
-      "labSpecialist_table.selectedRow.nationalID"
+      "labSpecialist_table.selectedRow?.nationalID"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
