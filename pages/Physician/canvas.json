@@ -1138,7 +1138,7 @@
                       "isRequired": true,
                       "isVisible": true,
                       "label": "Date of Birth",
-                      "maxDate": "2000-12-31T21:29:00.000+03:00",
+                      "maxDate": "2003-12-31T21:29:00.000+03:00",
                       "minDate": "1920-12-31T18:30:00.000Z",
                       "shortcuts": false,
                       "timePrecision": "minute",
