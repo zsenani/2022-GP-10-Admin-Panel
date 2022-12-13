@@ -747,8 +747,8 @@
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
                       "label": "Name",
-                      "regex": "/^[a-zA-Z]+[\\s]+/",
-                      "validation": "{{((sourceData, formData, fieldState) => (JSONForm.formData.name.length > 4))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
+                      "regex": "/^([a-zA-Z]{2,}\\s[a-zA-Z]{2,})/",
+                      "validation": "",
                       "errorMessage": "",
                       "tooltip": "The field must include the first and the last name "
                     },
@@ -817,8 +817,8 @@
                       "isRequired": true,
                       "isVisible": true,
                       "label": "Date of Birth",
-                      "maxDate": "2121-12-31T18:29:00.000Z",
-                      "minDate": "1920-12-31T18:30:00.000Z",
+                      "maxDate": "2000-12-31T21:29:00.000+03:00",
+                      "minDate": "1950-12-31T21:30:52.5252+03:00",
                       "shortcuts": false,
                       "timePrecision": "None",
                       "labelTextSize": "0.875rem"
@@ -868,7 +868,7 @@
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
                       "label": "Mobile No.",
-                      "validation": "{{((sourceData, formData, fieldState) => (JSONForm.formData.mobileNo.length >= 9))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}"
+                      "validation": "{{((sourceData, formData, fieldState) => (JSONForm.formData.mobileNo.length == 9))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}"
                     },
                     "email": {
                       "children": {},
@@ -1199,9 +1199,6 @@
                 },
                 {
                   "key": "schema.__root_schema__.children.idHospital.borderRadius"
-                },
-                {
-                  "key": "schema.__root_schema__.children.name.validation"
                 },
                 {
                   "key": "schema.__root_schema__.children.mobileNo.validation"

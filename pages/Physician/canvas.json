@@ -1069,8 +1069,8 @@
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
                       "label": "Name",
-                      "regex": "/^[a-zA-Z]+[\\s]+/",
-                      "validation": "{{((sourceData, formData, fieldState) => (JSONForm.formData.name.length > 4))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}",
+                      "regex": "/^([a-zA-Z]{2,}\\s[a-zA-Z]{2,})/",
+                      "validation": "",
                       "tooltip": "The field must include the first and the last name "
                     },
                     "nationalID": {
@@ -1138,7 +1138,7 @@
                       "isRequired": true,
                       "isVisible": true,
                       "label": "Date of Birth",
-                      "maxDate": "2121-12-31T18:29:00.000Z",
+                      "maxDate": "2000-12-31T21:29:00.000+03:00",
                       "minDate": "1920-12-31T18:30:00.000Z",
                       "shortcuts": false,
                       "timePrecision": "minute",
@@ -1189,7 +1189,7 @@
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
                       "label": "Mobile No",
-                      "validation": "{{((sourceData, formData, fieldState) => (JSONForm.formData.mobileNo.length >= 9))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}"
+                      "validation": "{{((sourceData, formData, fieldState) => (JSONForm.formData.mobileNo.length == 9))(JSONForm.sourceData, JSONForm.formData, JSONForm.fieldState)}}"
                     },
                     "email": {
                       "children": {},
@@ -1257,7 +1257,7 @@
                       "label": "Specialization",
                       "labelTextSize": "0.875rem",
                       "serverSideFiltering": false,
-                      "options": "{{appsmith.store.selectOptions || specializationJS.initial_options()}}",
+                      "options": "[\n  {\n    \"label\": \"Allergy and immunology\",\n    \"value\": \"Allergy and immunology\"\n  },\n  {\n    \"label\": \"Anesthesiology\",\n    \"value\": \"Anesthesiology\"\n  },\n  {\n    \"label\": \"Dermatology\",\n    \"value\": \"Dermatology\"\n  },\n  {\n    \"label\": \"Diagnostic radiology\",\n    \"value\": \"Diagnostic radiology\"\n  },\n  {\n    \"label\": \"Emergency medicine\",\n    \"value\": \"Emergency medicine\"\n  },\n  {\n    \"label\": \"Family medicine\",\n    \"value\": \"Family medicine\"\n  },\n  {\n    \"label\": \"Internal medicine\",\n    \"value\": \"Internal medicine\"\n  },\n  {\n    \"label\": \"Medical genetics\",\n    \"value\": \"Medical genetics\"\n  },\n  {\n    \"label\": \"Neurology\",\n    \"value\": \"Neurology\"\n  },\n  {\n    \"label\": \"Nuclear medicine\",\n    \"value\": \"Nuclear medicine\"\n  },\n  {\n    \"label\": \"Obstetrics and gynecology\",\n    \"value\": \"Obstetrics and gynecology\"\n  },\n  {\n    \"label\": \"Ophthalmology\",\n    \"value\": \"Ophthalmology\"\n  },\n  {\n    \"label\": \"Pathology\",\n    \"value\": \"Pathology\"\n  },\n  {\n    \"label\": \"Pediatrics\",\n    \"value\": \"Pediatrics\"\n  },\n  {\n    \"label\": \"Physical medicine and rehabilitation\",\n    \"value\": \"Physical medicine and rehabilitation\"\n  },\n  {\n    \"label\": \"Preventive medicine\",\n    \"value\": \"Preventive medicine\"\n  },\n  {\n    \"label\": \"Psychiatry\",\n    \"value\": \"Psychiatry\"\n  },\n  {\n    \"label\": \"Radiation oncology\",\n    \"value\": \"Radiation oncology\"\n  },\n  {\n    \"label\": \"Surgery\",\n    \"value\": \"Surgery\"\n  },\n  {\n    \"label\": \"Urology\",\n    \"value\": \"Urology\"\n  }\n]",
                       "onOptionChange": "{{JSONForm.formData.specialisation =='Other' ? showModal('other_model') : \"\"}}"
                     }
                   },
@@ -1530,13 +1530,7 @@
                   "key": "schema.__root_schema__.children.specialisation.borderRadius"
                 },
                 {
-                  "key": "schema.__root_schema__.children.name.validation"
-                },
-                {
                   "key": "schema.__root_schema__.children.mobileNo.validation"
-                },
-                {
-                  "key": "schema.__root_schema__.children.specialisation.options"
                 },
                 {
                   "key": "isVisible"

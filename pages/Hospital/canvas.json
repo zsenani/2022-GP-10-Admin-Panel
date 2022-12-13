@@ -402,8 +402,8 @@
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
                       "label": "Name",
-                      "regex": "/^[a-zA-Z]+/",
-                      "validation": "{{((sourceData, formData, fieldState) => (edit_hospital_JSONForm.formData.name.length > 5))(edit_hospital_JSONForm.sourceData, edit_hospital_JSONForm.formData, edit_hospital_JSONForm.fieldState)}}"
+                      "regex": "/^([a-zA-Z]{2,}\\s[a-zA-Z]{2,})/",
+                      "validation": ""
                     },
                     "city": {
                       "children": {},
@@ -448,7 +448,8 @@
                       "isSpellCheck": false,
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
-                      "label": "District"
+                      "label": "District",
+                      "regex": "/^([a-zA-Z]{2,})/"
                     },
                     "_id": {
                       "children": {},
@@ -858,9 +859,6 @@
                   "key": "schema.__root_schema__.children.region.defaultValue"
                 },
                 {
-                  "key": "schema.__root_schema__.children.name.validation"
-                },
-                {
                   "key": "isVisible"
                 }
               ],
@@ -1137,7 +1135,9 @@
                               "isSpellCheck": false,
                               "isVisible": true,
                               "labelTextSize": "0.875rem",
-                              "label": "Hospital ID"
+                              "label": "Hospital ID",
+                              "regex": "/^\\d+$/",
+                              "validation": "{{((sourceData, formData, fieldState) => (JSONForm1.formData.hospitalID.length == 6))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}"
                             },
                             "date_of_birth": {
                               "children": {},
@@ -1160,8 +1160,8 @@
                               "isVisible": true,
                               "labelTextSize": "0.875rem",
                               "label": "Name",
-                              "validation": "{{((sourceData, formData, fieldState) => (JSONForm1.formData.name.length > 5))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
-                              "regex": "/^[a-zA-Z]+/"
+                              "validation": "",
+                              "regex": "/^([a-zA-Z]{2,}\\s[a-zA-Z]{2,})/"
                             },
                             "employee_id": {
                               "children": {},
@@ -1229,7 +1229,8 @@
                               "isVisible": true,
                               "labelTextSize": "0.875rem",
                               "label": "District",
-                              "validation": "{{((sourceData, formData, fieldState) => (JSONForm1.formData.district.length  > 5))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}"
+                              "validation": "",
+                              "regex": "/^([a-zA-Z]{2,})/"
                             }
                           },
                           "dataType": "object",
@@ -1437,10 +1438,7 @@
                           "key": "schema.__root_schema__.children.customField2.borderRadius"
                         },
                         {
-                          "key": "schema.__root_schema__.children.customField2.validation"
-                        },
-                        {
-                          "key": "schema.__root_schema__.children.date_of_birth.validation"
+                          "key": "schema.__root_schema__.children.name.validation"
                         }
                       ],
                       "borderWidth": "1",
