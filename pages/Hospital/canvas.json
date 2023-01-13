@@ -114,9 +114,6 @@
                   "key": "primaryColumns.name.computedValue"
                 },
                 {
-                  "key": "primaryColumns.region.computedValue"
-                },
-                {
                   "key": "tableData"
                 },
                 {
@@ -165,7 +162,6 @@
               "columnOrder": [
                 "idhospital",
                 "name",
-                "region",
                 "city",
                 "district"
               ],
@@ -272,32 +268,6 @@
                   "isSaveVisible": true,
                   "isDiscardVisible": true,
                   "computedValue": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
-                  "validation": {},
-                  "cellBackground": "transparent"
-                },
-                "region": {
-                  "allowCellWrapping": false,
-                  "index": 6,
-                  "width": 150,
-                  "originalId": "region",
-                  "id": "region",
-                  "alias": "region",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "0.875rem",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": false,
-                  "isDisabled": false,
-                  "isCellEditable": false,
-                  "isEditable": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "Region",
-                  "isSaveVisible": true,
-                  "isDiscardVisible": true,
-                  "computedValue": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"region\"]))}}",
                   "validation": {},
                   "cellBackground": "transparent"
                 },

@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM Hospital WHERE name = '{{JSONForm1.formData.name}}' AND region = '{{JSONForm1.formData.region}}' AND city = '{{JSONForm1.formData.city}}';",
+      "body": "SELECT * FROM Hospital WHERE name = '{{JSONForm1.formData.name}}' AND  city = '{{JSONForm1.formData.city}}';",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -37,8 +37,7 @@
     "messages": [],
     "jsonPathKeys": [
       "JSONForm1.formData.city",
-      "JSONForm1.formData.name",
-      "JSONForm1.formData.region"
+      "JSONForm1.formData.name"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
