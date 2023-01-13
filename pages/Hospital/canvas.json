@@ -1084,7 +1084,7 @@
                               "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(JSONForm1.sourceData, JSONForm1.formData, JSONForm1.fieldState)}}",
                               "boxShadow": "none",
                               "isDisabled": false,
-                              "isFilterable": false,
+                              "isFilterable": true,
                               "isRequired": true,
                               "isVisible": true,
                               "label": "City",
