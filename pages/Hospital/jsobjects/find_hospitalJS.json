@@ -6,7 +6,7 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tfindHospital: async () => {\n\t\tawait find_hospitalID.run() \n\t\tif(find_hospitalID.data.length == 0 && find_hospital.data.length == 0){\n\t\t\tawait add_hospital.run()\n\t\t\tcloseModal('add_hospital_modal')\n      get_hospital.run()\n\t\t}else{\n\t\t\tshowAlert('The hospital is already exists')\n\t\t}\n\t}\n}\n\n",
+    "body": "export default {\n\tfindHospital: async () => {\n\t\tconst result1 = await find_hospitalID.run() \n\t\tconst result2 = await find_hospital.run()\n\t\tif(result1.length == 0 && result2.length == 0){\n\t\t\tawait add_hospital.run()\n\t\t\tcloseModal('add_hospital_modal')\n      get_hospital.run()\n\t\t}else{\n\t\t\tshowAlert('The hospital is already exists')\n\t\t}\n\t}\n}\n\n",
     "variables": [],
     "userPermissions": []
   },

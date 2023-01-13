@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 70,
+          "version": 74,
           "minHeight": 1292,
           "dynamicTriggerPathList": [],
           "parentColumnSpace": 1,
@@ -103,36 +103,6 @@
                 },
                 {
                   "key": "boxShadow"
-                },
-                {
-                  "key": "childStylesheet.button.buttonColor"
-                },
-                {
-                  "key": "childStylesheet.button.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.menuButton.menuColor"
-                },
-                {
-                  "key": "childStylesheet.menuButton.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.iconButton.buttonColor"
-                },
-                {
-                  "key": "childStylesheet.iconButton.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.editActions.saveButtonColor"
-                },
-                {
-                  "key": "childStylesheet.editActions.saveBorderRadius"
-                },
-                {
-                  "key": "childStylesheet.editActions.discardButtonColor"
-                },
-                {
-                  "key": "childStylesheet.editActions.discardBorderRadius"
                 },
                 {
                   "key": "primaryColumns.city.computedValue"
@@ -318,7 +288,7 @@
                   "textSize": "0.875rem",
                   "enableFilter": true,
                   "enableSort": true,
-                  "isVisible": true,
+                  "isVisible": false,
                   "isDisabled": false,
                   "isCellEditable": false,
                   "isEditable": false,
@@ -490,7 +460,7 @@
                       "isDisabled": false,
                       "isFilterable": true,
                       "isRequired": true,
-                      "isVisible": true,
+                      "isVisible": false,
                       "label": "Region",
                       "labelTextSize": "0.875rem",
                       "serverSideFiltering": false,
@@ -677,93 +647,6 @@
                 },
                 {
                   "key": "resetButtonStyles.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.ARRAY.accentColor"
-                },
-                {
-                  "key": "childStylesheet.ARRAY.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.ARRAY.cellBorderRadius"
-                },
-                {
-                  "key": "childStylesheet.OBJECT.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.OBJECT.cellBorderRadius"
-                },
-                {
-                  "key": "childStylesheet.CHECKBOX.accentColor"
-                },
-                {
-                  "key": "childStylesheet.CHECKBOX.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.CURRENCY_INPUT.accentColor"
-                },
-                {
-                  "key": "childStylesheet.CURRENCY_INPUT.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.DATEPICKER.accentColor"
-                },
-                {
-                  "key": "childStylesheet.DATEPICKER.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.EMAIL_INPUT.accentColor"
-                },
-                {
-                  "key": "childStylesheet.EMAIL_INPUT.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.MULTISELECT.accentColor"
-                },
-                {
-                  "key": "childStylesheet.MULTISELECT.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.MULTILINE_TEXT_INPUT.accentColor"
-                },
-                {
-                  "key": "childStylesheet.MULTILINE_TEXT_INPUT.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.NUMBER_INPUT.accentColor"
-                },
-                {
-                  "key": "childStylesheet.NUMBER_INPUT.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.PASSWORD_INPUT.accentColor"
-                },
-                {
-                  "key": "childStylesheet.PASSWORD_INPUT.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.PHONE_NUMBER_INPUT.accentColor"
-                },
-                {
-                  "key": "childStylesheet.PHONE_NUMBER_INPUT.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.RADIO_GROUP.accentColor"
-                },
-                {
-                  "key": "childStylesheet.SELECT.accentColor"
-                },
-                {
-                  "key": "childStylesheet.SELECT.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.SWITCH.accentColor"
-                },
-                {
-                  "key": "childStylesheet.TEXT_INPUT.accentColor"
-                },
-                {
-                  "key": "childStylesheet.TEXT_INPUT.borderRadius"
                 },
                 {
                   "key": "schema.__root_schema__.children.name.defaultValue"
@@ -1180,7 +1063,7 @@
                               "isDisabled": false,
                               "isFilterable": false,
                               "isRequired": true,
-                              "isVisible": true,
+                              "isVisible": false,
                               "label": "Region",
                               "labelTextSize": "0.875rem",
                               "serverSideFiltering": false,
@@ -1207,7 +1090,7 @@
                               "label": "City",
                               "labelTextSize": "0.875rem",
                               "serverSideFiltering": false,
-                              "options": "[\n  {\n    \"label\": \"Abha\",\n    \"value\": \"Abha\"\n  },\n  {\n    \"label\": \"Ad-Dilam\",\n    \"value\": \"Ad-Dilam\"\n  },\n  {\n    \"label\": \"Al Artaweeiyah\",\n    \"value\": \"Al Artaweeiyah\"\n  },\n\t{\n    \"label\": \"Al Bukayriyah\",\n    \"value\": \"Al Bukayriyah\"\n  },\n\t{\n    \"label\": \"Badr\",\n    \"value\": \"Badr\"\n  },\n\t{\n    \"label\": \"Baljurashi\",\n    \"value\": \"Baljurashi\"\n  },\n\t{\n    \"label\": \"Bisha\",\n    \"value\": \"Bisha\"\n  },\n\t{\n    \"label\": \"Bareq\",\n    \"value\": \"Bareq\"\n  },\n\t{\n    \"label\": \"Buraydah\",\n    \"value\": \"Buraydah\"\n  },\n\t{\n    \"label\": \"Al Bahah\",\n    \"value\": \"Al Bahah\"\n  },\n\t{\n    \"label\": \"'Buqaa\",\n    \"value\": \"'Buqaa'\"\n  },\n\t{\n    \"label\": \"Dammam\",\n    \"value\": \"Dammam\"\n  },\n\t{\n    \"label\": \"Dhahran\",\n    \"value\": \"Dhahran\"\n  },\n\t{\n    \"label\": \"Dhurma\",\n    \"value\": \"Dhurma\"\n  },\n\t{\n    \"label\": \"Dahaban\",\n    \"value\": \"Dahaban\"\n  },\n\t{\n    \"label\": \"Diriyah\",\n    \"value\": \"Diriyah\"\n  },\n\t{\n    \"label\": \"Duba\",\n    \"value\": \"Duba\"\n  },\n\t{\n    \"label\": \"Dumat Al-Jandal\",\n    \"value\": \"Dumat Al-Jandal\"\n  },\n\t{\n    \"label\": \"Dawadmi\",\n    \"value\": \"Dawadmi\"\n  },\n\t{\n    \"label\": \"Farasan\",\n    \"value\": \"Farasan\"\n  },\n\t{\n    \"label\": \"Gatgat\",\n    \"value\": \"Gatgat\"\n  },\n\t{\n    \"label\": \"Gerrha\",\n    \"value\": \"Gerrha\"\n  },\n\t{\n    \"label\": \"Ghawiyah\",\n    \"value\": \"Ghawiyah\"\n  },\n\t{\n    \"label\": \"Al-Gwei'iyyah\",\n    \"value\": \"Al-Gwei'iyyah\"\n  },\n\t{\n    \"label\": \"Hautat Sudair\",\n    \"value\": \"Hautat Sudair\"\n  },\n\t{\n    \"label\": \"Habaala\",\n    \"value\": \"Habaala\"\n  },\n\t{\n    \"label\": \"Hajrah\",\n    \"value\": \"Hajrah\"\n  },\n\t{\n    \"label\": \"Haql\",\n    \"value\": \"Haql\"\n  },\n\t{\n    \"label\": \"Al-Hareeq\",\n    \"value\": \"Al-Hareeq\"\n  },\n\t{\n    \"label\": \"Harmah\",\n    \"value\": \"Harmah\"\n  },\n\t{\n    \"label\": \"Ha'il\",\n    \"value\": \"Ha'il\"\n  },\n\t{\n    \"label\": \"Hotat Bani Tamim\",\n    \"value\": \"Hotat Bani Tamim\"\n  },\n\t{\n    \"label\": \"Hofuf\",\n    \"value\": \"Hofuf\"\n  },\n\t{\n    \"label\": \"Huraymila\",\n    \"value\": \"Huraymila\"\n  },\n\t{\n    \"label\": \"Hafr Al-Batin\",\n    \"value\": \"Hafr Al-Batin\"\n  },\n\t{\n    \"label\": \"Jabal Umm al Ru'us\",\n    \"value\": \"Jabal Umm al Ru'us\"\n  },\n\t{\n    \"label\": \"Jalajil\",\n    \"value\": \"Jalajil\"\n  },\n\t{\n    \"label\": \"Jeddah\",\n    \"value\": \"Jeddah\"\n  },\n\t{\n    \"label\": \"Jizan\",\n    \"value\": \"Jizan\"\n  },\n\t{\n    \"label\": \"Jizan Economic City\",\n    \"value\": \"Jizan Economic City\"\n  },\n\t{\n    \"label\": \"Jubail\",\n    \"value\": \"Jubail\"\n  },\n\t{\n    \"label\": \"Al Jafr\",\n    \"value\": \"Al Jafr\"\n  },\n\t{\n    \"label\": \"Khafji\",\n    \"value\": \"Khafji\"\n  },\n\t{\n    \"label\": \"Khaybar\",\n    \"value\": \"Khaybar\"\n  },\n\t{\n    \"label\": \"King Abdullah Economic City\",\n    \"value\": \"King Abdullah Economic City\"\n  },\n\t{\n    \"label\": \"Khamis Mushait\",\n    \"value\": \"Khamis Mushait\"\n  },\n\t{\n    \"label\": \"Al-Saih\",\n    \"value\": \"Al-Saih\"\n  },\n\t{\n    \"label\": \"Knowledge Economic City, Medina\",\n    \"value\": \"Knowledge Economic City, Medina\"\n  },\n\t{\n    \"label\": \"Khobar\",\n    \"value\": \"Khobar\"\n  },\n\t{\n    \"label\": \"Al-Khutt\",\n    \"value\": \"Al-Khutt\"\n  },\n\t{\n    \"label\": \"Layla\",\n    \"value\": \"Layla\"\n  },\n\t{\n    \"label\": \"Lihyan\",\n    \"value\": \"Lihyan\"\n  },\n\t{\n    \"label\": \"Al Lith\",\n    \"value\": \"Al Lith\"\n  },\n\t{\n    \"label\": \"Al Majma'ah\",\n    \"value\": \"Al Majma'ah\"\n  },\n\t{\n    \"label\": \"Mastoorah\",\n    \"value\": \"Mastoorah\"\n  },\n\t{\n    \"label\": \"Al Mikhwah\",\n    \"value\": \"Al Mikhwah\"\n  },\n\t{\n    \"label\": \"Al-Mubarraz\",\n    \"value\": \"Al-Mubarraz\"\n  },\n\t{\n    \"label\": \"Al Mawain\",\n    \"value\": \"Al Mawain\"\n  },\n\t{\n    \"label\": \"Medina\",\n    \"value\": \"Medina\"\n  },\n\t{\n    \"label\": \"Mecca\",\n    \"value\": \"Mecca\"\n  },\n\t{\n    \"label\": \"Muzahmiyya\",\n    \"value\": \"Muzahmiyya\"\n  },\n\t{\n    \"label\": \"Najran\",\n    \"value\": \"Najran\"\n  },\n\t{\n    \"label\": \"Al-Namas\",\n    \"value\": \"Al-Namas\"\n  },\n\t{\n    \"label\": \"Umluj\",\n    \"value\": \"Umluj\"\n  },\n\t{\n    \"label\": \"Al-Omran\",\n    \"value\": \"Al-Omran\"\n  },\n\t{\n    \"label\": \"Al-Oyoon\",\n    \"value\": \"Al-Oyoon\"\n  },\n\t{\n    \"label\": \"Qadeimah\",\n    \"value\": \"Qadeimah\"\n  },\n\t{\n    \"label\": \"Qatif\",\n    \"value\": \"Qatif\"\n  },\n\t{\n    \"label\": \"Qaisumah\",\n    \"value\": \"Qaisumah\"\n  },\n\t{\n    \"label\": \"Al Qunfudhah\",\n    \"value\": \"Al Qunfudhah\"\n  },\n\t{\n    \"label\": \"Qurayyat\",\n    \"value\": \"Qurayyat\"\n  },\n\t{\n    \"label\": \"Rabigh\",\n    \"value\": \"Rabigh\"\n  },\n\t{\n    \"label\": \"Rafha\",\n    \"value\": \"Rafha\"\n  },\n\t{\n    \"label\": \"Ar Rass\",\n    \"value\": \"Ar Rass\"\n  },\n\t{\n    \"label\": \"Ras Tanura\",\n    \"value\": \"Ras Tanura\"\n  },\n\t{\n    \"label\": \"Ranyah\",\n    \"value\": \"Ranyah\"\n  },\n\t{\n    \"label\": \"Riyadh\",\n    \"value\": \"Riyadh\"\n  },\n\t{\n    \"label\": \"Riyadh Al-Khabra\",\n    \"value\": \"Riyadh Al-Khabra\"\n  },\n\t{\n    \"label\": \"Rumailah\",\n    \"value\": \"Rumailah\"\n  },\n\t{\n    \"label\": \"Sabt Al Alaya\",\n    \"value\": \"Sabt Al Alaya\"\n  },\n\t{\n    \"label\": \"Sarat Abidah\",\n    \"value\": \"Sarat Abidah\"\n  },\n\t{\n    \"label\": \"Saihat\",\n    \"value\": \"Saihat\"\n  },\n\t{\n    \"label\": \"Safwa city\",\n    \"value\": \"Safwa city\"\n  },\n\t{\n    \"label\": \"Sakakah\",\n    \"value\": \"Sakakah\"\n  },\n\t{\n    \"label\": \"Sharurah\",\n    \"value\": \"Sharurah\"\n  },\n\t{\n    \"label\": \"Shaqraa\",\n    \"value\": \"Shaqraa\"\n  },\n\t{\n    \"label\": \"Shaybah\",\n    \"value\": \"Shaybah\"\n  },\n\t{\n    \"label\": \"As Sulayyil\",\n    \"value\": \"As Sulayyil\"\n  },\n\t{\n    \"label\": \"Taif\",\n    \"value\": \"Taif\"\n  },\n\t{\n    \"label\": \"Tabuk\",\n    \"value\": \"Tabuk\"\n  },\n\t{\n    \"label\": \"Tanomah\",\n    \"value\": \"Tanomah\"\n  },\n\t{\n    \"label\": \"Tarout\",\n    \"value\": \"Tarout\"\n  },\n\t{\n    \"label\": \"Tayma\",\n    \"value\": \"Tayma\"\n  },\n\t{\n    \"label\": \"Thadiq\",\n    \"value\": \"Thadiq\"\n  },\n\t{\n    \"label\": \"Thuwal\",\n    \"value\": \"Thuwal\"\n  },\n\t{\n    \"label\": \"Thuqbah\",\n    \"value\": \"Thuqbah\"\n  },\n\t{\n    \"label\": \"Turaif\",\n    \"value\": \"Turaif\"\n  },\n\t{\n    \"label\": \"Tabarjal\",\n    \"value\": \"Tabarjal\"\n  },\n\t{\n    \"label\": \"Udhailiyah\",\n    \"value\": \"Udhailiyah\"\n  },\n\t{\n    \"label\": \"Al-'Ula\",\n    \"value\": \"Al-'Ula\"\n  },\n\t{\n    \"label\": \"Um Al-Sahek\",\n    \"value\": \"Um Al-Sahek\"\n  },\n\t{\n    \"label\": \"Unaizah\",\n    \"value\": \"Unaizah\"\n  },\n\t{\n    \"label\": \"Uqair\",\n    \"value\": \"Uqair\"\n  },\n\t{\n    \"label\": \"Uyayna\",\n    \"value\": \"Uyayna\"\n  },\n\t{\n    \"label\": \"Uyun AlJiwa\",\n    \"value\": \"Uyun AlJiwa\"\n  },\n\t{\n    \"label\": \"Wadi Al-Dawasir\",\n    \"value\": \"Wadi Al-Dawasir\"\n  },\n\t{\n    \"label\": \"Al Wajh\",\n    \"value\": \"Al Wajh\"\n  },\n\t{\n    \"label\": \"Yanbu\",\n    \"value\": \"Yanbu\"\n  },\n\t{\n    \"label\": \"Az Zaimah\",\n    \"value\": \"Az Zaimah\"\n  },\n\t{\n    \"label\": \"Zulfi\",\n    \"value\": \"Zulfi\"\n  }\n]"
+                              "options": "[\n  {\n    \"label\": \"Abha\",\n    \"value\": \"Abha\"\n  },\n  {\n    \"label\": \"Ad-Dilam\",\n    \"value\": \"Ad-Dilam\"\n  },\n  {\n    \"label\": \"Al Artaweeiyah\",\n    \"value\": \"Al Artaweeiyah\"\n  },\n\t{\n    \"label\": \"Al Bukayriyah\",\n    \"value\": \"Al Bukayriyah\"\n  },\n\t{\n    \"label\": \"Badr\",\n    \"value\": \"Badr\"\n  },\n\t{\n    \"label\": \"Baljurashi\",\n    \"value\": \"Baljurashi\"\n  },\n\t{\n    \"label\": \"Bisha\",\n    \"value\": \"Bisha\"\n  },\n\t{\n    \"label\": \"Bareq\",\n    \"value\": \"Bareq\"\n  },\n\t{\n    \"label\": \"Buraydah\",\n    \"value\": \"Buraydah\"\n  },\n\t{\n    \"label\": \"Al Bahah\",\n    \"value\": \"Al Bahah\"\n  },\n\t{\n    \"label\": \"'Buqaa\",\n    \"value\": \"'Buqaa'\"\n  },\n\t{\n    \"label\": \"Dammam\",\n    \"value\": \"Dammam\"\n  },\n\t{\n    \"label\": \"Dhahran\",\n    \"value\": \"Dhahran\"\n  },\n\t{\n    \"label\": \"Dhurma\",\n    \"value\": \"Dhurma\"\n  },\n\t{\n    \"label\": \"Dahaban\",\n    \"value\": \"Dahaban\"\n  },\n\t{\n    \"label\": \"Diriyah\",\n    \"value\": \"Diriyah\"\n  },\n\t{\n    \"label\": \"Duba\",\n    \"value\": \"Duba\"\n  },\n\t{\n    \"label\": \"Dumat Al-Jandal\",\n    \"value\": \"Dumat Al-Jandal\"\n  },\n\t{\n    \"label\": \"Dawadmi\",\n    \"value\": \"Dawadmi\"\n  },\n\t{\n    \"label\": \"Farasan\",\n    \"value\": \"Farasan\"\n  },\n\t{\n    \"label\": \"Gatgat\",\n    \"value\": \"Gatgat\"\n  },\n\t{\n    \"label\": \"Gerrha\",\n    \"value\": \"Gerrha\"\n  },\n\t{\n    \"label\": \"Ghawiyah\",\n    \"value\": \"Ghawiyah\"\n  },\n\t{\n    \"label\": \"Al-Gwei'iyyah\",\n    \"value\": \"Al-Gwei'iyyah\"\n  },\n\t{\n    \"label\": \"Hautat Sudair\",\n    \"value\": \"Hautat Sudair\"\n  },\n\t{\n    \"label\": \"Habaala\",\n    \"value\": \"Habaala\"\n  },\n\t{\n    \"label\": \"Hajrah\",\n    \"value\": \"Hajrah\"\n  },\n\t{\n    \"label\": \"Haql\",\n    \"value\": \"Haql\"\n  },\n\t{\n    \"label\": \"Al-Hareeq\",\n    \"value\": \"Al-Hareeq\"\n  },\n\t{\n    \"label\": \"Harmah\",\n    \"value\": \"Harmah\"\n  },\n\t{\n    \"label\": \"Ha'il\",\n    \"value\": \"Ha'il\"\n  },\n\t{\n    \"label\": \"Hotat Bani Tamim\",\n    \"value\": \"Hotat Bani Tamim\"\n  },\n\t{\n    \"label\": \"Hofuf\",\n    \"value\": \"Hofuf\"\n  },\n\t{\n    \"label\": \"Huraymila\",\n    \"value\": \"Huraymila\"\n  },\n\t{\n    \"label\": \"Hafr Al-Batin\",\n    \"value\": \"Hafr Al-Batin\"\n  },\n\t{\n    \"label\": \"Jabal Umm al Ru'us\",\n    \"value\": \"Jabal Umm al Ru'us\"\n  },\n\t{\n    \"label\": \"Jalajil\",\n    \"value\": \"Jalajil\"\n  },\n\t{\n    \"label\": \"Jeddah\",\n    \"value\": \"Jeddah\"\n  },\n\t{\n    \"label\": \"Jizan\",\n    \"value\": \"Jizan\"\n  },\n\t{\n    \"label\": \"Jizan Economic City\",\n    \"value\": \"Jizan Economic City\"\n  },\n\t{\n    \"label\": \"Jubail\",\n    \"value\": \"Jubail\"\n  },\n\t{\n    \"label\": \"Al Jafr\",\n    \"value\": \"Al Jafr\"\n  },\n\t{\n    \"label\": \"Khafji\",\n    \"value\": \"Khafji\"\n  },\n\t{\n    \"label\": \"Khaybar\",\n    \"value\": \"Khaybar\"\n  },\n\t{\n    \"label\": \"King Abdullah Economic City\",\n    \"value\": \"King Abdullah Economic City\"\n  },\n\t{\n    \"label\": \"Khamis Mushait\",\n    \"value\": \"Khamis Mushait\"\n  },\n\t{\n    \"label\": \"Al-Saih\",\n    \"value\": \"Al-Saih\"\n  },\n\t{\n    \"label\": \"Knowledge Economic City, Medina\",\n    \"value\": \"Knowledge Economic City, Medina\"\n  },\n\t{\n    \"label\": \"Khobar\",\n    \"value\": \"Khobar\"\n  },\n\t{\n    \"label\": \"Al-Khutt\",\n    \"value\": \"Al-Khutt\"\n  },\n\t{\n    \"label\": \"Layla\",\n    \"value\": \"Layla\"\n  },\n\t{\n    \"label\": \"Lihyan\",\n    \"value\": \"Lihyan\"\n  },\n\t{\n    \"label\": \"Al Lith\",\n    \"value\": \"Al Lith\"\n  },\n\t{\n    \"label\": \"Al Majma'ah\",\n    \"value\": \"Al Majma'ah\"\n  },\n\t{\n    \"label\": \"Mastoorah\",\n    \"value\": \"Mastoorah\"\n  },\n\t{\n    \"label\": \"Al Mikhwah\",\n    \"value\": \"Al Mikhwah\"\n  },\n\t{\n    \"label\": \"Al-Mubarraz\",\n    \"value\": \"Al-Mubarraz\"\n  },\n\t{\n    \"label\": \"Al Mawain\",\n    \"value\": \"Al Mawain\"\n  },\n\t{\n    \"label\": \"Medina\",\n    \"value\": \"Medina\"\n  },\n\t{\n    \"label\": \"Makkah\",\n    \"value\": \"Makkah\"\n  },\n\t{\n    \"label\": \"Muzahmiyya\",\n    \"value\": \"Muzahmiyya\"\n  },\n\t{\n    \"label\": \"Najran\",\n    \"value\": \"Najran\"\n  },\n\t{\n    \"label\": \"Al-Namas\",\n    \"value\": \"Al-Namas\"\n  },\n\t{\n    \"label\": \"Umluj\",\n    \"value\": \"Umluj\"\n  },\n\t{\n    \"label\": \"Al-Omran\",\n    \"value\": \"Al-Omran\"\n  },\n\t{\n    \"label\": \"Al-Oyoon\",\n    \"value\": \"Al-Oyoon\"\n  },\n\t{\n    \"label\": \"Qadeimah\",\n    \"value\": \"Qadeimah\"\n  },\n\t{\n    \"label\": \"Qatif\",\n    \"value\": \"Qatif\"\n  },\n\t{\n    \"label\": \"Qaisumah\",\n    \"value\": \"Qaisumah\"\n  },\n\t{\n    \"label\": \"Al Qunfudhah\",\n    \"value\": \"Al Qunfudhah\"\n  },\n\t{\n    \"label\": \"Qurayyat\",\n    \"value\": \"Qurayyat\"\n  },\n\t{\n    \"label\": \"Rabigh\",\n    \"value\": \"Rabigh\"\n  },\n\t{\n    \"label\": \"Rafha\",\n    \"value\": \"Rafha\"\n  },\n\t{\n    \"label\": \"Ar Rass\",\n    \"value\": \"Ar Rass\"\n  },\n\t{\n    \"label\": \"Ras Tanura\",\n    \"value\": \"Ras Tanura\"\n  },\n\t{\n    \"label\": \"Ranyah\",\n    \"value\": \"Ranyah\"\n  },\n\t{\n    \"label\": \"Riyadh\",\n    \"value\": \"Riyadh\"\n  },\n\t{\n    \"label\": \"Riyadh Al-Khabra\",\n    \"value\": \"Riyadh Al-Khabra\"\n  },\n\t{\n    \"label\": \"Rumailah\",\n    \"value\": \"Rumailah\"\n  },\n\t{\n    \"label\": \"Sabt Al Alaya\",\n    \"value\": \"Sabt Al Alaya\"\n  },\n\t{\n    \"label\": \"Sarat Abidah\",\n    \"value\": \"Sarat Abidah\"\n  },\n\t{\n    \"label\": \"Saihat\",\n    \"value\": \"Saihat\"\n  },\n\t{\n    \"label\": \"Safwa city\",\n    \"value\": \"Safwa city\"\n  },\n\t{\n    \"label\": \"Sakakah\",\n    \"value\": \"Sakakah\"\n  },\n\t{\n    \"label\": \"Sharurah\",\n    \"value\": \"Sharurah\"\n  },\n\t{\n    \"label\": \"Shaqraa\",\n    \"value\": \"Shaqraa\"\n  },\n\t{\n    \"label\": \"Shaybah\",\n    \"value\": \"Shaybah\"\n  },\n\t{\n    \"label\": \"As Sulayyil\",\n    \"value\": \"As Sulayyil\"\n  },\n\t{\n    \"label\": \"Taif\",\n    \"value\": \"Taif\"\n  },\n\t{\n    \"label\": \"Tabuk\",\n    \"value\": \"Tabuk\"\n  },\n\t{\n    \"label\": \"Tanomah\",\n    \"value\": \"Tanomah\"\n  },\n\t{\n    \"label\": \"Tarout\",\n    \"value\": \"Tarout\"\n  },\n\t{\n    \"label\": \"Tayma\",\n    \"value\": \"Tayma\"\n  },\n\t{\n    \"label\": \"Thadiq\",\n    \"value\": \"Thadiq\"\n  },\n\t{\n    \"label\": \"Thuwal\",\n    \"value\": \"Thuwal\"\n  },\n\t{\n    \"label\": \"Thuqbah\",\n    \"value\": \"Thuqbah\"\n  },\n\t{\n    \"label\": \"Turaif\",\n    \"value\": \"Turaif\"\n  },\n\t{\n    \"label\": \"Tabarjal\",\n    \"value\": \"Tabarjal\"\n  },\n\t{\n    \"label\": \"Udhailiyah\",\n    \"value\": \"Udhailiyah\"\n  },\n\t{\n    \"label\": \"Al-'Ula\",\n    \"value\": \"Al-'Ula\"\n  },\n\t{\n    \"label\": \"Um Al-Sahek\",\n    \"value\": \"Um Al-Sahek\"\n  },\n\t{\n    \"label\": \"Unaizah\",\n    \"value\": \"Unaizah\"\n  },\n\t{\n    \"label\": \"Uqair\",\n    \"value\": \"Uqair\"\n  },\n\t{\n    \"label\": \"Uyayna\",\n    \"value\": \"Uyayna\"\n  },\n\t{\n    \"label\": \"Uyun AlJiwa\",\n    \"value\": \"Uyun AlJiwa\"\n  },\n\t{\n    \"label\": \"Wadi Al-Dawasir\",\n    \"value\": \"Wadi Al-Dawasir\"\n  },\n\t{\n    \"label\": \"Al Wajh\",\n    \"value\": \"Al Wajh\"\n  },\n\t{\n    \"label\": \"Yanbu\",\n    \"value\": \"Yanbu\"\n  },\n\t{\n    \"label\": \"Az Zaimah\",\n    \"value\": \"Az Zaimah\"\n  },\n\t{\n    \"label\": \"Zulfi\",\n    \"value\": \"Zulfi\"\n  }\n]"
                             },
                             "customField2": {
                               "children": {},
@@ -1310,93 +1193,6 @@
                         },
                         {
                           "key": "resetButtonStyles.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.ARRAY.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.ARRAY.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.ARRAY.cellBorderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.OBJECT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.OBJECT.cellBorderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.CHECKBOX.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.CHECKBOX.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.CURRENCY_INPUT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.CURRENCY_INPUT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.DATEPICKER.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.DATEPICKER.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.EMAIL_INPUT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.EMAIL_INPUT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.MULTISELECT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.MULTISELECT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.MULTILINE_TEXT_INPUT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.MULTILINE_TEXT_INPUT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.NUMBER_INPUT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.NUMBER_INPUT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.PASSWORD_INPUT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.PASSWORD_INPUT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.PHONE_NUMBER_INPUT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.PHONE_NUMBER_INPUT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.RADIO_GROUP.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.SELECT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.SELECT.borderRadius"
-                        },
-                        {
-                          "key": "childStylesheet.SWITCH.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.TEXT_INPUT.accentColor"
-                        },
-                        {
-                          "key": "childStylesheet.TEXT_INPUT.borderRadius"
                         },
                         {
                           "key": "schema.__root_schema__.children.name.accentColor"
@@ -1888,36 +1684,6 @@
                                   "key": "borderRadius"
                                 },
                                 {
-                                  "key": "childStylesheet.button.buttonColor"
-                                },
-                                {
-                                  "key": "childStylesheet.button.borderRadius"
-                                },
-                                {
-                                  "key": "childStylesheet.menuButton.menuColor"
-                                },
-                                {
-                                  "key": "childStylesheet.menuButton.borderRadius"
-                                },
-                                {
-                                  "key": "childStylesheet.iconButton.buttonColor"
-                                },
-                                {
-                                  "key": "childStylesheet.iconButton.borderRadius"
-                                },
-                                {
-                                  "key": "childStylesheet.editActions.saveButtonColor"
-                                },
-                                {
-                                  "key": "childStylesheet.editActions.saveBorderRadius"
-                                },
-                                {
-                                  "key": "childStylesheet.editActions.discardButtonColor"
-                                },
-                                {
-                                  "key": "childStylesheet.editActions.discardBorderRadius"
-                                },
-                                {
                                   "key": "tableData"
                                 },
                                 {
@@ -2048,36 +1814,6 @@
                                 },
                                 {
                                   "key": "borderRadius"
-                                },
-                                {
-                                  "key": "childStylesheet.button.buttonColor"
-                                },
-                                {
-                                  "key": "childStylesheet.button.borderRadius"
-                                },
-                                {
-                                  "key": "childStylesheet.menuButton.menuColor"
-                                },
-                                {
-                                  "key": "childStylesheet.menuButton.borderRadius"
-                                },
-                                {
-                                  "key": "childStylesheet.iconButton.buttonColor"
-                                },
-                                {
-                                  "key": "childStylesheet.iconButton.borderRadius"
-                                },
-                                {
-                                  "key": "childStylesheet.editActions.saveButtonColor"
-                                },
-                                {
-                                  "key": "childStylesheet.editActions.saveBorderRadius"
-                                },
-                                {
-                                  "key": "childStylesheet.editActions.discardButtonColor"
-                                },
-                                {
-                                  "key": "childStylesheet.editActions.discardBorderRadius"
                                 },
                                 {
                                   "key": "cellBackground"
@@ -2516,36 +2252,6 @@
                                   "key": "borderRadius"
                                 },
                                 {
-                                  "key": "childStylesheet.button.buttonColor"
-                                },
-                                {
-                                  "key": "childStylesheet.button.borderRadius"
-                                },
-                                {
-                                  "key": "childStylesheet.menuButton.menuColor"
-                                },
-                                {
-                                  "key": "childStylesheet.menuButton.borderRadius"
-                                },
-                                {
-                                  "key": "childStylesheet.iconButton.buttonColor"
-                                },
-                                {
-                                  "key": "childStylesheet.iconButton.borderRadius"
-                                },
-                                {
-                                  "key": "childStylesheet.editActions.saveButtonColor"
-                                },
-                                {
-                                  "key": "childStylesheet.editActions.saveBorderRadius"
-                                },
-                                {
-                                  "key": "childStylesheet.editActions.discardButtonColor"
-                                },
-                                {
-                                  "key": "childStylesheet.editActions.discardBorderRadius"
-                                },
-                                {
                                   "key": "tableData"
                                 },
                                 {
@@ -2938,36 +2644,6 @@
                                 },
                                 {
                                   "key": "borderRadius"
-                                },
-                                {
-                                  "key": "childStylesheet.button.buttonColor"
-                                },
-                                {
-                                  "key": "childStylesheet.button.borderRadius"
-                                },
-                                {
-                                  "key": "childStylesheet.menuButton.menuColor"
-                                },
-                                {
-                                  "key": "childStylesheet.menuButton.borderRadius"
-                                },
-                                {
-                                  "key": "childStylesheet.iconButton.buttonColor"
-                                },
-                                {
-                                  "key": "childStylesheet.iconButton.borderRadius"
-                                },
-                                {
-                                  "key": "childStylesheet.editActions.saveButtonColor"
-                                },
-                                {
-                                  "key": "childStylesheet.editActions.saveBorderRadius"
-                                },
-                                {
-                                  "key": "childStylesheet.editActions.discardButtonColor"
-                                },
-                                {
-                                  "key": "childStylesheet.editActions.discardBorderRadius"
                                 },
                                 {
                                   "key": "tableData"
