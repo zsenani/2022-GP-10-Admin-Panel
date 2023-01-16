@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 70,
+          "version": 74,
           "minHeight": 1292,
           "dynamicTriggerPathList": [],
           "parentColumnSpace": 1,
@@ -315,36 +315,6 @@
                 },
                 {
                   "key": "boxShadow"
-                },
-                {
-                  "key": "childStylesheet.button.buttonColor"
-                },
-                {
-                  "key": "childStylesheet.button.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.menuButton.menuColor"
-                },
-                {
-                  "key": "childStylesheet.menuButton.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.iconButton.buttonColor"
-                },
-                {
-                  "key": "childStylesheet.iconButton.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.editActions.saveButtonColor"
-                },
-                {
-                  "key": "childStylesheet.editActions.saveBorderRadius"
-                },
-                {
-                  "key": "childStylesheet.editActions.discardButtonColor"
-                },
-                {
-                  "key": "childStylesheet.editActions.discardBorderRadius"
                 },
                 {
                   "key": "tableData"
@@ -1548,93 +1518,6 @@
                 },
                 {
                   "key": "resetButtonStyles.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.ARRAY.accentColor"
-                },
-                {
-                  "key": "childStylesheet.ARRAY.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.ARRAY.cellBorderRadius"
-                },
-                {
-                  "key": "childStylesheet.OBJECT.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.OBJECT.cellBorderRadius"
-                },
-                {
-                  "key": "childStylesheet.CHECKBOX.accentColor"
-                },
-                {
-                  "key": "childStylesheet.CHECKBOX.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.CURRENCY_INPUT.accentColor"
-                },
-                {
-                  "key": "childStylesheet.CURRENCY_INPUT.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.DATEPICKER.accentColor"
-                },
-                {
-                  "key": "childStylesheet.DATEPICKER.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.EMAIL_INPUT.accentColor"
-                },
-                {
-                  "key": "childStylesheet.EMAIL_INPUT.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.MULTISELECT.accentColor"
-                },
-                {
-                  "key": "childStylesheet.MULTISELECT.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.MULTILINE_TEXT_INPUT.accentColor"
-                },
-                {
-                  "key": "childStylesheet.MULTILINE_TEXT_INPUT.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.NUMBER_INPUT.accentColor"
-                },
-                {
-                  "key": "childStylesheet.NUMBER_INPUT.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.PASSWORD_INPUT.accentColor"
-                },
-                {
-                  "key": "childStylesheet.PASSWORD_INPUT.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.PHONE_NUMBER_INPUT.accentColor"
-                },
-                {
-                  "key": "childStylesheet.PHONE_NUMBER_INPUT.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.RADIO_GROUP.accentColor"
-                },
-                {
-                  "key": "childStylesheet.SELECT.accentColor"
-                },
-                {
-                  "key": "childStylesheet.SELECT.borderRadius"
-                },
-                {
-                  "key": "childStylesheet.SWITCH.accentColor"
-                },
-                {
-                  "key": "childStylesheet.TEXT_INPUT.accentColor"
-                },
-                {
-                  "key": "childStylesheet.TEXT_INPUT.borderRadius"
                 },
                 {
                   "key": "schema.__root_schema__.children.name.defaultValue"
