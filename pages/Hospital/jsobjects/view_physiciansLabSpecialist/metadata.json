@@ -6,7 +6,6 @@
     "pluginType": "JS",
     "actions": [],
     "archivedActions": [],
-    "body": "export default {\n\tviewPhysiciansLabSpecialist: async () => {\n\t\t\n\t\tshowModal('ModalP')\n\t\tawait get_physician.run()\n\t\tawait get_physicianDetails.run()\n\t\tawait get_labSpecialist.run()\n\t\tawait get_labSpecialistDetails.run()\n\t\t\n\t}\n}",
     "variables": [],
     "userPermissions": []
   },

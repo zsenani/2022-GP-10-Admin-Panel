@@ -1,0 +1,2 @@
+INSERT INTO Hospital (idhospital, name, city, district)
+  VALUES ('{{JSONForm1.formData.hospitalID}}','{{JSONForm1.formData.name}}',  '{{JSONForm1.formData.city}}','{{ JSONForm1.formData.district}}');

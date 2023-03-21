@@ -13,13 +13,13 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1290,
+          "bottomRow": 730,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 74,
+          "version": 77,
           "minHeight": 1292,
           "dynamicTriggerPathList": [],
           "parentColumnSpace": 1,
@@ -154,6 +154,7 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "columnUpdatedAt": 1678617550383,
               "defaultSelectedRowIndices": [
                 0
               ],
@@ -217,7 +218,8 @@
                   "isDiscardVisible": true,
                   "computedValue": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"city\"]))}}",
                   "validation": {},
-                  "cellBackground": "transparent"
+                  "cellBackground": "transparent",
+                  "sticky": ""
                 },
                 "district": {
                   "allowCellWrapping": false,
@@ -243,7 +245,8 @@
                   "isDiscardVisible": true,
                   "computedValue": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"district\"]))}}",
                   "validation": {},
-                  "cellBackground": "transparent"
+                  "cellBackground": "transparent",
+                  "sticky": ""
                 },
                 "name": {
                   "allowCellWrapping": false,
@@ -269,7 +272,8 @@
                   "isDiscardVisible": true,
                   "computedValue": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
                   "validation": {},
-                  "cellBackground": "transparent"
+                  "cellBackground": "transparent",
+                  "sticky": ""
                 },
                 "idhospital": {
                   "allowCellWrapping": false,
@@ -297,11 +301,13 @@
                   "isDiscardVisible": true,
                   "computedValue": "{{hospital_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"idhospital\"]))}}",
                   "validation": {},
-                  "cellBackground": "transparent"
+                  "cellBackground": "transparent",
+                  "sticky": ""
                 }
               },
               "onRowSelected": "",
               "key": "exycfw7eck",
+              "canFreezeColumn": false,
               "isDeprecated": false,
               "rightColumn": 44,
               "textSize": "0.875rem",
@@ -1503,7 +1509,7 @@
                   "widgetName": "Canvas3",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 720,
+                  "bottomRow": 700,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
@@ -1617,7 +1623,7 @@
                           "widgetName": "Canvas8",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 480,
+                          "bottomRow": 610,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": true,
@@ -1696,6 +1702,7 @@
                                 }
                               },
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "columnUpdatedAt": 1678617550383,
                               "defaultSelectedRowIndices": [
                                 0
                               ],
@@ -1748,11 +1755,13 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"idPhysician\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "transparent"
+                                  "cellBackground": "transparent",
+                                  "sticky": ""
                                 }
                               },
                               "onRowSelected": "{{get_physicianDetails.run()}}",
                               "key": "wc4hxv24a7",
+                              "canFreezeColumn": false,
                               "isDeprecated": false,
                               "rightColumn": 58,
                               "textSize": "0.875rem",
@@ -1856,6 +1865,7 @@
                                 }
                               },
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "columnUpdatedAt": 1678617550383,
                               "defaultSelectedRowIndices": [
                                 0
                               ],
@@ -1918,7 +1928,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationalID\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "#F0F9F8"
+                                  "cellBackground": "#F0F9F8",
+                                  "sticky": ""
                                 },
                                 "name": {
                                   "allowCellWrapping": false,
@@ -1946,7 +1957,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "#F0F9F8"
+                                  "cellBackground": "#F0F9F8",
+                                  "sticky": ""
                                 },
                                 "password": {
                                   "allowCellWrapping": false,
@@ -1974,7 +1986,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"password\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "#F0F9F8"
+                                  "cellBackground": "#F0F9F8",
+                                  "sticky": ""
                                 },
                                 "DOB": {
                                   "allowCellWrapping": false,
@@ -2004,7 +2017,8 @@
                                   "validation": {},
                                   "cellBackground": "#F0F9F8",
                                   "inputFormat": "YYYY-MM-DD HH:mm",
-                                  "outputFormat": "YYYY-MM-DD"
+                                  "outputFormat": "YYYY-MM-DD",
+                                  "sticky": ""
                                 },
                                 "gender": {
                                   "allowCellWrapping": false,
@@ -2032,7 +2046,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"gender\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "#F0F9F8"
+                                  "cellBackground": "#F0F9F8",
+                                  "sticky": ""
                                 },
                                 "mobileNo": {
                                   "allowCellWrapping": false,
@@ -2060,7 +2075,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"mobileNo\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "#F0F9F8"
+                                  "cellBackground": "#F0F9F8",
+                                  "sticky": ""
                                 },
                                 "email": {
                                   "allowCellWrapping": false,
@@ -2088,7 +2104,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"email\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "#F0F9F8"
+                                  "cellBackground": "#F0F9F8",
+                                  "sticky": ""
                                 },
                                 "nationality": {
                                   "allowCellWrapping": false,
@@ -2116,7 +2133,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationality\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "#F0F9F8"
+                                  "cellBackground": "#F0F9F8",
+                                  "sticky": ""
                                 },
                                 "specialisation": {
                                   "allowCellWrapping": false,
@@ -2144,10 +2162,12 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"specialisation\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "#F0F9F8"
+                                  "cellBackground": "#F0F9F8",
+                                  "sticky": ""
                                 }
                               },
                               "key": "xltdvoo6n7",
+                              "canFreezeColumn": false,
                               "isDeprecated": false,
                               "rightColumn": 64,
                               "textSize": "0.875rem",
@@ -2185,7 +2205,7 @@
                           "widgetName": "Canvas9",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 480,
+                          "bottomRow": 610,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": true,
@@ -2292,6 +2312,7 @@
                                 }
                               },
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "columnUpdatedAt": 1678617550383,
                               "defaultSelectedRowIndices": [
                                 0
                               ],
@@ -2354,7 +2375,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationalID\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "#F0F9F8"
+                                  "cellBackground": "#F0F9F8",
+                                  "sticky": ""
                                 },
                                 "name": {
                                   "allowCellWrapping": false,
@@ -2382,7 +2404,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "#F0F9F8"
+                                  "cellBackground": "#F0F9F8",
+                                  "sticky": ""
                                 },
                                 "password": {
                                   "allowCellWrapping": false,
@@ -2410,7 +2433,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"password\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "#F0F9F8"
+                                  "cellBackground": "#F0F9F8",
+                                  "sticky": ""
                                 },
                                 "DOB": {
                                   "allowCellWrapping": false,
@@ -2439,7 +2463,8 @@
                                   "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"DOB\"]))}}",
                                   "validation": {},
                                   "cellBackground": "#F0F9F8",
-                                  "outputFormat": "YYYY-MM-DD"
+                                  "outputFormat": "YYYY-MM-DD",
+                                  "sticky": ""
                                 },
                                 "gender": {
                                   "allowCellWrapping": false,
@@ -2467,7 +2492,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"gender\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "#F0F9F8"
+                                  "cellBackground": "#F0F9F8",
+                                  "sticky": ""
                                 },
                                 "mobileNo": {
                                   "allowCellWrapping": false,
@@ -2495,7 +2521,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"mobileNo\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "#F0F9F8"
+                                  "cellBackground": "#F0F9F8",
+                                  "sticky": ""
                                 },
                                 "email": {
                                   "allowCellWrapping": false,
@@ -2523,7 +2550,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"email\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "#F0F9F8"
+                                  "cellBackground": "#F0F9F8",
+                                  "sticky": ""
                                 },
                                 "nationality": {
                                   "allowCellWrapping": false,
@@ -2551,7 +2579,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationality\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "#F0F9F8"
+                                  "cellBackground": "#F0F9F8",
+                                  "sticky": ""
                                 },
                                 "idHospital": {
                                   "allowCellWrapping": false,
@@ -2579,10 +2608,12 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table2Copy.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"idHospital\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "#F0F9F8"
+                                  "cellBackground": "#F0F9F8",
+                                  "sticky": ""
                                 }
                               },
                               "key": "xltdvoo6n7",
+                              "canFreezeColumn": false,
                               "isDeprecated": false,
                               "rightColumn": 64,
                               "textSize": "0.875rem",
@@ -2656,6 +2687,7 @@
                                 }
                               },
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "columnUpdatedAt": 1678617550383,
                               "defaultSelectedRowIndices": [
                                 0
                               ],
@@ -2712,11 +2744,13 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{tt1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationalID\"]))}}",
                                   "validation": {},
-                                  "cellBackground": "transparent"
+                                  "cellBackground": "transparent",
+                                  "sticky": ""
                                 }
                               },
                               "onRowSelected": "{{get_labSpecialistDetails.run()}}",
                               "key": "wc4hxv24a7",
+                              "canFreezeColumn": false,
                               "isDeprecated": false,
                               "rightColumn": 58,
                               "textSize": "0.875rem",
@@ -3182,7 +3216,7 @@
                   "widgetName": "Canvas5",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 0,
+                  "bottomRow": 240,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
@@ -3443,7 +3477,7 @@
                   "widgetName": "Canvas6",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 190,
+                  "bottomRow": 180,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
@@ -3718,7 +3752,7 @@
                   "widgetName": "Canvas7",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 190,
+                  "bottomRow": 200,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,

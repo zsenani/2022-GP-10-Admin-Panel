@@ -1,0 +1,10 @@
+UPDATE Patient SET
+    name = '{{JSONForm.formData.name}}',
+    DOB = '{{JSONForm.formData.DOB}}',
+    gender = '{{JSONForm.formData.gender}}',
+    mobileNo = '{{JSONForm.formData.mobileNo}}',
+    email = '{{JSONForm.formData.email}}',
+    nationality = '{{JSONForm.formData.nationality}}',
+    maritalStatus = '{{JSONForm.formData.maritalStatus}}'
+ 
+  WHERE NationalID = '{{patient_table.selectedRow.NationalID}}'; 

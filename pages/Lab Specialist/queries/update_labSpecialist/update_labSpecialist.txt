@@ -1,0 +1,8 @@
+UPDATE LabSpecialist SET
+    name = '{{JSONForm.formData.name}}',
+    DOB = '{{JSONForm.formData.DOB}}',
+    gender = '{{JSONForm.formData.gender}}',
+    mobileNo = '{{JSONForm.formData.mobileNo}}',
+    email = '{{JSONForm.formData.email}}',
+    nationality = '{{JSONForm.formData.nationality}}'
+  WHERE nationalID = '{{labSpecialist_table.selectedRow?.nationalID}}'; 

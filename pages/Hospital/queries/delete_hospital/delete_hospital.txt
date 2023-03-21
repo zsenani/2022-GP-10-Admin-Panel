@@ -1,0 +1,2 @@
+DELETE FROM Hospital
+  WHERE idhospital = '{{hospital_table.selectedRow?.idhospital}}';

@@ -1,0 +1,1 @@
+SELECT * FROM Physician WHERE nationalID = '{{Table1.selectedRow?.idPhysician}}';

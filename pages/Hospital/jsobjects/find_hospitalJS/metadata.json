@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "find_hospitalJS",
+    "pageId": "Hospital",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Hospital_find_hospitalJS",
+  "deleted": false,
+  "gitSyncId": "6356520d4b1a8d4291238688_6363c13bbaf07e59ff351557"
+}

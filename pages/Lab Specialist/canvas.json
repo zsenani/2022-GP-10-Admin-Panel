@@ -13,13 +13,13 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1290,
+          "bottomRow": 730,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 74,
+          "version": 77,
           "minHeight": 1292,
           "dynamicTriggerPathList": [],
           "parentColumnSpace": 1,
@@ -61,7 +61,7 @@
                   "widgetName": "Canvas7CopyCopy",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 190,
+                  "bottomRow": 200,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
@@ -332,7 +332,7 @@
                   "widgetName": "Canvas7Copy",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 190,
+                  "bottomRow": 200,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
@@ -649,6 +649,7 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "columnUpdatedAt": 1679428119629,
               "defaultSelectedRowIndices": [
                 0
               ],
@@ -718,7 +719,8 @@
                   "isDiscardVisible": true,
                   "computedValue": "",
                   "validation": {},
-                  "cellBackground": "transparent"
+                  "cellBackground": "transparent",
+                  "sticky": ""
                 },
                 "nationalID": {
                   "allowCellWrapping": false,
@@ -746,7 +748,8 @@
                   "isDiscardVisible": true,
                   "computedValue": "{{labSpecialist_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationalID\"]))}}",
                   "validation": {},
-                  "cellBackground": "transparent"
+                  "cellBackground": "transparent",
+                  "sticky": ""
                 },
                 "password": {
                   "allowCellWrapping": false,
@@ -774,7 +777,8 @@
                   "isDiscardVisible": true,
                   "computedValue": "{{labSpecialist_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"password\"]))}}",
                   "validation": {},
-                  "cellBackground": "transparent"
+                  "cellBackground": "transparent",
+                  "sticky": ""
                 },
                 "DOB": {
                   "allowCellWrapping": false,
@@ -803,7 +807,8 @@
                   "computedValue": "{{labSpecialist_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"DOB\"]))}}",
                   "validation": {},
                   "cellBackground": "transparent",
-                  "outputFormat": "YYYY-MM-DD"
+                  "outputFormat": "YYYY-MM-DD",
+                  "sticky": ""
                 },
                 "gender": {
                   "allowCellWrapping": false,
@@ -831,7 +836,8 @@
                   "isDiscardVisible": true,
                   "computedValue": "{{labSpecialist_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"gender\"]))}}",
                   "validation": {},
-                  "cellBackground": "transparent"
+                  "cellBackground": "transparent",
+                  "sticky": ""
                 },
                 "mobileNo": {
                   "allowCellWrapping": false,
@@ -859,7 +865,8 @@
                   "isDiscardVisible": true,
                   "computedValue": "{{labSpecialist_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"mobileNo\"]))}}",
                   "validation": {},
-                  "cellBackground": "transparent"
+                  "cellBackground": "transparent",
+                  "sticky": ""
                 },
                 "email": {
                   "allowCellWrapping": false,
@@ -887,7 +894,8 @@
                   "isDiscardVisible": true,
                   "computedValue": "{{labSpecialist_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"email\"]))}}",
                   "validation": {},
-                  "cellBackground": "transparent"
+                  "cellBackground": "transparent",
+                  "sticky": ""
                 },
                 "nationality": {
                   "allowCellWrapping": false,
@@ -915,7 +923,8 @@
                   "isDiscardVisible": true,
                   "computedValue": "{{labSpecialist_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationality\"]))}}",
                   "validation": {},
-                  "cellBackground": "transparent"
+                  "cellBackground": "transparent",
+                  "sticky": ""
                 },
                 "idHospital": {
                   "allowCellWrapping": false,
@@ -943,11 +952,13 @@
                   "isDiscardVisible": true,
                   "computedValue": "{{labSpecialist_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"idHospital\"]))}}",
                   "validation": {},
-                  "cellBackground": "transparent"
+                  "cellBackground": "transparent",
+                  "sticky": ""
                 }
               },
               "onRowSelected": "",
               "key": "exycfw7eck",
+              "canFreezeColumn": false,
               "isDeprecated": false,
               "rightColumn": 44,
               "textSize": "0.875rem",
@@ -1504,7 +1515,7 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 440,
+                  "bottomRow": 450,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
@@ -1596,7 +1607,7 @@
                           "widgetName": "Canvas2",
                           "displayName": "Canvas",
                           "topRow": 0,
-                          "bottomRow": 390,
+                          "bottomRow": 340,
                           "parentRowSpace": 1,
                           "type": "CANVAS_WIDGET",
                           "canExtend": false,
@@ -2476,7 +2487,7 @@
                   "widgetName": "Canvas5",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 0,
+                  "bottomRow": 240,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
@@ -2737,7 +2748,7 @@
                   "widgetName": "Canvas6",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 190,
+                  "bottomRow": 180,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
@@ -3012,7 +3023,7 @@
                   "widgetName": "Canvas7",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 190,
+                  "bottomRow": 200,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,

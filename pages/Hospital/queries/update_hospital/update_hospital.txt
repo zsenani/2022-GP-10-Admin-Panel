@@ -1,0 +1,6 @@
+UPDATE Hospital SET
+    name = '{{edit_hospital_JSONForm.formData.name}}',
+    region = '{{edit_hospital_JSONForm.formData.region}}',
+    city = '{{edit_hospital_JSONForm.formData.city}}',
+    district = '{{edit_hospital_JSONForm.formData.district}}'
+  WHERE idhospital = '{{hospital_table.selectedRow.idhospital}}';

@@ -1,0 +1,1 @@
+SELECT * FROM Hospital WHERE name = '{{JSONForm1.formData.name}}' AND  city = '{{JSONForm1.formData.city}}';
