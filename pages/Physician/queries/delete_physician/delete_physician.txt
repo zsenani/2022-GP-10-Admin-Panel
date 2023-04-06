@@ -1,2 +1,2 @@
 DELETE FROM Physician
-   WHERE nationalID = {{physician_table.selectedRow.nationalID}}; 
+   WHERE nationalID = {{physician_table.selectedRow?.nationalID}}; 

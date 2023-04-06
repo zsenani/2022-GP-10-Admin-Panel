@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "DELETE FROM Patient\n    WHERE NationalID = '{{patient_table.selectedRow.NationalID}}'; ",
+      "body": "DELETE FROM Patient\n    WHERE NationalID = '{{patient_table.selectedRow?.NationalID}}'; ",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -36,7 +36,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "patient_table.selectedRow.NationalID"
+      "patient_table.selectedRow?.NationalID"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
