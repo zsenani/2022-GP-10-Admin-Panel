@@ -3630,7 +3630,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
+              "timeoutInMillisecond": 50000
             }
           ]
         ],

@@ -1,1 +1,0 @@
-SELECT * FROM LabSpecialist WHERE nationalID = '{{tt1.selectedRow?.nationalID}}'; 

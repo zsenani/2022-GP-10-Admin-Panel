@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mysql-plugin",
   "unpublishedAction": {
-    "name": "get_labSpecialistDetails",
+    "name": "Query1",
     "datasource": {
       "name": "MedCoreMySQL",
       "pluginId": "mysql-plugin",
@@ -13,37 +13,31 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Hospital",
+    "pageId": "Physician",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM LabSpecialist WHERE nationalID = '{{tt1.selectedRow?.nationalID}}'; ",
+      "body": "SELECT * FROM information_schema.processlist WHERE USER = 'b71432b615aa7b'",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ]
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "tt1.selectedRow?.nationalID"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Hospital_get_labSpecialistDetails",
+  "id": "Physician_Query1",
   "deleted": false,
-  "gitSyncId": "6356520d4b1a8d4291238688_63933b34e77ccb59f6880216"
+  "gitSyncId": "6356520d4b1a8d4291238688_642c3c450cbeba5c311c6e1c"
 }

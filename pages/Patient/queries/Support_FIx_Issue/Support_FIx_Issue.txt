@@ -1,0 +1,1 @@
+SET GLOBAL max_user_connections = 20;

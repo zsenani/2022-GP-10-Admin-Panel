@@ -1,1 +1,1 @@
-SELECT idPhysician FROM HospitalPhysician WHERE idhospital = '{{hospital_table.selectedRow.idhospital}}';
+SELECT idPhysician,name FROM HospitalPhysician,Physician  WHERE idhospital = '{{hospital_table.selectedRow.idhospital}}';

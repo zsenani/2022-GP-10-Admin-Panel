@@ -1,1 +1,1 @@
-SELECT nationalID FROM LabSpecialist WHERE idhospital = '{{hospital_table.selectedRow?.idhospital}}'; 
+SELECT nationalID,name FROM LabSpecialist WHERE idhospital = '{{hospital_table.selectedRow?.idhospital}}'; 

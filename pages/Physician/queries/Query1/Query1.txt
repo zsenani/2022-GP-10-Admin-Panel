@@ -1,0 +1,1 @@
+SELECT * FROM information_schema.processlist WHERE USER = 'b71432b615aa7b'
