@@ -1631,10 +1631,10 @@
                                   "key": "tableData"
                                 },
                                 {
-                                  "key": "primaryColumns.idPhysician.computedValue"
+                                  "key": "primaryColumns.name.computedValue"
                                 },
                                 {
-                                  "key": "primaryColumns.name.computedValue"
+                                  "key": "primaryColumns.nationalID.computedValue"
                                 }
                               ],
                               "leftColumn": 9,
@@ -1673,14 +1673,14 @@
                                 }
                               },
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                              "columnUpdatedAt": 1680741690478,
+                              "columnUpdatedAt": 1680743403380,
                               "defaultSelectedRowIndices": [
                                 0
                               ],
                               "widgetName": "Table1",
                               "defaultPageSize": 0,
                               "columnOrder": [
-                                "idPhysician",
+                                "nationalID",
                                 "name"
                               ],
                               "dynamicPropertyPathList": [],
@@ -1690,7 +1690,9 @@
                                 "task": 245,
                                 "step": 62,
                                 "status": 75,
-                                "idPhysician": 333
+                                "idPhysician": 333,
+                                "name": 323,
+                                "nationalID": 307
                               },
                               "parentRowSpace": 10,
                               "hideCard": false,
@@ -1702,35 +1704,6 @@
                               ],
                               "borderWidth": "1",
                               "primaryColumns": {
-                                "idPhysician": {
-                                  "allowCellWrapping": false,
-                                  "index": 0,
-                                  "width": 150,
-                                  "originalId": "idPhysician",
-                                  "id": "idPhysician",
-                                  "alias": "idPhysician",
-                                  "horizontalAlignment": "CENTER",
-                                  "verticalAlignment": "CENTER",
-                                  "columnType": "number",
-                                  "textColor": "#52525b",
-                                  "textSize": "0.875rem",
-                                  "fontStyle": "",
-                                  "enableFilter": true,
-                                  "enableSort": true,
-                                  "isVisible": true,
-                                  "isDisabled": false,
-                                  "isCellEditable": false,
-                                  "isEditable": false,
-                                  "isCellVisible": true,
-                                  "isDerived": false,
-                                  "label": "National/ Resident ID",
-                                  "isSaveVisible": true,
-                                  "isDiscardVisible": true,
-                                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"idPhysician\"]))}}",
-                                  "validation": {},
-                                  "cellBackground": "transparent",
-                                  "sticky": ""
-                                },
                                 "name": {
                                   "allowCellWrapping": false,
                                   "index": 1,
@@ -1756,6 +1729,35 @@
                                   "isSaveVisible": true,
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
+                                  "sticky": "",
+                                  "validation": {},
+                                  "cellBackground": "transparent"
+                                },
+                                "nationalID": {
+                                  "allowCellWrapping": false,
+                                  "index": 0,
+                                  "width": 150,
+                                  "originalId": "nationalID",
+                                  "id": "nationalID",
+                                  "alias": "nationalID",
+                                  "horizontalAlignment": "CENTER",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "number",
+                                  "textColor": "#52525b",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "National/ Resident ID",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"nationalID\"]))}}",
                                   "sticky": "",
                                   "validation": {},
                                   "cellBackground": "transparent"
@@ -3228,20 +3230,18 @@
           ],
           [
             {
-              "id": "Hospital_get_physician",
-              "name": "get_physician",
+              "id": "Hospital_get_labSpecialist",
+              "name": "get_labSpecialist",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "hospital_table.selectedRow.idhospital"
+                "hospital_table.selectedRow?.idhospital"
               ],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
-              "id": "Hospital_get_labSpecialist",
-              "name": "get_labSpecialist",
+              "id": "Hospital_get_physician",
+              "name": "get_physician",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
