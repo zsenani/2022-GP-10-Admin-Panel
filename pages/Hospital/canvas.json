@@ -1692,7 +1692,7 @@
                                 "status": 75,
                                 "idPhysician": 333,
                                 "name": 323,
-                                "nationalID": 307
+                                "nationalID": 326
                               },
                               "parentRowSpace": 10,
                               "hideCard": false,
@@ -3230,18 +3230,20 @@
           ],
           [
             {
-              "id": "Hospital_get_labSpecialist",
-              "name": "get_labSpecialist",
+              "id": "Hospital_get_physician",
+              "name": "get_physician",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "hospital_table.selectedRow?.idhospital"
+                "hospital_table.selectedRow.idhospital"
               ],
               "timeoutInMillisecond": 10000
-            },
+            }
+          ],
+          [
             {
-              "id": "Hospital_get_physician",
-              "name": "get_physician",
+              "id": "Hospital_get_labSpecialist",
+              "name": "get_labSpecialist",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
