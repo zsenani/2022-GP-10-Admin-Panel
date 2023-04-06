@@ -3230,20 +3230,18 @@
           ],
           [
             {
-              "id": "Hospital_get_physician",
-              "name": "get_physician",
+              "id": "Hospital_get_labSpecialist",
+              "name": "get_labSpecialist",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "hospital_table.selectedRow.idhospital"
+                "hospital_table.selectedRow?.idhospital"
               ],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
-              "id": "Hospital_get_labSpecialist",
-              "name": "get_labSpecialist",
+              "id": "Hospital_get_physician",
+              "name": "get_physician",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
