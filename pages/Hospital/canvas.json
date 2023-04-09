@@ -996,7 +996,8 @@
                               "labelTextSize": "0.875rem",
                               "label": "Hospital ID",
                               "regex": "/^\\d{6,6}$/",
-                              "validation": ""
+                              "validation": "",
+                              "errorMessage": "Invalid hospital ID"
                             },
                             "date_of_birth": {
                               "children": {},
