@@ -1764,7 +1764,7 @@
                                   "cellBackground": "transparent"
                                 }
                               },
-                              "onRowSelected": "{{get_physicianDetails.run()}}",
+                              "onRowSelected": "",
                               "key": "wc4hxv24a7",
                               "canFreezeColumn": false,
                               "isDeprecated": false,
@@ -1976,7 +1976,7 @@
                                   "cellBackground": "transparent"
                                 }
                               },
-                              "onRowSelected": "{{get_labSpecialistDetails.run()}}",
+                              "onRowSelected": "",
                               "key": "wc4hxv24a7",
                               "canFreezeColumn": false,
                               "isDeprecated": false,
