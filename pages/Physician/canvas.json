@@ -2960,7 +2960,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button12",
-                      "onClick": "\n{{update_physician.run(() =>\n\t\t\t\t\t\t\t\t\t\t\t{\n\tcloseModal('Modal4')\n\tget_physician.run() \n\t\n})}}",
+                      "onClick": "{{check_email.checkEmail()}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {

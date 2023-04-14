@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "check_email",
+    "pageId": "Lab Specialist",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Lab Specialist_check_email",
+  "deleted": false,
+  "gitSyncId": "6356520d4b1a8d4291238688_6439e6d2e0735231ba677e6a"
+}

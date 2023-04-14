@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "check_email",
+    "pageId": "Physician",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Physician_check_email",
+  "deleted": false,
+  "gitSyncId": "6356520d4b1a8d4291238688_6439e2ee99d4922aba72edf4"
+}

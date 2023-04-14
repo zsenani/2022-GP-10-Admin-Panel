@@ -1796,7 +1796,7 @@
                               "resetFormOnClick": true,
                               "boxShadow": "none",
                               "widgetName": "Button1",
-                              "onClick": "{{JSObject1.findHospital()}}",
+                              "onClick": "{{check_email.findHospital()}}",
                               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                               "dynamicPropertyPathList": [
                                 {
@@ -2902,7 +2902,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button12",
-                      "onClick": "\n{{update_labSpecialist.run(() =>\n\t\t\t\t\t\t\t\t\t\t\t{\n\tcloseModal('Modal4')\n\tget_labSpecialist.run() \n\t\n})}}",
+                      "onClick": "{{check_email.checkEmail()}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
