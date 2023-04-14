@@ -214,7 +214,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button15Copy",
-                      "onClick": "{{delete_patient.run(() =>\n\t\t\t\t\t\t\t\t\t\t\t{\n\tcloseModal('Modal5Copy')\n\tget_patient.run() \n\t\n}, () => showAlert('Select Hospital'))}}\n",
+                      "onClick": "{{delete_patient.run(() =>\n\t\t\t\t\t\t\t\t\t\t\t{\n\tcloseModal('Modal5Copy')\n\tget_patient.run() \n\t\n})}}\n",
                       "buttonColor": "#f22b2b",
                       "dynamicPropertyPathList": [
                         {
