@@ -11,3 +11,4 @@
 # https://app.appsmith.com/app/medcore/hospital-6356520d4b1a8d429123868b?branch=master
 
 # MedCore Mobile Application Repository: https://github.com/zsenani/2022-GP-10.git
+# ML part Repository: https://github.com/zsenani/medcoreML-2.git
