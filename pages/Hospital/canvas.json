@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 77,
+          "version": 79,
           "minHeight": 1292,
           "dynamicTriggerPathList": [],
           "parentColumnSpace": 1,
@@ -349,7 +349,8 @@
                       "labelTextSize": "0.875rem",
                       "label": "Name",
                       "regex": "/^([a-zA-Z]{2,}\\s[a-zA-Z]{2,})/",
-                      "validation": ""
+                      "validation": "",
+                      "errorMessage": "Must be at least two characters"
                     },
                     "city": {
                       "children": {},
@@ -395,7 +396,8 @@
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
                       "label": "District",
-                      "regex": "/^([a-zA-Z]{2,})/"
+                      "regex": "/^([a-zA-Z]{2,})/",
+                      "errorMessage": "Must be at least two characters"
                     },
                     "_id": {
                       "children": {},
@@ -997,7 +999,7 @@
                               "label": "Hospital ID",
                               "regex": "/^\\d{6,6}$/",
                               "validation": "",
-                              "errorMessage": "Invalid hospital ID"
+                              "errorMessage": "Must be 6 digits"
                             },
                             "date_of_birth": {
                               "children": {},
@@ -1021,7 +1023,8 @@
                               "labelTextSize": "0.875rem",
                               "label": "Name",
                               "validation": "",
-                              "regex": "/^([a-zA-Z]{2,}\\s[a-zA-Z]{2,})/"
+                              "regex": "/^([a-zA-Z]{2,}\\s[a-zA-Z]{2,})/",
+                              "errorMessage": "Must be at least two words"
                             },
                             "employee_id": {
                               "children": {},
@@ -1044,7 +1047,8 @@
                               "isVisible": true,
                               "labelTextSize": "0.875rem",
                               "label": "District",
-                              "regex": "/^([a-zA-Z]{2,})/"
+                              "regex": "/^([a-zA-Z]{2,})/",
+                              "errorMessage": "Must be at least two characters"
                             },
                             "customField1": {
                               "children": {},
