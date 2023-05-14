@@ -350,7 +350,7 @@
                       "label": "Name",
                       "regex": "/^([a-zA-Z]{2,}\\s[a-zA-Z]{2,})/",
                       "validation": "",
-                      "errorMessage": "Must be at least two characters"
+                      "errorMessage": "Must be at least two words"
                     },
                     "city": {
                       "children": {},
